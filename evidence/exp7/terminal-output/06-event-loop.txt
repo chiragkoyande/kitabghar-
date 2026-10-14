@@ -1,0 +1,26 @@
+==================================================
+Kitab Ghar - Event Loop Phases Demonstration
+==================================================
+
+Expected Execution Order:
+1. Synchronous Code
+2. process.nextTick (Microtask)
+3. Promise.resolve().then() (Microtask)
+4. setTimeout(..., 0) (Timers Phase)
+5. setImmediate (Check Phase)
+6. I/O Callbacks
+
+--- ACTUAL EXECUTION OUTPUT ---
+
+[Step 1] Sync           : Processing reader registration...
+[Step 2] Sync           : Initial script execution completed.
+[Step 3] Promise        : Fetching book catalogue... (Microtask)
+[Step 4] nextTick       : Validating membership... (Microtask)
+[Step 5] setTimeout     : Sending rental reminder... (Macrotask/Timer)
+[Step 6] I/O Callback   : Verifying library directory... (Poll Phase)
+
+--- Round 2: Nested inside I/O Callback ---
+[Step 7] nextTick 2     : Updating cache... (Microtask)
+[Step 8] setImmediate   : Updating dashboard... (Check Phase)
+[Step 9] setImmediate 2 : Syncing inventory... (Check Phase - Runs before setTimeout here!)
+[Step 10] setTimeout 2   : Late fee calculation... (Timer)

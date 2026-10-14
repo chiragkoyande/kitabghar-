@@ -1,0 +1,90 @@
+[
+  {
+    "figure": "Figure 1.1",
+    "title": "Current Main Registration Form",
+    "file": "screenshots/01-registration-overview.png",
+    "purpose": "Initial desktop capture of the actual current /register route.",
+    "what_it_demonstrates": "The main React registration card shows the real reader information, account credentials, terms consent and Create account action.",
+    "code_refs": [
+      "EXP1-CODE-01",
+      "EXP1-CODE-02"
+    ]
+  },
+  {
+    "figure": "Figure 1.2",
+    "title": "Empty Form — Visible Validation Errors",
+    "file": "screenshots/02-empty-form-errors.png",
+    "purpose": "Submit the current form with no reader details.",
+    "what_it_demonstrates": "The real current UI displays the validation summary and visible field-level errors rather than leaving the output ambiguous.",
+    "code_refs": [
+      "EXP1-CODE-01",
+      "EXP1-CODE-02"
+    ]
+  },
+  {
+    "figure": "Figure 1.3",
+    "title": "Invalid Email and Mobile Test",
+    "file": "screenshots/03-email-mobile-errors.png",
+    "purpose": "Enter an incomplete email and an invalid Indian mobile number.",
+    "what_it_demonstrates": "Current client-side rules visibly flag both contact fields and explain the expected mobile-number format.",
+    "code_refs": [
+      "EXP1-CODE-01",
+      "EXP1-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 1.4",
+    "title": "Age and Pincode Failure Test",
+    "file": "screenshots/04-age-pincode-errors.png",
+    "purpose": "Enter an underage date and short pincode.",
+    "what_it_demonstrates": "The actual current validation reports the 13-year age rule and six-digit pincode requirement.",
+    "code_refs": [
+      "EXP1-CODE-01",
+      "EXP1-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 1.5",
+    "title": "Password Strength and Confirmation Test",
+    "file": "screenshots/05-password-confirmation-errors.png",
+    "purpose": "Enter a weak password and mismatched confirmation.",
+    "what_it_demonstrates": "The current UI shows a Weak password-strength label and a visible password-matching error.",
+    "code_refs": [
+      "EXP1-CODE-01",
+      "EXP1-CODE-02"
+    ]
+  },
+  {
+    "figure": "Figure 1.6",
+    "title": "Terms Consent Failure Test",
+    "file": "screenshots/06-terms-error.png",
+    "purpose": "Complete reader details but leave the terms unchecked before submit.",
+    "what_it_demonstrates": "The current form blocks the next action and displays the reader-terms error as an actual test result.",
+    "code_refs": [
+      "EXP1-CODE-01",
+      "EXP1-CODE-02"
+    ]
+  },
+  {
+    "figure": "Figure 1.7",
+    "title": "All Valid Reader Details — Pass State",
+    "file": "screenshots/07-valid-form-pass.png",
+    "purpose": "Fill every current validation requirement with valid reader details.",
+    "what_it_demonstrates": "The current UI shows green valid states and the All checks passed message before any account is created.",
+    "code_refs": [
+      "EXP1-CODE-01",
+      "EXP1-CODE-02",
+      "EXP1-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 1.8",
+    "title": "Responsive Mobile Valid Form",
+    "file": "screenshots/08-mobile-valid-form.png",
+    "purpose": "Capture the current valid registration form at 320 px.",
+    "what_it_demonstrates": "The main CSS mobile breakpoint presents the current form in one column without horizontal overflow.",
+    "code_refs": [
+      "EXP1-CODE-04"
+    ]
+  }
+]

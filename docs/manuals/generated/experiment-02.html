@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Experiment No. 2 — Kitab Ghar</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #000000;
+      background: #ffffff;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      font-size: 12pt;
+      line-height: 1.4;
+      text-align: left;
+    }
+    .exp-no {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 3pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .exp-title {
+      font-size: 11.5pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 8pt;
+      line-height: 1.3;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .section-head {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 8pt 0 2pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    p {
+      margin: 0 0 4pt;
+      color: #000000;
+      text-align: left;
+    }
+    ul, ol {
+      margin: 0 0 6pt 18pt;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 2pt;
+      color: #000000;
+      text-align: left;
+    }
+    .methodology-flow {
+      border: 1px solid #000000;
+      padding: 5pt 8pt;
+      margin: 4pt 0 6pt;
+      font-size: 9.5pt;
+      font-weight: bold;
+      text-align: center;
+      background: #fafafa;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-block {
+      margin: 4pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-label {
+      font-size: 9.5pt;
+      font-weight: bold;
+      margin: 0 0 1.5pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .code-meta {
+      font-size: 8.5pt;
+      font-style: italic;
+      margin: 0 0 2pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    pre {
+      margin: 2pt 0 4pt;
+      padding: 4pt 6pt;
+      border: 1px solid #000000;
+      background: #fafafa;
+      color: #000000;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 7.5pt;
+      line-height: 1.2;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .figure-block {
+      margin: 5pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .fig-img-wrap {
+      text-align: center;
+      margin: 2pt 0 2pt;
+    }
+    .fig-img-wrap img {
+      max-width: 92%;
+      max-height: 82mm;
+      width: auto;
+      height: auto;
+      border: 1px solid #000000;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .fig-title {
+      font-size: 10pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 3pt 0 2pt;
+      text-align: center;
+      page-break-before: avoid !important;
+      break-before: avoid !important;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .fig-desc {
+      font-size: 12pt;
+      color: #000000;
+      line-height: 1.3;
+      margin: 1pt 0 3pt;
+      text-align: left;
+    }
+    .result-conclusion-block {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin-top: 4pt;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+      margin: 3pt 0 4pt;
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+    tr {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid #000000;
+      padding: 2.5pt 4pt;
+      text-align: left;
+      vertical-align: top;
+      color: #000000;
+      line-height: 1.22;
+    }
+    th {
+      background: #f0f0f0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starts immediately on Page 1 -->
+  <div class="exp-no">Experiment No. 2</div>
+  <div class="exp-title">Title: Develop JavaScript Programs using ES6 Features (Arrow Functions, Anonymous Functions, Arrays, Events, and Popup Boxes)</div>
+
+  <div class="section-head">Aim:</div>
+  <p>To write and execute modular JavaScript programs demonstrating ES6 arrow functions, anonymous callback functions, higher-order array methods (map, filter, reduce), DOM event handling, and browser popup dialogs (alert, confirm, prompt) using the Kitab Ghar library catalogue data.</p>
+
+  <div class="section-head">Tools Used:</div>
+  <ul><li>JavaScript (ECMAScript 2015 / ES6+) runtime</li><li>Bootstrap 5.3 CSS for interface layout</li><li>HTML5 DOM APIs (addEventListener, document.getElementById, classList)</li><li>Node.js v22 for headless terminal execution</li><li>Google Chrome Headless for automated browser capture</li></ul>
+
+  <div class="section-head">Methodology:</div>
+  <div class="methodology-flow">Catalogue Dataset Definition → Arrow Function Formatting → Anonymous Callback Scheduling → Array Higher-Order Processing → Event Listeners Binding → Native Popup Dialogs Triggering</div>
+  <p>A sample dataset of 8 realistic Kitab Ghar titles was defined with properties for title, author, category, rental price, availability, and rating. Each ES6 concept was isolated into an independent card containing an explanation, runnable code snippet, interactive trigger button, and live output display. In addition to browser verification, the same logic was verified via Node.js.</p>
+
+  <div class="section-head">Theory:</div>
+  <p>ECMAScript 2015 (ES6) introduced foundational modernizations to JavaScript. Arrow functions (() =&gt; {}) provide a concise syntax for function expressions and lexically bind the 'this' value, eliminating common binding ambiguities in asynchronous callbacks. They are particularly suited for inline transformations within higher-order functions.</p>
+<p>Anonymous functions are function expressions defined without an identifier, commonly supplied as first-class arguments to asynchronous schedulers like setTimeout() or array iteration methods like forEach(). Higher-order array methods—namely map(), filter(), and reduce()—promote a declarative, functional programming style that avoids manual index management and imperative mutation.</p>
+<p>The DOM Event model allows applications to register event listeners using addEventListener(), decoupling JavaScript logic from HTML markup. Browser popup boxes (window.alert, window.confirm, window.prompt) represent synchronous modal dialogs that halt execution to deliver critical notifications, request binary confirmations, or capture textual user input.</p>
+
+  <div class="section-head">Case Study Context:</div>
+  <p>Kitab Ghar, Badlapur — an interactive book discovery catalogue. Reader actions include searching titles, filtering books by genre (Fiction, Self-Help, Mystery, Classics), calculating inventory valuations, and triggering modal/popup alerts for book reservations and reader personalization.</p>
+  <p>A dedicated standalone demonstration suite was implemented at experiments/exp2/index.html with 5 independent interactive sections, accompanied by a companion Node.js script (experiments/exp2/es6-node.mjs) for dual browser and terminal verification.</p>
+
+  <div class="section-head">Functions / Methods / Technologies Used:</div>
+  <ul><li>Arrow function syntax: const format = (val) =&gt; ...</li><li>setTimeout(function() { ... }, delay) with anonymous callbacks</li><li>Array.prototype.map() to project data arrays</li><li>Array.prototype.filter() for predicate-based filtering</li><li>Array.prototype.reduce() for aggregating metrics</li><li>EventTarget.addEventListener('click', 'input', 'change', 'mouseover')</li><li>window.alert(), window.confirm(), and window.prompt() dialogs</li></ul>
+
+  <div class="section-head">Procedure:</div>
+  <p>The catalogue data was processed through the ES6 demonstrations one feature at a time: arrow functions and callbacks first, then map, filter, and reduce, followed by search, category events, and popup actions. Each action was executed in the browser and its visible output was checked.</p>
+  <ol><li>Navigate to experiments/exp2/ and examine index.html, es6-demo.js, and es6-node.mjs.</li><li>Define the books catalogue array containing 8 realistic Kitab Ghar titles with categories and pricing.</li><li>Implement Section 1 with arrow functions for currency formatting and title extraction.</li><li>Implement Section 2 with anonymous callbacks in setTimeout() and Array.prototype.forEach().</li><li>Implement Section 3 showcasing map() for titles, filter() for available Fiction, and reduce() for total catalogue value.</li><li>Implement Section 4 attaching addEventListener for live search (input), category dropdown (change), and button click.</li><li>Implement Section 5 attaching handlers for alert() rental notices, confirm() deletions, and prompt() reader greetings.</li><li>Open index.html in Google Chrome and interactively test every button and input.</li><li>Execute node experiments/exp2/es6-node.mjs in the terminal to verify non-DOM ES6 functionality.</li><li>Capture high-resolution screenshots for each section's output.</li></ol>
+
+  <div class="section-head">Code:</div>
+  
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 2.1: Arrow Functions &amp; Array Methods Implementation</strong></p>
+      <p class="code-meta">File: <code>experiments/exp2/es6-demo.js</code> (Lines 38–72) — Demonstrates arrow function formatting, map(), filter(), and reduce() over Kitab Ghar data.</p>
+      <pre><code>// Arrow Functions
+const formatPrice = (price) =&gt; '₹' + price.toFixed(2);
+const getAvailable = () =&gt; books.filter((b) =&gt; b.available);
+
+// Array Higher-Order Methods
+const handleMap = () =&gt; {
+  const titles = books.map((b) =&gt; b.title);
+  outArray.innerHTML = '&lt;strong&gt;map() Titles:&lt;/strong&gt;&lt;br&gt;' + titles.join(', ');
+};
+
+const handleFilter = () =&gt; {
+  const availableFiction = books.filter((b) =&gt; b.available &amp;&amp; b.category === 'Fiction');
+  outArray.innerHTML = '&lt;strong&gt;filter() Available Fiction:&lt;/strong&gt;&lt;br&gt;' +
+    availableFiction.map((b) =&gt; `${b.title} (${formatPrice(b.price)})`).join('&lt;br&gt;');
+};
+
+const handleReduce = () =&gt; {
+  const totalValue = books.reduce((acc, b) =&gt; acc + b.price, 0);
+  const avgRating = books.reduce((acc, b) =&gt; acc + b.rating, 0) / books.length;
+  outArray.innerHTML = `&lt;strong&gt;reduce() Stats:&lt;/strong&gt;&lt;br&gt;
+    Total Catalogue Value: ${formatPrice(totalValue)}&lt;br&gt;
+    Average Rating: ${avgRating.toFixed(1)} / 5.0`;
+};</code></pre>
+    </div>
+  
+
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 2.2: DOM Event Listeners &amp; Popup Dialogs</strong></p>
+      <p class="code-meta">File: <code>experiments/exp2/es6-demo.js</code> (Lines 85–130) — Demonstrates addEventListener and native alert, confirm, and prompt boxes.</p>
+      <pre><code>// Event Listeners
+searchInput.addEventListener('input', (e) =&gt; {
+  const query = e.target.value.toLowerCase();
+  const filtered = books.filter((b) =&gt; b.title.toLowerCase().includes(query));
+  renderBooks(filtered);
+});
+
+// Popup Boxes
+btnAlert.addEventListener('click', () =&gt; {
+  alert('Kitab Ghar Notice: "Norwegian Wood" has been reserved for your Badlapur library card.');
+  outPopup.textContent = 'alert() displayed: Book rental confirmation notice shown.';
+});
+
+btnConfirm.addEventListener('click', () =&gt; {
+  const confirmed = confirm('Remove "The Alchemist" from your reading wishlist?');
+  outPopup.textContent = 'confirm() returned: ' + confirmed + (confirmed ? ' (Book removed)' : ' (Action cancelled)');
+});
+
+btnPrompt.addEventListener('click', () =&gt; {
+  const readerName = prompt('Please enter your reader name for Kitab Ghar membership:', 'Badlapur Reader');
+  if (readerName) {
+    outPopup.textContent = `Welcome to Kitab Ghar, ${readerName}! Enjoy your reading journey.`;
+  }
+});</code></pre>
+    </div>
+  
+
+  <div class="section-head">Output:</div>
+  
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp2/screenshots/EXP2-01-es6-demo-page-overview.png" alt="Kitab Ghar ES6 Features Demonstration Page Overview">
+      </div>
+      <p class="fig-title"><strong>Figure 2.1: Kitab Ghar ES6 Features Demonstration Page Overview</strong></p>
+      <p class="fig-desc">This screenshot shows the dedicated Experiment 2 demonstration page loaded at 1280px desktop resolution. The interface presents 5 clearly separated Bootstrap card components for Arrow Functions, Anonymous Functions, Arrays, Events, and Popup Boxes, each with its own interactive trigger buttons and output display area. The page is styled with Bootstrap 5 grid and Kitab Ghar branding, providing a structured, examiner-friendly layout for demonstrating each ES6 concept independently.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp2/screenshots/EXP2-02-arrow-functions-output.png" alt="Section 1: Arrow Functions Price Formatter &amp; Array Mapping">
+      </div>
+      <p class="fig-title"><strong>Figure 2.2: Section 1: Arrow Functions Price Formatter &amp; Array Mapping</strong></p>
+      <p class="fig-desc">This screenshot shows the output generated by clicking 'Run Arrow Functions'. The arrow function formatPrice formats numeric values into rupee currency strings (₹90.00), while books.map(b =&gt; b.title) extracts all 8 catalogue titles concisely without verbose function declarations. The output area displays both the code syntax and the computed result side by side, clearly demonstrating how ES6 arrow functions eliminate the need for the function keyword and provide implicit return for single-expression bodies.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp2/screenshots/EXP2-03-anonymous-functions-output.png" alt="Section 2: Anonymous Functions in setTimeout &amp; forEach Callback">
+      </div>
+      <p class="fig-title"><strong>Figure 2.3: Section 2: Anonymous Functions in setTimeout &amp; forEach Callback</strong></p>
+      <p class="fig-desc">This screenshot shows the execution of anonymous functions. The forEach method iterates over catalogue records using an un-named function argument to display each book, while clicking 'Simulate Rental Reminder' executes an anonymous callback inside setTimeout after a 2-second delay. This demonstrates how anonymous functions are commonly used as inline callbacks in JavaScript for event handling, array iteration, and asynchronous timer operations without polluting the namespace with named function declarations.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp2/screenshots/EXP2-04-array-map-filter-reduce.png" alt="Section 3: Higher-Order Array Methods (map, filter, reduce)">
+      </div>
+      <p class="fig-title"><strong>Figure 2.4: Section 3: Higher-Order Array Methods (map, filter, reduce)</strong></p>
+      <p class="fig-desc">This screenshot displays the cumulative output of map(), filter(), and reduce() higher-order array methods applied to the Kitab Ghar book catalogue. map() extracts all book titles into a new array, filter() isolates available Fiction titles ('Norwegian Wood'), and reduce() calculates the total inventory value (₹645.00) and average catalogue rating (4.7 / 5.0). Each operation is triggered by a separate button, showing the functional programming pipeline that processes the 8-book catalogue array without mutating the original data.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp2/screenshots/EXP2-05-events-click-input-change.png" alt="Section 4: DOM Event Handling (click, input, change, mouseover)">
+      </div>
+      <p class="fig-title"><strong>Figure 2.5: Section 4: DOM Event Handling (click, input, change, mouseover)</strong></p>
+      <p class="fig-desc">This screenshot demonstrates interactive DOM event listeners registered via addEventListener(). Typing 'Ikigai' into the search input triggers the 'input' event to filter the display in real time, the category dropdown triggers the 'change' event to filter by genre, and hovering over book tags fires the 'mouseover' event to reveal pricing details. All event bindings are established inside a DOMContentLoaded handler, following best practices for unobtrusive JavaScript and separation of markup from behaviour.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp2/screenshots/EXP2-06-alert-popup.png" alt="Section 5: Native Browser Dialog: alert() Rental Confirmation">
+      </div>
+      <p class="fig-title"><strong>Figure 2.6: Section 5: Native Browser Dialog: alert() Rental Confirmation</strong></p>
+      <p class="fig-desc">This screenshot shows the native window.alert() popup dialog invoked by clicking the Rental Confirmation button. The browser halts JavaScript execution and presents a modal message confirming that 'Norwegian Wood' has been reserved for the reader. The alert() function is a synchronous blocking call that displays an informational message and waits for the user to dismiss it before continuing script execution.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp2/screenshots/EXP2-07-confirm-popup.png" alt="Section 5: Native Browser Dialog: confirm() Wishlist Deletion">
+      </div>
+      <p class="fig-title"><strong>Figure 2.7: Section 5: Native Browser Dialog: confirm() Wishlist Deletion</strong></p>
+      <p class="fig-desc">This screenshot shows the native window.confirm() dialog asking the user whether to remove 'The Alchemist' from their wishlist. Clicking OK returns a boolean value of true, while Cancel returns false. The return value is captured and rendered into the output pane, demonstrating how confirm() enables binary user decisions within the application flow.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp2/screenshots/EXP2-08-prompt-popup.png" alt="Section 5: Native Browser Dialog: prompt() Reader Personalization">
+      </div>
+      <p class="fig-title"><strong>Figure 2.8: Section 5: Native Browser Dialog: prompt() Reader Personalization</strong></p>
+      <p class="fig-desc">This screenshot shows the native window.prompt() dialog requesting reader input with a default value of 'Badlapur Reader'. Upon submission, the entered string is returned to the calling script, which the event handler uses to dynamically construct and display a personalized welcome message in the DOM. The prompt() function returns null if the user cancels, enabling conditional logic based on user input.</p>
+    </div>
+  
+
+  <div class="result-conclusion-block">
+    <div class="section-head">Result:</div>
+    <p>All required ES6 language features—arrow functions, anonymous callbacks, higher-order array methods (map, filter, reduce), DOM event listeners, and native browser popup boxes—were successfully implemented and verified. Both browser-based interactive output and headless terminal output confirmed expected execution.</p>
+    <p>The recorded output confirmed that the same book array could be formatted, filtered, sorted, and displayed through event-driven DOM updates without reloading the page. Popup actions also reflected the selected book and its availability.</p>
+
+    <div class="section-head">Conclusion:</div>
+    <p>The experiment confirmed that modern ES6 features significantly improve code readability, conciseness, and maintainability compared to pre-ES6 JavaScript. Arrow functions and functional array pipelines streamline collection processing.</p>
+<p>The dedicated demonstration suite proved that DOM event handling and popup dialogs provide essential interactivity for web applications, establishing core competencies for client-side JavaScript development.</p>
+    <p>This experiment demonstrates how modern ES6 syntax and higher-order array methods make an interactive catalogue concise, maintainable, and responsive to reader actions.</p>
+  </div>
+
+</body>
+</html>

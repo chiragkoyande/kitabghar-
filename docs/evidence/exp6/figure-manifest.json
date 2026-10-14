@@ -1,0 +1,91 @@
+[
+  {
+    "figure": "Figure 6.1",
+    "title": "Node.js Express Server Health & MongoDB State (/api/health)",
+    "file": "screenshots/01-express-server-health.png",
+    "purpose": "Live Express server health check and MongoDB connectivity verification.",
+    "what_it_demonstrates": "Express.js REST API running on port 5003 with JSON response verifying active server status and live MongoDB connection.",
+    "code_refs": [
+      "EXP6-CODE-01",
+      "EXP6-CODE-02"
+    ]
+  },
+  {
+    "figure": "Figure 6.2",
+    "title": "Mongoose Books REST API Endpoint (GET /api/books)",
+    "file": "screenshots/02-api-books-endpoint.png",
+    "purpose": "Live JSON payload returned by Mongoose Book.find() query.",
+    "what_it_demonstrates": "Express REST endpoint returning 77 book documents serialized from MongoDB with Mongoose Schema fields, text search indexing, and inventory counts.",
+    "code_refs": [
+      "EXP6-CODE-05",
+      "EXP6-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 6.3",
+    "title": "Main Kitab Ghar SPA Connected to Express Backend & MongoDB",
+    "file": "screenshots/03-main-homepage-backend.png",
+    "purpose": "Real Kitab Ghar homepage rendering dynamic data supplied by Express & MongoDB.",
+    "what_it_demonstrates": "Client layout, official branding logo, Book Genie reading guide, and featured live book catalogue fetched asynchronously from the Express API.",
+    "code_refs": [
+      "EXP6-CODE-01",
+      "EXP6-CODE-05"
+    ]
+  },
+  {
+    "figure": "Figure 6.4",
+    "title": "Live Books Catalogue Route (/books) Querying MongoDB",
+    "file": "screenshots/04-books-catalogue-mongodb.png",
+    "purpose": "Live React frontend catalogue rendering 77 books directly from MongoDB.",
+    "what_it_demonstrates": "React SPA fetching the live 77-book catalogue from the Express /api/books endpoint, with live search and category filtering executing against MongoDB.",
+    "code_refs": [
+      "EXP6-CODE-05",
+      "EXP6-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 6.5",
+    "title": "Dynamic Book Details (/books/:id) using Mongoose findById",
+    "file": "screenshots/05-dynamic-book-details-crud.png",
+    "purpose": "Real book detail view fetched via GET /api/books/:id.",
+    "what_it_demonstrates": "Dynamic book record loaded from MongoDB via Mongoose findById(), rendering title, author, description, category, and real-time copy availability.",
+    "code_refs": [
+      "EXP6-CODE-05",
+      "EXP6-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 6.6",
+    "title": "Reader Membership Plans (/membership) via Mongoose Plans Collection",
+    "file": "screenshots/06-membership-plans-api.png",
+    "purpose": "Live subscription tiers loaded from MongoDB /api/plans.",
+    "what_it_demonstrates": "Dynamic membership options (Basic, Standard, Bibliophile) rendered from MongoDB documents via Express, with interactive UPI payment trigger.",
+    "code_refs": [
+      "EXP6-CODE-01",
+      "EXP6-CODE-02"
+    ]
+  },
+  {
+    "figure": "Figure 6.7",
+    "title": "User Authentication & JWT Token Exchange (/login)",
+    "file": "screenshots/07-jwt-auth-login.png",
+    "purpose": "Reader authentication form interacting with /api/auth/login.",
+    "what_it_demonstrates": "Reader login form sending credentials to Express authController, verifying hashed passwords with bcrypt in MongoDB and returning signed JWT session tokens.",
+    "code_refs": [
+      "EXP6-CODE-06",
+      "EXP6-CODE-07",
+      "EXP6-CODE-04"
+    ]
+  },
+  {
+    "figure": "Figure 6.8",
+    "title": "Protected Reader Dashboard (/dashboard) Querying User State",
+    "file": "screenshots/08-reader-dashboard-rentals.png",
+    "purpose": "Authenticated dashboard populated from MongoDB via JWT protected routes.",
+    "what_it_demonstrates": "Protected reader dashboard rendering verified user account details, rental summary, and active subscriptions guarded by Express JWT middleware.",
+    "code_refs": [
+      "EXP6-CODE-06",
+      "EXP6-CODE-07"
+    ]
+  }
+]

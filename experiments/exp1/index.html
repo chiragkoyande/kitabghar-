@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitab Ghar · Reader Registration (Experiment 1)</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="registration-shell container py-4 my-3">
+    <header class="text-center mb-4">
+      <div class="brand-header d-flex align-items-center justify-content-center gap-3 mb-2">
+        <img src="kitab-ghar-logo.png" alt="Kitab Ghar Logo" class="brand-logo img-fluid" style="max-height: 54px;">
+        <div class="text-start">
+          <h1 class="brand-wordmark h3 mb-0 text-brand">Kitab Ghar</h1>
+          <p class="text-muted small mb-0">Neighbourhood Library · Badlapur</p>
+        </div>
+      </div>
+      <p class="lead text-secondary fs-6">Reader Membership Registration &amp; Client-Side Validation</p>
+      <div id="form-alert" class="alert d-none" role="alert"></div>
+    </header>
+
+    <div class="card shadow-sm border-0 registration-card">
+      <div class="card-body p-4 p-md-5">
+        <form id="registration-form" class="needs-validation" novalidate>
+          <div class="form-section-title mb-3">
+            <h2 class="h5 text-brand mb-1">1. Personal &amp; Contact Details</h2>
+            <p class="text-muted small">Enter your reader profile information for library membership.</p>
+          </div>
+
+          <div class="row g-3 mb-4">
+            <div class="col-12 col-md-6">
+              <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="fullName" name="fullName" placeholder="e.g. Aditi Sharma" required minlength="3" autocomplete="name">
+              <div class="invalid-feedback">Please enter your full name (at least 3 characters).</div>
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required autocomplete="email">
+              <div class="invalid-feedback">Please provide a valid email address (e.g. name@domain.com).</div>
+              <div class="valid-feedback">Valid email format.</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="mobile" class="form-label">Mobile Number <span class="text-danger">*</span></label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">+91</span>
+                <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="9876543210" required pattern="[6-9][0-9]{9}" maxlength="10" autocomplete="tel">
+                <div class="invalid-feedback">Enter a valid 10-digit Indian mobile number starting with 6, 7, 8 or 9.</div>
+                <div class="valid-feedback">Valid mobile number.</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="dob" class="form-label">Date of Birth <span class="text-danger">*</span></label>
+              <input type="date" class="form-control" id="dob" name="dob" required autocomplete="bday">
+              <div class="invalid-feedback">You must be at least 13 years old to register.</div>
+              <div class="valid-feedback">Age requirement met.</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="city" class="form-label">City / Region <span class="text-danger">*</span></label>
+              <select class="form-select" id="city" name="city" required>
+                <option value="Badlapur" selected>Badlapur (Neighbourhood Delivery)</option>
+                <option value="Kulgaon">Kulgaon</option>
+                <option value="Ambernath">Ambernath</option>
+                <option value="Thane District">Other Thane District</option>
+              </select>
+              <div class="invalid-feedback">Please select your city.</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="pincode" class="form-label">Pincode <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="pincode" name="pincode" placeholder="421503" required pattern="[0-9]{6}" maxlength="6">
+              <div class="invalid-feedback">Enter a valid 6-digit postal pincode (e.g. 421503).</div>
+              <div class="valid-feedback">Valid postal code.</div>
+            </div>
+            <div class="col-12">
+              <label for="address" class="form-label">Delivery Address <span class="text-danger">*</span></label>
+              <textarea class="form-control" id="address" name="address" rows="2" placeholder="House/Flat No., Building Name, Street, Area" required minlength="5"></textarea>
+              <div class="invalid-feedback">Please enter your complete delivery address (at least 5 characters).</div>
+              <div class="valid-feedback">Address recorded.</div>
+            </div>
+          </div>
+          <div class="form-section-title mb-3 pt-2 border-top">
+            <h2 class="h5 text-brand mb-1">2. Membership &amp; Security</h2>
+            <div class="col-12 col-md-6">
+              <label for="subscriptionPlan" class="form-label">Membership Plan <span class="text-danger">*</span></label>
+              <select class="form-select" id="subscriptionPlan" name="subscriptionPlan" required>
+                <option value="" disabled selected>Choose a rental plan...</option>
+                <option value="basic">Basic (₹199/month · 1 Book at a time)</option>
+                <option value="standard">Standard (₹299/month · 3 Books at a time)</option>
+                <option value="premium">Premium (₹499/month · 5 Books at a time)</option>
+              </select>
+              <div class="invalid-feedback">Please select a membership plan.</div>
+              <div class="valid-feedback">Plan selected.</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="bookCategory" class="form-label">Preferred Book Category</label>
+              <select class="form-select" id="bookCategory" name="bookCategory">
+                <option value="Classics" selected>Classics &amp; Literature</option>
+                <option value="Literary Fiction">Literary Fiction</option>
+                <option value="Mystery & Thriller">Mystery &amp; Thriller</option>
+                <option value="Fantasy & Sci-Fi">Fantasy &amp; Sci-Fi</option>
+                <option value="Nonfiction & Self-Help">Nonfiction &amp; Self-Help</option>
+                <option value="Hindi Literature">Hindi Literature</option>
+              </select>
+              <div class="form-text">Helps the Book Genie curate initial recommendations.</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+              <input type="password" class="form-control" id="password" name="password" required minlength="8" autocomplete="new-password">
+              <div class="password-meter mt-2">
+                <div class="progress" style="height: 6px;">
+                  <div id="password-meter-bar" class="progress-bar bg-danger" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small id="password-feedback" class="text-muted d-block mt-1">Min 8 characters with uppercase, lowercase &amp; number.</small>
+              </div>
+              <div class="invalid-feedback">Password must be at least 8 chars and include uppercase, lowercase and a digit.</div>
+              <div class="valid-feedback">Strong password!</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="confirmPassword" class="form-label">Confirm Password <span class="text-danger">*</span></label>
+              <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required autocomplete="new-password">
+              <div class="invalid-feedback">Passwords do not match.</div>
+              <div class="valid-feedback">Passwords match!</div>
+            </div>
+            <div class="col-12 mt-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                <label class="form-check-label small" for="terms">
+                  I agree to Kitab Ghar's <a href="#" class="text-brand">Terms of Rental</a> and membership guidelines. <span class="text-danger">*</span>
+                </label>
+                <div class="invalid-feedback">You must accept the membership terms before registering.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4 pt-3 border-top">
+            <button type="reset" class="btn btn-outline-secondary px-4 me-md-2" id="reset-btn">Reset Form</button>
+            <button type="submit" class="btn btn-brand px-5 py-2 fw-semibold" id="submit-btn">Complete Registration →</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-cream border-0">
+          <h5 class="modal-title text-brand fw-bold" id="modalLabel">✦ Membership Registration Successful</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 text-center">
+          <div class="success-icon mb-3">✓</div>
+          <h4 class="h5 fw-bold mb-2">Welcome to Kitab Ghar Badlapur!</h4>
+          <p class="text-muted small mb-3">Your reader account and local rental membership request have been validated.</p>
+          <div id="modal-summary" class="summary-box p-3 rounded text-start bg-light small mb-3"></div>
+          <p class="text-muted extra-small mb-0">Our Badlapur team will arrange your first doorstep rental delivery upon verification.</p>
+        </div>
+        <div class="modal-footer border-0 justify-content-center pb-4">
+          <button type="button" class="btn btn-brand px-4" data-bs-dismiss="modal">Go to Reading Room</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

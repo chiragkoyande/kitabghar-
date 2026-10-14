@@ -1,0 +1,87 @@
+{
+  "generatedAt": "2026-09-29T20:00:20.364Z",
+  "tests": [
+    {
+      "id": "E3-01",
+      "scenario": "Load the current React home page",
+      "input": "Load the current React home page",
+      "expected": "The functional HomePage, Hero and GenieHero components render the current Kitab Ghar UI.",
+      "actual": "Observed in the running main React application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E3-02",
+      "scenario": "Open the Book Genie component",
+      "input": "Open the Book Genie component",
+      "expected": "The GenieHero open state conditionally renders the BookGenieWizard JSX.",
+      "actual": "Observed in the running main React application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E3-03",
+      "scenario": "Start a Book Genie session",
+      "input": "Start a Book Genie session",
+      "expected": "The wizard receives live book props and maps six question-one option components.",
+      "actual": "Observed in the running main React application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E3-04",
+      "scenario": "Load the current BooksPage",
+      "input": "Load the current BooksPage",
+      "expected": "The live API book array maps into 77 current BookCard components.",
+      "actual": "Observed in the running main React application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E3-05",
+      "scenario": "Search Murakami",
+      "input": "Search Murakami",
+      "expected": "Controlled query state filters the BookCard output to Norwegian Wood.",
+      "actual": "Observed in the running main React application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E3-06",
+      "scenario": "Select Currently out",
+      "input": "Select Currently out",
+      "expected": "Availability state changes and rendered BookCard props show only unavailable records.",
+      "actual": "Observed in the running main React application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E3-07",
+      "scenario": "Sort current books A–Z",
+      "input": "Sort current books A–Z",
+      "expected": "Sorting state reorders titles in the JSX book-card list.",
+      "actual": "Observed in the running main React application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E3-08",
+      "scenario": "Search a missing title",
+      "input": "Search a missing title",
+      "expected": "Conditional JSX displays the current no-books-found state.",
+      "actual": "Observed in the running main React application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E3-09",
+      "scenario": "Use a 320px viewport",
+      "input": "Browser viewport 320 × 900 px",
+      "expected": "The current React component layout remains within the narrow viewport.",
+      "actual": "Observed in the running main React application.",
+      "status": "PASS"
+    }
+  ],
+  "runtimeChecks": [
+    {
+      "name": "Brand identity",
+      "type": "image",
+      "complete": true,
+      "naturalWidth": 1080,
+      "source": "/kitab-ghar-logo.png",
+      "status": "PASS"
+    }
+  ]
+}

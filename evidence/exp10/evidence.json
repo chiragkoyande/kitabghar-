@@ -1,0 +1,26 @@
+{
+  "experiment": 10,
+  "title": "Deploy the Kitab Ghar MERN Application to the Cloud",
+  "requirements": [
+    "Cloud deployment",
+    "End-to-end functionality"
+  ],
+  "implemented": [
+    "Render API deployment configuration and Vercel SPA rewrite configuration exist in the current repository.",
+    "The current Vite production build completed successfully with 452 transformed modules.",
+    "The current server syntax check completed successfully.",
+    "A deployment checklist identifies exact environment variables and required post-deployment tests."
+  ],
+  "missing": [
+    "EVIDENCE MISSING: no deployed frontend URL, deployed API URL, hosting credentials or cloud dashboard access was found. Live cloud deployment and end-to-end cloud verification could not be performed."
+  ],
+  "files_used": [
+    "render.yaml",
+    "client/vercel.json",
+    "docs/deployment-checklist.md",
+    "client/package.json",
+    "README.md",
+    "server/server.js"
+  ],
+  "screenshots_required": 6
+}

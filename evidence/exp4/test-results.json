@@ -1,0 +1,95 @@
+{
+  "generatedAt": "2026-09-29T20:03:13.518Z",
+  "tests": [
+    {
+      "id": "E4-01",
+      "scenario": "Load the main Kitab Ghar SPA home page",
+      "input": "Load the main Kitab Ghar SPA home page",
+      "expected": "The Layout, Header, and Book Genie Hero components render the main UI.",
+      "actual": "Observed in the running main React Router application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E4-02",
+      "scenario": "Open the Book Genie Akinator recommendation wizard",
+      "input": "Open the Book Genie Akinator recommendation wizard",
+      "expected": "The Book Genie modal opens with interactive question flow and progress indicator.",
+      "actual": "Observed in the running main React Router application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E4-03",
+      "scenario": "Navigate to Books Catalogue (/books)",
+      "input": "Navigate to Books Catalogue (/books)",
+      "expected": "Live API-backed catalogue renders 77 books without full page reload.",
+      "actual": "Observed in the running main React Router application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E4-04",
+      "scenario": "Controlled Search Hook (useState)",
+      "input": "Controlled Search Hook (useState)",
+      "expected": "Controlled search input filters books down to Norwegian Wood.",
+      "actual": "Observed in the running main React Router application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E4-05",
+      "scenario": "Category Filter State",
+      "input": "Category Filter State",
+      "expected": "Clicking Classics filter renders only Classics books.",
+      "actual": "Observed in the running main React Router application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E4-06",
+      "scenario": "Dynamic Route Parameter (useParams)",
+      "input": "Dynamic Route Parameter (useParams)",
+      "expected": "Navigating to /books/:id resolves dynamic book ID and renders details page.",
+      "actual": "Observed in the running main React Router application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E4-07",
+      "scenario": "Membership Route (/membership)",
+      "input": "Membership Route (/membership)",
+      "expected": "Renders live reader subscription tiers with UPI payment integration.",
+      "actual": "Observed in the running main React Router application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E4-08",
+      "scenario": "Protected Route Guard (ProtectedRoute)",
+      "input": "Protected Route Guard (ProtectedRoute)",
+      "expected": "Accessing /dashboard while unauthenticated redirects user to /login.",
+      "actual": "Observed in the running main React Router application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E4-09",
+      "scenario": "Controlled Authentication Route (/login)",
+      "input": "Controlled Authentication Route (/login)",
+      "expected": "Renders controlled login form with email and password state.",
+      "actual": "Observed in the running main React Router application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E4-10",
+      "scenario": "Mobile Viewport Responsiveness (320px)",
+      "input": "Browser viewport 320 × 900 px",
+      "expected": "Main Kitab Ghar SPA layout adapts smoothly without horizontal overflow.",
+      "actual": "Observed in the running main React Router application.",
+      "status": "PASS"
+    }
+  ],
+  "runtimeChecks": [
+    {
+      "name": "Brand identity",
+      "type": "image",
+      "complete": true,
+      "naturalWidth": 1080,
+      "source": "/kitab-ghar-logo.png",
+      "status": "PASS"
+    }
+  ]
+}

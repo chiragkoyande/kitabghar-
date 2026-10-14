@@ -1,0 +1,9 @@
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem; }
+.form-grid label:nth-child(5) { grid-column: 1 / -1; }
+.registration-card .field-invalid input, .registration-card .field-invalid textarea { border-color: #b43a23; background: #fff5f1; }
+.registration-card .field-valid input, .registration-card .field-valid textarea { border-color: #4b8547; background: #f4faef; }
+.field-feedback { color: #b43a23; font-size: .72rem; line-height: 1.25; }
+.password-strength { font-size: .72rem; font-weight: 700; } .password-strength.weak { color: #b43a23; } .password-strength.almost-there { color: #b16d12; } .password-strength.strong { color: #4b8547; }
+.validation-summary { margin: 0; padding: .75rem .85rem; font-size: .8rem; text-align: left; }
+.validation-success { color: #285f2b; border: 1px solid #8fbd8a; background: #f1faee; }
+.terms-field { grid-template-columns: 18px 1fr !important; align-items: start; gap: .65rem !important; padding-top: .15rem; } .terms-field input { min-height: auto !important; margin-top: .2rem; } .terms-feedback { margin-top: -.65rem; }

@@ -1,0 +1,12 @@
+==================================================
+Kitab Ghar - REPL Demonstration
+==================================================
+
+Starting a programmatic REPL session...
+You can type JavaScript expressions here.
+Example: 2 + 3 * 4
+Example: "Kitab Ghar".toUpperCase()
+Type .help for commands, .exit to quit.
+
+kitab-ghar> Context injected: Try typing `books` or `reader` to see the data!
+

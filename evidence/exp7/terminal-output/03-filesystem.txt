@@ -1,0 +1,31 @@
+==================================================
+Kitab Ghar - File System Demonstration
+==================================================
+
+--- Synchronous File Operations ---
+Writing note...
+Reading note:
+Reader: Badlapur Reader
+Membership: Premium
+
+Appending rental reminder...
+Reading updated note:
+Reader: Badlapur Reader
+Membership: Premium
+Reminder: Return "Norwegian Wood" by tomorrow.
+
+File Size: 91 bytes
+Created At: Wed Sep 30 2026 13:21:04 GMT+0530 (India Standard Time)
+
+--- Asynchronous File Operations ---
+Writing books list asynchronously...
+Reading books list asynchronously:
+1. The Alchemist
+2. Ikigai
+3. Norwegian Wood
+
+Cleaning up temporary files...
+Deleted: kitab-ghar-books-async.txt
+Deleted: kitab-ghar-reader-note.txt
+
+✅ File system operations completed successfully.

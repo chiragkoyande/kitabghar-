@@ -1,0 +1,30 @@
+{
+  "experiment": 6,
+  "title": "Build a Node.js, Express.js, Mongoose and MongoDB Application",
+  "requirements": [
+    "Node.js Express Server Setup & Middleware Pipeline (Helmet, CORS, JSON, Rate Limit, Error Handling)",
+    "Mongoose Schema & Model Architecture (Data Types, Field Validations, Indexes, Instance Methods)",
+    "MongoDB Connection Configuration with Mongoose strictQuery",
+    "RESTful API CRUD Controllers (find, text search, findById, create, update, delete)",
+    "JWT Authentication Middleware (protect, requireRole) and Secured Routes",
+    "Connected Real Client UI Integration"
+  ],
+  "implemented": [
+    "Node.js and Express server initialization with security middleware (Helmet, CORS, rate limiting, JSON parser, and centralized error handling).",
+    "Mongoose ODM integration with typed schemas, field validators, default values, timestamps, and compound text indexing for MongoDB collections.",
+    "RESTful API CRUD endpoints for books, categories, plans, and user authentication with JWT security middleware and role-based access control.",
+    "Full end-to-end integration verified with the live Kitab Ghar React client on localhost."
+  ],
+  "missing": [],
+  "files_used": [
+    "server/package.json",
+    "server/server.js",
+    "server/config/db.js",
+    "server/models/Book.js",
+    "server/models/User.js",
+    "server/controllers/bookController.js",
+    "server/middleware/auth.js",
+    "server/controllers/authController.js"
+  ],
+  "screenshots_required": 8
+}

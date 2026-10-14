@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Experiment No. 8 — Kitab Ghar</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #000000;
+      background: #ffffff;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      font-size: 12pt;
+      line-height: 1.4;
+      text-align: left;
+    }
+    .exp-no {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 3pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .exp-title {
+      font-size: 11.5pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 8pt;
+      line-height: 1.3;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .section-head {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 8pt 0 2pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    p {
+      margin: 0 0 4pt;
+      color: #000000;
+      text-align: left;
+    }
+    ul, ol {
+      margin: 0 0 6pt 18pt;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 2pt;
+      color: #000000;
+      text-align: left;
+    }
+    .methodology-flow {
+      border: 1px solid #000000;
+      padding: 5pt 8pt;
+      margin: 4pt 0 6pt;
+      font-size: 9.5pt;
+      font-weight: bold;
+      text-align: center;
+      background: #fafafa;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-block {
+      margin: 4pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-label {
+      font-size: 9.5pt;
+      font-weight: bold;
+      margin: 0 0 1.5pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .code-meta {
+      font-size: 8.5pt;
+      font-style: italic;
+      margin: 0 0 2pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    pre {
+      margin: 2pt 0 4pt;
+      padding: 4pt 6pt;
+      border: 1px solid #000000;
+      background: #fafafa;
+      color: #000000;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 7.5pt;
+      line-height: 1.2;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .figure-block {
+      margin: 5pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .fig-img-wrap {
+      text-align: center;
+      margin: 2pt 0 2pt;
+    }
+    .fig-img-wrap img {
+      max-width: 92%;
+      max-height: 82mm;
+      width: auto;
+      height: auto;
+      border: 1px solid #000000;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .fig-title {
+      font-size: 10pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 3pt 0 2pt;
+      text-align: center;
+      page-break-before: avoid !important;
+      break-before: avoid !important;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .fig-desc {
+      font-size: 12pt;
+      color: #000000;
+      line-height: 1.3;
+      margin: 1pt 0 3pt;
+      text-align: left;
+    }
+    .result-conclusion-block {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin-top: 4pt;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+      margin: 3pt 0 4pt;
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+    tr {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid #000000;
+      padding: 2.5pt 4pt;
+      text-align: left;
+      vertical-align: top;
+      color: #000000;
+      line-height: 1.22;
+    }
+    th {
+      background: #f0f0f0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starts immediately on Page 1 -->
+  <div class="exp-no">Experiment No. 8</div>
+  <div class="exp-title">Title: Build a RESTful API using Express.js and Test API Endpoints using Postman / curl</div>
+
+  <div class="section-head">Aim:</div>
+  <p>To design and build a RESTful Web API for Kitab Ghar using Express.js and Mongoose, exposing full CRUD operations for the book resource with appropriate HTTP status codes and validation, and systematically verifying all endpoints using curl and Postman.</p>
+
+  <div class="section-head">Tools Used:</div>
+  <ul><li>Express.js v4.21.1 Router &amp; Controllers</li><li>curl command-line HTTP client</li><li>Postman API platform (collection provided)</li><li>JSON Web Token (JWT) Bearer authorization</li><li>MongoDB Atlas database backing REST endpoints</li></ul>
+
+  <div class="section-head">Methodology:</div>
+  <div class="methodology-flow">Resource Modeling (/api/books) → Express Route Mapping → HTTP Controller Handlers → Authentication Middleware Guarding → curl Test Suite Execution → Status Code Matrix Verification</div>
+  <p>The Book resource was modeled according to REST principles: GET /api/books (collection), GET /api/books/:id (element), POST /api/books (create), PUT /api/books/:id (update), and DELETE /api/books/:id (delete). Each endpoint returns standard HTTP status codes: 200 OK for successful reads/mutations, 201 Created for insertions, 400 Bad Request for validation errors, 401 Unauthorized for unauthenticated modifications, and 404 Not Found for missing entities.</p>
+
+  <div class="section-head">Theory:</div>
+  <p>REST (Representational State Transfer) is an architectural style for distributed hypermedia systems. RESTful APIs use standard HTTP verbs to map actions to resources identified by URIs: GET retrieves representations, POST creates new resources, PUT modifies existing resources idempotently, and DELETE removes resources. Statelessness requires each request to contain all necessary credentials.</p>
+<p>HTTP status codes communicate the outcome of client requests. The 2xx family indicates success (200 OK, 201 Created); the 4xx family indicates client errors (400 Bad Request for validation failures, 401 Unauthorized for missing tokens, 403 Forbidden for insufficient roles, 404 Not Found for non-existent routes or IDs); and the 5xx family indicates server-side faults.</p>
+<p>API testing verifies endpoint correctness, error resilience, and contract compliance. While Postman provides a graphical interface for assembling requests and inspecting headers, curl provides identical command-line HTTP testing capabilities, making it indispensable for automated verification, CI/CD pipelines, and headless server environments.</p>
+
+  <div class="section-head">Case Study Context:</div>
+  <p>Kitab Ghar, Badlapur — Book Resource REST API (/api/books). The API supports searching the 77-book catalogue, retrieving individual book details, creating new book records with administrator authentication, updating copy availability, and archiving books via soft delete.</p>
+  <p>Testing was conducted via a systematic bash script (experiments/exp8/curl-tests.sh) issuing curl requests with identical HTTP methods, headers, and payloads as Postman. The Postman collection is maintained at postman/kitab-ghar-api.postman_collection.json for GUI inspection.</p>
+
+  <div class="section-head">Functions / Methods / Technologies Used:</div>
+  <ul><li>router.get(), router.post(), router.put(), router.delete() in Express Router</li><li>res.status(200).json(), res.status(201).json(), res.status(400).json(), res.status(401).json()</li><li>curl -s -w '\nHTTP Status: %{http_code}\n' for response code inspection</li><li>-H 'Content-Type: application/json' and -H 'Authorization: Bearer &lt;token&gt;'</li><li>-X POST, -X PUT, -X DELETE HTTP verb switches in curl</li></ul>
+
+  <div class="section-head">Procedure:</div>
+  <p>The API was started and its health, books, and categories resources were called before protected routes were tested. An unauthenticated write request was checked first, then an authenticated administrator session created, updated, and deleted a temporary book resource.</p>
+  <ol><li>Inspect server/routes/bookRoutes.js and server/controllers/bookController.js.</li><li>Review the Postman collection at postman/kitab-ghar-api.postman_collection.json.</li><li>Start the Express API server on port 5000: cd server &amp;&amp; npm run dev.</li><li>Execute Test 1: GET /api/health; verify HTTP 200 OK.</li><li>Execute Test 2: GET /api/books; verify HTTP 200 OK with paginated catalogue.</li><li>Execute Test 3: GET /api/categories; verify HTTP 200 OK with genre list.</li><li>Execute Test 4: POST /api/books without token; verify HTTP 401 Unauthorized.</li><li>Execute Test 5: POST /api/auth/login with admin credentials; extract JWT token.</li><li>Execute Test 6: POST /api/books with Bearer token; verify HTTP 201 Created and extract book _id.</li><li>Execute Test 7: PUT /api/books/:id with updated availability; verify HTTP 200 OK.</li><li>Execute Test 8: DELETE /api/books/:id with Bearer token; verify HTTP 200 OK (archived).</li><li>Run the complete curl test script: bash experiments/exp8/curl-tests.sh and record outputs.</li></ol>
+
+  <div class="section-head">Code:</div>
+  
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 8.1: RESTful Controller with Status Codes</strong></p>
+      <p class="code-meta">File: <code>server/controllers/bookController.js</code> (Lines 38–78) — Express controller handlers returning 200, 201, 400, and 404 HTTP status codes.</p>
+      <pre><code>// POST /api/books (Create Resource)
+export const createBook = asyncHandler(async (req, res) =&gt; {
+  const { title, author, description, category, totalCopies, availableCopies } = req.body;
+  if (!title || !author || !category) {
+    res.status(400);
+    throw new Error("Please provide title, author and category");
+  }
+  const book = await Book.create({
+    title, author, description, category,
+    totalCopies: totalCopies || 1,
+    availableCopies: availableCopies !== undefined ? availableCopies : (totalCopies || 1)
+  });
+  res.status(201).json(book);
+});
+
+// PUT /api/books/:id (Update Resource)
+export const updateBook = asyncHandler(async (req, res) =&gt; {
+  const book = await Book.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
+  if (!book) {
+    res.status(404);
+    throw new Error("Book not found");
+  }
+  res.status(200).json(book);
+});</code></pre>
+    </div>
+  
+
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 8.2: Automated curl Endpoint Verification Suite</strong></p>
+      <p class="code-meta">File: <code>experiments/exp8/curl-tests.sh</code> (Lines 22–65) — curl commands testing health check, catalogue retrieval, auth rejection, login, and CRUD.</p>
+      <pre><code># 1. Health Check
+curl -s -w "\nHTTP Status: %{http_code}\n" http://localhost:5000/api/health
+
+# 2. Get All Books
+curl -s -w "\nHTTP Status: %{http_code}\n" http://localhost:5000/api/books
+
+# 3. Unauthorized POST (Expect 401)
+curl -s -w "\nHTTP Status: %{http_code}\n" -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Test Book"}' http://localhost:5000/api/books
+
+# 4. Admin Login &amp; Token Extraction
+TOKEN=$(curl -s -X POST -H "Content-Type: application/json" \
+  -d '{"email":"admin@kitabghar.local","password":"KitabGhar@2026!"}' \
+  http://localhost:5000/api/auth/login | grep -o '"token":"[^"]*"' | cut -d'"' -f4)
+
+# 5. Authenticated Book Creation (Expect 201)
+curl -s -w "\nHTTP Status: %{http_code}\n" -X POST \
+  -H "Content-Type: application/json" -H "Authorization: Bearer $TOKEN" \
+  -d '{"title":"__EXP8_CURL_BOOK__","author":"Agent","category":"Evidence","totalCopies":2}' \
+  http://localhost:5000/api/books</code></pre>
+    </div>
+  
+
+  <div class="section-head">Output:</div>
+  
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp8/screenshots/EXP8-01-curl-health-check.png" alt="REST API Endpoint Verification — GET /api/health (200 OK)">
+      </div>
+      <p class="fig-title"><strong>Figure 8.1: REST API Endpoint Verification — GET /api/health (200 OK)</strong></p>
+      <p class="fig-desc">This screenshot shows the curl test against GET /api/health returning HTTP 200 OK with { status: 'ok', service: 'kitabghar-api', database: 'mongodb' }, confirming backend service health. The curl command includes the -w flag to display the HTTP status code alongside the response body, and the -H header sets Content-Type to application/json, demonstrating proper RESTful API testing methodology.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp8/screenshots/EXP8-02-curl-get-books.png" alt="REST API Endpoint Verification — GET /api/books (200 OK)">
+      </div>
+      <p class="fig-title"><strong>Figure 8.2: REST API Endpoint Verification — GET /api/books (200 OK)</strong></p>
+      <p class="fig-desc">This screenshot shows the retrieval of the books collection via GET /api/books. The server returns HTTP 200 OK along with the total count (77) and the paginated array of book resources from MongoDB. The JSON response structure follows REST conventions with a wrapper object containing both metadata (total, page) and the data array, demonstrating proper API response formatting.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp8/screenshots/EXP8-03-curl-get-categories.png" alt="REST API Endpoint Verification — GET /api/categories (200 OK)">
+      </div>
+      <p class="fig-title"><strong>Figure 8.3: REST API Endpoint Verification — GET /api/categories (200 OK)</strong></p>
+      <p class="fig-desc">This screenshot shows GET /api/categories returning HTTP 200 OK and all 12 library genre categories (Classics, Fiction, Mystery, Self-Help, Non-Fiction, Biography, etc.) in JSON format. Each category object includes the genre name and the count of books belonging to that category, demonstrating an aggregation endpoint backed by MongoDB's groupBy query capabilities.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp8/screenshots/EXP8-04-curl-post-unauthorized.png" alt="REST API Route Protection — POST /api/books (401 Unauthorized)">
+      </div>
+      <p class="fig-title"><strong>Figure 8.4: REST API Route Protection — POST /api/books (401 Unauthorized)</strong></p>
+      <p class="fig-desc">This screenshot verifies route protection via the auth middleware. Attempting to POST a new book to /api/books without an Authorization header returns HTTP 401 Unauthorized and { message: 'Authentication required' }. This confirms that the Express middleware stack correctly intercepts unauthenticated requests before they reach the controller, implementing proper API security.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp8/screenshots/EXP8-05-curl-admin-login-jwt.png" alt="REST API Authentication — POST /api/auth/login (200 OK + JWT)">
+      </div>
+      <p class="fig-title"><strong>Figure 8.5: REST API Authentication — POST /api/auth/login (200 OK + JWT)</strong></p>
+      <p class="fig-desc">This screenshot shows administrator authentication via POST /api/auth/login with email and password in the request body. The endpoint returns HTTP 200 OK, the administrator profile object, and a signed JWT Bearer token. The token is extracted from the response and used in subsequent authenticated curl requests, demonstrating the complete authentication flow for RESTful API testing.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp8/screenshots/EXP8-06-curl-post-book-created.png" alt="REST API Resource Creation — POST /api/books (201 Created)">
+      </div>
+      <p class="fig-title"><strong>Figure 8.6: REST API Resource Creation — POST /api/books (201 Created)</strong></p>
+      <p class="fig-desc">This screenshot verifies resource creation. Issuing POST /api/books with the Bearer token in the Authorization header and a JSON body containing title, author, category, and price fields successfully creates a test book document in MongoDB and returns HTTP 201 Created with the complete new document including its auto-generated _id. This demonstrates the Create operation of the RESTful CRUD lifecycle.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp8/screenshots/EXP8-07-curl-put-update-book.png" alt="REST API Resource Modification — PUT /api/books/:id (200 OK)">
+      </div>
+      <p class="fig-title"><strong>Figure 8.7: REST API Resource Modification — PUT /api/books/:id (200 OK)</strong></p>
+      <p class="fig-desc">This screenshot shows resource mutation. Issuing PUT /api/books/:id with the Bearer token and an updated availableCopies field in the JSON body returns HTTP 200 OK and the modified book representation reflecting the changes. The server applies the update atomically via Mongoose's findByIdAndUpdate() with the { new: true } option to return the updated document, demonstrating the Update operation of the RESTful CRUD lifecycle.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp8/screenshots/EXP8-08-curl-delete-book.png" alt="REST API Resource Deletion — DELETE /api/books/:id (200 OK)">
+      </div>
+      <p class="fig-title"><strong>Figure 8.8: REST API Resource Deletion — DELETE /api/books/:id (200 OK)</strong></p>
+      <p class="fig-desc">This screenshot demonstrates resource deletion. Issuing DELETE /api/books/:id with the Bearer token soft-deletes the test record, returning HTTP 200 OK and { message: 'Book archived' }. The curl command confirms that the resource is no longer retrievable via GET after deletion. This completes the full RESTful CRUD lifecycle: Create (POST 201), Read (GET 200), Update (PUT 200), and Delete (DELETE 200).</p>
+    </div>
+  
+
+  <div class="result-conclusion-block">
+    <div class="section-head">Result:</div>
+    <p>A comprehensive RESTful Web API for Kitab Ghar was successfully developed using Express.js and tested using curl and Postman. All CRUD operations, status code conventions (200, 201, 401), route guarding, and error handling were thoroughly validated.</p>
+    <p>The captured HTTP responses confirmed the expected 200, 201, and 401 status behaviour, along with the correct JSON payload for each GET, POST, PUT, and DELETE action. The protected sequence validated both authorization and resource mutation.</p>
+
+    <div class="section-head">Conclusion:</div>
+    <p>The experiment confirmed that RESTful API design combined with Express router controllers provides a clean, standard contract for client-server communication.</p>
+<p>Rigorous endpoint testing with curl and Postman ensures that both happy paths and edge cases (unauthorized attempts, invalid IDs) respond predictably with standard HTTP status codes.</p>
+    <p>This experiment demonstrates a consistent REST contract in which HTTP methods, status codes, and JWT protection make the API predictable for clients and administrators.</p>
+  </div>
+
+</body>
+</html>

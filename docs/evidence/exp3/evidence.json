@@ -1,0 +1,28 @@
+{
+  "experiment": 3,
+  "title": "Create a React Application using Functional Components, JSX, Props and State",
+  "requirements": [
+    "Functional components",
+    "JSX",
+    "Props",
+    "State"
+  ],
+  "implemented": [
+    "Current React functional components render the Kitab Ghar layout, home page, hero, Book Genie, live Books page and reusable BookCard list.",
+    "Current JSX passes live book objects to BookCard and passes live books, loading state and callbacks to BookGenieWizard as props.",
+    "Current useState values control the Books-page search, category, availability and sort choices as well as Book Genie loading and popup state."
+  ],
+  "missing": [],
+  "files_used": [
+    "client/README.md",
+    "client/package.json",
+    "client/index.html",
+    "client/src/main.jsx",
+    "client/src/App.jsx",
+    "client/src/pages/Pages.jsx",
+    "client/src/components/BookCard.jsx",
+    "client/src/components/hero/GenieHero.jsx",
+    "client/src/context/AuthContext.jsx"
+  ],
+  "screenshots_required": 8
+}

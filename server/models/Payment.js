@@ -1,0 +1,3 @@
+import mongoose from "mongoose";
+const paymentSchema = new mongoose.Schema({ userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true }, subscriptionId: { type: mongoose.Schema.Types.ObjectId, ref: "Subscription" }, amount: { type: Number, required: true, min: 0 }, currency: { type: String, default: "INR" }, method: { type: String, enum: ["demo", "upi"], default: "demo" }, transactionReference: String, status: { type: String, enum: ["pending", "simulated", "paid", "failed"], default: "simulated" }, paidAt: Date, verifiedAt: Date, verifiedBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" }, payerReference: String }, { timestamps: true });
+export const Payment = mongoose.model("Payment", paymentSchema);

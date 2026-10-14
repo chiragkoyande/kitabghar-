@@ -1,0 +1,31 @@
+{
+  "info": {
+    "name": "Kitab Ghar REST API",
+    "description": "Experiment 8 requests for the Kitab Ghar Badlapur API, including success and failure cases.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5000" },
+    { "key": "token", "value": "" },
+    { "key": "testEmail", "value": "" },
+    { "key": "testUserId", "value": "" },
+    { "key": "bookId", "value": "000000000000000000000000" }
+  ],
+  "item": [
+    { "name": "Health — 200", "request": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/api/health", "host": ["{{baseUrl}}"], "path": ["api", "health"] } } },
+    { "name": "Books — list 200", "request": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/api/books", "host": ["{{baseUrl}}"], "path": ["api", "books"] } } },
+    { "name": "Books — search 200", "request": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/api/books?search=coffee", "host": ["{{baseUrl}}"], "path": ["api", "books"], "query": [{ "key": "search", "value": "coffee" }] } } },
+    { "name": "Book — invalid ID 400", "request": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/api/books/not-an-object-id", "host": ["{{baseUrl}}"], "path": ["api", "books", "not-an-object-id"] } } },
+    { "name": "Book — missing resource 404", "request": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/api/books/{{bookId}}", "host": ["{{baseUrl}}"], "path": ["api", "books", "{{bookId}}"] } } },
+    { "name": "Auth — register 201", "event": [{ "listen": "test", "script": { "exec": ["const body = pm.response.json();", "pm.collectionVariables.set('token', body.token);", "pm.collectionVariables.set('testEmail', body.user.email);", "pm.collectionVariables.set('testUserId', body.user.id);"] } }], "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"name\": \"Postman Reader\",\n  \"email\": \"reader-{{$timestamp}}@example.com\",\n  \"password\": \"DemoPass123!\",\n  \"city\": \"Badlapur\",\n  \"pincode\": \"421503\"\n}" }, "url": { "raw": "{{baseUrl}}/api/auth/register", "host": ["{{baseUrl}}"], "path": ["api", "auth", "register"] } } },
+    { "name": "Auth — login 200", "event": [{ "listen": "test", "script": { "exec": ["const body = pm.response.json();", "pm.collectionVariables.set('token', body.token);"] } }], "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"email\": \"{{testEmail}}\",\n  \"password\": \"DemoPass123!\"\n}" }, "url": { "raw": "{{baseUrl}}/api/auth/login", "host": ["{{baseUrl}}"], "path": ["api", "auth", "login"] } } },
+    { "name": "Auth — invalid credentials 401", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"email\": \"wrong@example.com\",\n  \"password\": \"wrong-password\"\n}" }, "url": { "raw": "{{baseUrl}}/api/auth/login", "host": ["{{baseUrl}}"], "path": ["api", "auth", "login"] } } },
+    { "name": "Auth — current user 200", "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": { "raw": "{{baseUrl}}/api/auth/me", "host": ["{{baseUrl}}"], "path": ["api", "auth", "me"] } } },
+    { "name": "Users — unauthenticated 401", "request": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/api/users", "host": ["{{baseUrl}}"], "path": ["api", "users"] } } },
+    { "name": "Subscription — invalid plan 404", "request": { "method": "POST", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"planId\": \"000000000000000000000000\"\n}" }, "url": { "raw": "{{baseUrl}}/api/subscriptions", "host": ["{{baseUrl}}"], "path": ["api", "subscriptions"] } } },
+    { "name": "Rentals — missing body 400", "request": { "method": "POST", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{}" }, "url": { "raw": "{{baseUrl}}/api/rentals", "host": ["{{baseUrl}}"], "path": ["api", "rentals"] } } },
+    { "name": "Rentals — my rentals 200", "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": { "raw": "{{baseUrl}}/api/rentals/me", "host": ["{{baseUrl}}"], "path": ["api", "rentals", "me"] } } },
+    { "name": "Admin — rentals forbidden 403", "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": { "raw": "{{baseUrl}}/api/rentals", "host": ["{{baseUrl}}"], "path": ["api", "rentals"] } } },
+    { "name": "Unknown route — 404", "request": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/api/does-not-exist", "host": ["{{baseUrl}}"], "path": ["api", "does-not-exist"] } } }
+  ]
+}

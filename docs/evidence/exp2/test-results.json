@@ -1,0 +1,95 @@
+{
+  "generatedAt": "2026-09-29T19:59:12.388Z",
+  "tests": [
+    {
+      "id": "E2-01",
+      "scenario": "Load the current main home page",
+      "input": "Load the current main home page",
+      "expected": "The official logo, Book Genie hero and main navigation render.",
+      "actual": "Observed in the running main Kitab Ghar application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E2-02",
+      "scenario": "Open the real Book Genie",
+      "input": "Open the real Book Genie",
+      "expected": "The current Book Genie popup opens from its hero action.",
+      "actual": "Observed in the running main Kitab Ghar application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E2-03",
+      "scenario": "Start a Book Genie session",
+      "input": "Start a Book Genie session",
+      "expected": "The popup changes from its start panel to question 1.",
+      "actual": "Observed in the running main Kitab Ghar application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E2-04",
+      "scenario": "Choose Mystery and suspense",
+      "input": "Choose Mystery and suspense",
+      "expected": "The chosen category changes the wizard to the mystery-specific question flow.",
+      "actual": "Observed in the running main Kitab Ghar application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E2-05",
+      "scenario": "Choose Detective",
+      "input": "Choose Detective",
+      "expected": "The next popup question requests a reading pace.",
+      "actual": "Observed in the running main Kitab Ghar application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E2-06",
+      "scenario": "Choose Fast-paced",
+      "input": "Choose Fast-paced",
+      "expected": "The next popup question requests a classic or modern preference.",
+      "actual": "Observed in the running main Kitab Ghar application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E2-07",
+      "scenario": "Complete Book Genie preferences",
+      "input": "Complete Book Genie preferences",
+      "expected": "Three API-backed book recommendations render after the final choice.",
+      "actual": "Observed in the running main Kitab Ghar application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E2-08",
+      "scenario": "Load the live main catalogue",
+      "input": "Load the live main catalogue",
+      "expected": "All 77 API-backed book cards render in the current Books page.",
+      "actual": "Observed in the running main Kitab Ghar application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E2-09",
+      "scenario": "Search Murakami in the current Books page",
+      "input": "Search Murakami in the current Books page",
+      "expected": "The API-backed search leaves Norwegian Wood as the matching book.",
+      "actual": "Observed in the running main Kitab Ghar application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E2-10",
+      "scenario": "Filter and sort the current Books page",
+      "input": "Filter and sort the current Books page",
+      "expected": "Currently out filter returns unavailable cards and A–Z sorting reorders their titles.",
+      "actual": "Observed in the running main Kitab Ghar application.",
+      "status": "PASS"
+    }
+  ],
+  "runtimeChecks": [
+    {
+      "name": "Brand identity",
+      "type": "image",
+      "complete": true,
+      "naturalWidth": 1080,
+      "source": "/kitab-ghar-logo.png",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "experiment": 7,
+  "title": "Demonstrate Node.js REPL, HTTP Server, File System, Buffers, Streams and Event Loop",
+  "requirements": [
+    "REPL",
+    "HTTP server",
+    "File system",
+    "Buffers",
+    "Streams",
+    "Event loop"
+  ],
+  "implemented": [
+    "A current Node.js script runs all prescribed features using Kitab Ghar labels and the current catalogue source.",
+    "A temporary HTTP server responds to a real fetch request on an OS-assigned localhost port.",
+    "File-system and CRUD-like temporary-file handling finishes with verified cleanup."
+  ],
+  "missing": [],
+  "files_used": [
+    "experiments/exp7/node-demo.mjs",
+    "experiments/exp7/package.json",
+    "server/data/catalogue.js"
+  ],
+  "screenshots_required": 8
+}

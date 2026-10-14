@@ -1,0 +1,82 @@
+[
+  {
+    "figure": "Figure 8.1",
+    "title": "GET /api/health",
+    "file": "screenshots/01-api-response.png",
+    "purpose": "Rendered from the actual saved JSON response from the isolated API test.",
+    "what_it_demonstrates": "{\"status\":200,\"body\":{\"status\":\"ok\",\"service\":\"kitabghar-api\",\"database\":\"mongodb\"}}",
+    "code_refs": [
+      "EXP8-CODE-01"
+    ]
+  },
+  {
+    "figure": "Figure 8.2",
+    "title": "GET /api/books",
+    "file": "screenshots/02-api-response.png",
+    "purpose": "Rendered from the actual saved JSON response from the isolated API test.",
+    "what_it_demonstrates": "{\"status\":200,\"count\":77,\"first\":\"Deewar Mein Ek Khidki Rehti Thi\"}",
+    "code_refs": [
+      "EXP8-CODE-02"
+    ]
+  },
+  {
+    "figure": "Figure 8.3",
+    "title": "GET /api/categories",
+    "file": "screenshots/03-api-response.png",
+    "purpose": "Rendered from the actual saved JSON response from the isolated API test.",
+    "what_it_demonstrates": "{\"status\":200,\"count\":13}",
+    "code_refs": [
+      "EXP8-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 8.4",
+    "title": "Unauthorized POST /api/books",
+    "file": "screenshots/04-api-response.png",
+    "purpose": "Rendered from the actual saved JSON response from the isolated API test.",
+    "what_it_demonstrates": "{\"status\":401,\"message\":\"Authentication required\"}",
+    "code_refs": [
+      "EXP8-CODE-04"
+    ]
+  },
+  {
+    "figure": "Figure 8.5",
+    "title": "POST /api/auth/login",
+    "file": "screenshots/05-api-response.png",
+    "purpose": "Rendered from the actual saved JSON response from the isolated API test.",
+    "what_it_demonstrates": "{\"status\":200,\"role\":\"admin\"}",
+    "code_refs": [
+      "EXP8-CODE-05"
+    ]
+  },
+  {
+    "figure": "Figure 8.6",
+    "title": "Authenticated POST /api/books",
+    "file": "screenshots/06-api-response.png",
+    "purpose": "Rendered from the actual saved JSON response from the isolated API test.",
+    "what_it_demonstrates": "{\"status\":201,\"id\":\"6abc1a72315cc420423961d9\",\"title\":\"__EXP8_API_EVIDENCE_TEMP__\",\"availableCopies\":2}",
+    "code_refs": [
+      "EXP8-CODE-02"
+    ]
+  },
+  {
+    "figure": "Figure 8.7",
+    "title": "Authenticated PUT /api/books/:id",
+    "file": "screenshots/07-api-response.png",
+    "purpose": "Rendered from the actual saved JSON response from the isolated API test.",
+    "what_it_demonstrates": "{\"status\":200,\"availableCopies\":1}",
+    "code_refs": [
+      "EXP8-CODE-02"
+    ]
+  },
+  {
+    "figure": "Figure 8.8",
+    "title": "Authenticated DELETE /api/books/:id",
+    "file": "screenshots/08-api-response.png",
+    "purpose": "Rendered from the actual saved JSON response from the isolated API test.",
+    "what_it_demonstrates": "{\"status\":200,\"message\":\"Book archived\",\"statusAfterDelete\":\"archived\"}",
+    "code_refs": [
+      "EXP8-CODE-02"
+    ]
+  }
+]

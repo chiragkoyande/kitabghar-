@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-09-29T20:19:07.543Z",
+  "evidence": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "experiment": 3
+  },
+  "screenshots": {
+    "status": "PASS",
+    "count": 8,
+    "entries": [
+      {
+        "file": "screenshots/01-main-react-home.png",
+        "bytes": 437827
+      },
+      {
+        "file": "screenshots/02-react-home-components.png",
+        "bytes": 469460
+      },
+      {
+        "file": "screenshots/03-book-genie-state.png",
+        "bytes": 276789
+      },
+      {
+        "file": "screenshots/04-book-genie-props.png",
+        "bytes": 219127
+      },
+      {
+        "file": "screenshots/05-live-bookcard-components.png",
+        "bytes": 388707
+      },
+      {
+        "file": "screenshots/06-search-state.png",
+        "bytes": 117309
+      },
+      {
+        "file": "screenshots/07-conditional-empty-state.png",
+        "bytes": 71238
+      },
+      {
+        "file": "screenshots/08-main-mobile-react.png",
+        "bytes": 82185
+      }
+    ],
+    "errors": []
+  },
+  "content": {
+    "status": "PASS",
+    "missingHeadings": [],
+    "figureReferences": 24,
+    "errors": []
+  },
+  "pdf": {
+    "status": "PASS",
+    "pages": 17,
+    "errors": [],
+    "textLength": 20356
+  }
+}

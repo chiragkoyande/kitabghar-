@@ -1,0 +1,34 @@
+==================================================
+Kitab Ghar - Buffers Demonstration
+==================================================
+
+--- 1. Creating Buffers ---
+Original String: Kitab Ghar · Badlapur
+Buffer object: <Buffer 4b 69 74 61 62 20 47 68 61 72 20 c2 b7 20 42 61 64 6c 61 70 75 72>
+
+--- 2. Buffer Encodings ---
+toString(utf8): Kitab Ghar · Badlapur
+toString(hex): 4b69746162204768617220c2b7204261646c61707572
+toString(base64): S2l0YWIgR2hhciDCtyBCYWRsYXB1cg==
+
+--- 3. String vs Buffer Length ---
+String length: 21 characters
+Buffer length: 22 bytes
+
+--- 4. Allocating & Writing ---
+Empty Allocated Buffer: <Buffer 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00>
+After writing "Ikigai": <Buffer 49 6b 69 67 61 69 00 00 00 00 00 00 00 00 00 00>
+Decoded text: Ikigai
+
+--- 5. Concatenating Buffers ---
+buf1: Norwegian 
+buf2: Wood
+Concatenated: Norwegian Wood
+
+--- 6. Extracting Portions ---
+Sliced buffer (bytes 6-10): Ghar
+
+--- 7. Copying Buffers ---
+Target Buffer after copy: Library
+
+✅ Buffer operations completed.

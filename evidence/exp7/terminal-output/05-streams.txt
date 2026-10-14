@@ -1,0 +1,49 @@
+==================================================
+Kitab Ghar - Streams Demonstration
+==================================================
+
+--- 1. Reading File via Stream ---
+Source: /home/chiragk/freelance/kitabghar/server/data/catalogue.js
+Received Chunk #1: 1024 bytes
+Received Chunk #2: 1024 bytes
+Received Chunk #3: 1024 bytes
+Received Chunk #4: 1024 bytes
+Received Chunk #5: 1024 bytes
+Received Chunk #6: 1024 bytes
+Received Chunk #7: 1024 bytes
+Received Chunk #8: 1024 bytes
+Received Chunk #9: 1024 bytes
+Received Chunk #10: 1024 bytes
+Received Chunk #11: 1024 bytes
+Received Chunk #12: 1024 bytes
+Received Chunk #13: 1024 bytes
+Received Chunk #14: 1024 bytes
+Received Chunk #15: 1024 bytes
+Received Chunk #16: 1024 bytes
+Received Chunk #17: 1024 bytes
+Received Chunk #18: 1024 bytes
+Received Chunk #19: 1024 bytes
+Received Chunk #20: 1024 bytes
+Received Chunk #21: 1024 bytes
+Received Chunk #22: 1024 bytes
+Received Chunk #23: 1024 bytes
+Received Chunk #24: 1024 bytes
+Received Chunk #25: 1024 bytes
+Received Chunk #26: 1024 bytes
+Received Chunk #27: 1024 bytes
+Received Chunk #28: 1024 bytes
+Received Chunk #29: 1024 bytes
+Received Chunk #30: 353 bytes
+
+--- Stream Reading Completed ---
+Total Chunks: 30
+Total Bytes: 30049
+
+--- 2. Piping Streams (Read -> Write) ---
+Piping catalogue content to: kitab-ghar-summary-output.txt
+✅ Piping completed successfully.
+
+Cleaning up temporary files...
+Deleted: kitab-ghar-summary-output.txt
+
+✅ Stream operations completed.

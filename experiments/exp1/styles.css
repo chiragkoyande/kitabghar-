@@ -1,0 +1,187 @@
+/**
+ * Kitab Ghar · Experiment 1 Responsive Styles
+ * Design system tokens matching main application with Bootstrap integration
+ */
+
+:root {
+  --cream: #f7f0df;
+  --cream-light: #fffdf8;
+  --orange: #c95722;
+  --orange-dark: #a84018;
+  --brown: #3b2118;
+  --brown-soft: #725849;
+  --green: #5c6b4f;
+  --line: #dfd2b9;
+  --white: #ffffff;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--cream);
+  color: var(--brown);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.text-brand {
+  color: var(--orange) !important;
+  font-family: var(--font-serif);
+}
+
+.bg-cream {
+  background-color: var(--cream) !important;
+}
+
+.registration-shell {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.registration-card {
+  background-color: var(--cream-light);
+  border-radius: 16px;
+  box-shadow: 0 12px 36px rgba(59, 33, 24, 0.08) !important;
+  border: 1px solid var(--line) !important;
+}
+
+.brand-header img {
+  border-radius: 8px;
+}
+
+.brand-wordmark {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--brown);
+  margin-bottom: 0.35rem;
+}
+
+.form-control, .form-select {
+  border: 1px solid var(--line);
+  background-color: var(--white);
+  color: var(--brown);
+  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 0.25rem rgba(201, 87, 34, 0.18);
+}
+
+.input-group-text {
+  background-color: var(--cream);
+  border-color: var(--line);
+  color: var(--brown-soft);
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.form-section-title h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.btn-brand {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  color: #ffffff;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-brand:hover, .btn-brand:focus {
+  background-color: var(--orange-dark);
+  border-color: var(--orange-dark);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(201, 87, 34, 0.25);
+}
+
+.btn-outline-secondary {
+  border-color: var(--line);
+  color: var(--brown-soft);
+  border-radius: 8px;
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--cream);
+  border-color: var(--brown-soft);
+  color: var(--brown);
+}
+
+.password-meter .progress {
+  background-color: var(--cream);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.success-icon {
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  border-radius: 50%;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.summary-box {
+  background-color: var(--cream) !important;
+  border: 1px solid var(--line);
+}
+
+.extra-small {
+  font-size: 0.78rem;
+}
+
+/* Custom form validation feedback styling */
+.was-validated .form-control:invalid, .form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.was-validated .form-control:valid, .form-control.is-valid {
+  border-color: #198754;
+}
+
+/* ── Responsive Mobile & Tablet Layout Media Queries ── */
+@media (max-width: 768px) {
+  .registration-shell {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .registration-card .card-body {
+    padding: 1.5rem !important;
+  }
+  .brand-wordmark {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+  .registration-shell {
+    margin-top: 0.5rem !important;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .card-body {
+    padding: 1.25rem !important;
+  }
+  .btn-brand, .btn-outline-secondary {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+}

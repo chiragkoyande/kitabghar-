@@ -1,0 +1,95 @@
+{
+  "generatedAt": "2026-09-29T20:04:03.573Z",
+  "tests": [
+    {
+      "id": "E6-01",
+      "scenario": "Express Server & MongoDB Health Check (GET /api/health)",
+      "input": "Express Server & MongoDB Health Check (GET /api/health)",
+      "expected": "Server returns HTTP 200 with status ok and database mongodb.",
+      "actual": "Observed in the running Node.js / Express API.",
+      "status": "PASS"
+    },
+    {
+      "id": "E6-02",
+      "scenario": "Mongoose Books Collection Query (GET /api/books)",
+      "input": "Mongoose Books Collection Query (GET /api/books)",
+      "expected": "Returns HTTP 200 with count 77 and an array of book documents.",
+      "actual": "Observed in the running Node.js / Express API.",
+      "status": "PASS"
+    },
+    {
+      "id": "E6-03",
+      "scenario": "Mongoose Text Search Query (GET /api/books?search=Murakami)",
+      "input": "Mongoose Text Search Query (GET /api/books?search=Murakami)",
+      "expected": "Text search query matches Norwegian Wood by Haruki Murakami.",
+      "actual": "Observed in the running Node.js / Express API.",
+      "status": "PASS"
+    },
+    {
+      "id": "E6-04",
+      "scenario": "Mongoose Single Document by ID (GET /api/books/:id)",
+      "input": "Mongoose Single Document by ID (GET /api/books/:id)",
+      "expected": "Retrieves targeted book record matching requested MongoDB ObjectId.",
+      "actual": "Observed in the running Node.js / Express API.",
+      "status": "PASS"
+    },
+    {
+      "id": "E6-05",
+      "scenario": "Mongoose Categories Collection Query (GET /api/categories)",
+      "input": "Mongoose Categories Collection Query (GET /api/categories)",
+      "expected": "Returns distinct categories populated from MongoDB.",
+      "actual": "Observed in the running Node.js / Express API.",
+      "status": "PASS"
+    },
+    {
+      "id": "E6-06",
+      "scenario": "Mongoose Plans Collection Query (GET /api/plans)",
+      "input": "Mongoose Plans Collection Query (GET /api/plans)",
+      "expected": "Returns active subscription tiers with pricing and benefits.",
+      "actual": "Observed in the running Node.js / Express API.",
+      "status": "PASS"
+    },
+    {
+      "id": "E6-07",
+      "scenario": "Express 404 Not Found & Error Handler Middleware (GET /api/unknown-endpoint)",
+      "input": "Express 404 Not Found & Error Handler Middleware (GET /api/unknown-endpoint)",
+      "expected": "Returns HTTP 404 with structured JSON error message.",
+      "actual": "Observed in the running Node.js / Express API.",
+      "status": "PASS"
+    },
+    {
+      "id": "E6-08",
+      "scenario": "JWT Authentication Middleware Protection (GET /api/notifications/me without token)",
+      "input": "JWT Authentication Middleware Protection (GET /api/notifications/me without token)",
+      "expected": "Unauthenticated request is rejected with HTTP 401 and Authentication required.",
+      "actual": "Observed in the running Node.js / Express API.",
+      "status": "PASS"
+    },
+    {
+      "id": "E6-09",
+      "scenario": "Connected React SPA Homepage Load",
+      "input": "Load main Kitab Ghar application connected to Express API",
+      "expected": "Layout, Book Genie Hero and live API data render seamlessly.",
+      "actual": "Observed in the running main application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E6-10",
+      "scenario": "Live Books Catalogue Frontend Integration",
+      "input": "Navigate to /books in the connected SPA",
+      "expected": "React frontend displays 77 book cards populated directly from MongoDB.",
+      "actual": "Observed in the running main application.",
+      "status": "PASS"
+    }
+  ],
+  "runtimeChecks": [
+    {
+      "name": "Brand identity",
+      "type": "image",
+      "complete": true,
+      "naturalWidth": 1080,
+      "source": "/kitab-ghar-logo.png",
+      "status": "PASS"
+    }
+  ]
+}

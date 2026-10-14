@@ -1,0 +1,28 @@
+{
+  "experiment": 4,
+  "title": "Develop a Single Page Application using React Router, Hooks and Component Lifecycle Behaviour",
+  "requirements": [
+    "React Router (BrowserRouter, Routes, Route, NavLink, Link)",
+    "React Hooks (useState, useEffect, useContext, useMemo, useParams, useNavigate)",
+    "Single Page Application (SPA) architecture",
+    "Component lifecycle behaviour (mount, update, cleanup, param change)",
+    "Protected route guarding"
+  ],
+  "implemented": [
+    "React Router v6 creates a Single Page Application with declarative BrowserRouter, Routes, Route, NavLink, Link, and Outlet layout.",
+    "Dynamic routing with useParams() extracts book ID parameters and useEffect() manages async lifecycle data fetching and title synchronization.",
+    "Custom React Hooks (useState, useEffect, useContext, useMemo, useNavigate, useLocation) control search, filtering, auth sessions, and protected route guarding."
+  ],
+  "missing": [],
+  "files_used": [
+    "client/README.md",
+    "client/package.json",
+    "client/index.html",
+    "client/src/App.jsx",
+    "client/src/components/Layout.jsx",
+    "client/src/pages/Pages.jsx",
+    "client/src/context/AuthContext.jsx",
+    "client/src/components/ProtectedRoute.jsx"
+  ],
+  "screenshots_required": 8
+}

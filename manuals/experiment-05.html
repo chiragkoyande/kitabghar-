@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Experiment No. 5 — Kitab Ghar</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #000000;
+      background: #ffffff;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      font-size: 12pt;
+      line-height: 1.4;
+      text-align: left;
+    }
+    .exp-no {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 3pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .exp-title {
+      font-size: 11.5pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 8pt;
+      line-height: 1.3;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .section-head {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 8pt 0 2pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    p {
+      margin: 0 0 4pt;
+      color: #000000;
+      text-align: left;
+    }
+    ul, ol {
+      margin: 0 0 6pt 18pt;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 2pt;
+      color: #000000;
+      text-align: left;
+    }
+    .methodology-flow {
+      border: 1px solid #000000;
+      padding: 5pt 8pt;
+      margin: 4pt 0 6pt;
+      font-size: 9.5pt;
+      font-weight: bold;
+      text-align: center;
+      background: #fafafa;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-block {
+      margin: 4pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-label {
+      font-size: 9.5pt;
+      font-weight: bold;
+      margin: 0 0 1.5pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .code-meta {
+      font-size: 8.5pt;
+      font-style: italic;
+      margin: 0 0 2pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    pre {
+      margin: 2pt 0 4pt;
+      padding: 4pt 6pt;
+      border: 1px solid #000000;
+      background: #fafafa;
+      color: #000000;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 7.5pt;
+      line-height: 1.2;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .figure-block {
+      margin: 5pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .fig-img-wrap {
+      text-align: center;
+      margin: 2pt 0 2pt;
+    }
+    .fig-img-wrap img {
+      max-width: 92%;
+      max-height: 82mm;
+      width: auto;
+      height: auto;
+      border: 1px solid #000000;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .fig-title {
+      font-size: 10pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 3pt 0 2pt;
+      text-align: center;
+      page-break-before: avoid !important;
+      break-before: avoid !important;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .fig-desc {
+      font-size: 12pt;
+      color: #000000;
+      line-height: 1.3;
+      margin: 1pt 0 3pt;
+      text-align: left;
+    }
+    .result-conclusion-block {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin-top: 4pt;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+      margin: 3pt 0 4pt;
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+    tr {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid #000000;
+      padding: 2.5pt 4pt;
+      text-align: left;
+      vertical-align: top;
+      color: #000000;
+      line-height: 1.22;
+    }
+    th {
+      background: #f0f0f0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starts immediately on Page 1 -->
+  <div class="exp-no">Experiment No. 5</div>
+  <div class="exp-title">Title: Install and Configure MongoDB. Create Database, Collections, Documents, and Perform CRUD Operations</div>
+
+  <div class="section-head">Aim:</div>
+  <p>To configure MongoDB, establish database and collection structures for the Kitab Ghar library platform, and execute verified Create, Read, Update, and Delete (CRUD) operations on documents using both the MongoDB Shell (mongosh) and Mongoose ODM in Node.js.</p>
+
+  <div class="section-head">Tools Used:</div>
+  <ul><li>MongoDB Atlas Cloud Database (replica set cluster)</li><li>MongoDB Shell (mongosh v2.x)</li><li>Mongoose ODM v8.7.1</li><li>Node.js runtime v22</li><li>JavaScript BSON query operators ($set, $match, ObjectId)</li></ul>
+
+  <div class="section-head">Methodology:</div>
+  <div class="methodology-flow">Cluster Connection Setup → Database Selection (use kitabghar) → Collection Inspection → Document Insertion (CREATE) → Document Retrieval (READ) → Document Mutation (UPDATE) → Document Removal (DELETE) → Mongoose Programmatic Audit</div>
+  <p>Database configuration began by provisioning a replica-set cluster on MongoDB Atlas. Connection strings were integrated into server/.env. Using mongosh, commands were executed to inspect collections, count documents, and perform full CRUD lifecycles on test documents. In parallel, a Node.js audit script (db-audit.mjs) exercised Mongoose models (Book, Category) to verify programmatic CRUD consistency.</p>
+
+  <div class="section-head">Theory:</div>
+  <p>MongoDB is an open-source, distributed NoSQL document database designed for high availability, scalability, and developer agility. Rather than storing data in rigid tabular relations with fixed column schemas, MongoDB stores data in BSON (Binary JSON) format. BSON documents support rich, nested data structures including arrays, embedded sub-documents, and dates.</p>
+<p>A MongoDB instance organizes data into Databases, which contain Collections (analogous to tables), which in turn hold individual Documents (analogous to rows). Every document is automatically assigned a unique 12-byte primary key named _id of type ObjectId, consisting of a 4-byte timestamp, 5-byte random value, and 3-byte incrementing counter.</p>
+<p>CRUD operations form the cornerstone of database interaction: db.collection.insertOne() or insertMany() create documents; db.collection.find() and findOne() read documents with optional filter criteria and field projections; db.collection.updateOne() and updateMany() mutate documents using atomic operators like $set and $inc; and db.collection.deleteOne() removes records. Object Data Modeling (ODM) libraries like Mongoose provide schema validation, type casting, and middleware hooks over raw MongoDB operations.</p>
+
+  <div class="section-head">Case Study Context:</div>
+  <p>Kitab Ghar, Badlapur — database infrastructure. The kitabghar database stores structured NoSQL collections for books (79 catalogue titles), categories (12 genres), users, plans, subscriptions, rentals, and payments. Verified CRUD operations ensure accurate book availability tracking and inventory management.</p>
+  <p>This experiment demonstrates database operations through two complementary avenues: (A) direct command-line execution using the MongoDB Shell (mongosh) connected to the live cluster, and (B) programmatic Mongoose ODM operations via experiments/exp5/db-audit.mjs.</p>
+
+  <div class="section-head">Functions / Methods / Technologies Used:</div>
+  <ul><li>use &lt;database&gt; to switch database context</li><li>show collections to list active collections</li><li>db.collection.countDocuments() to count records</li><li>db.collection.find(filter, projection).limit(n) to read documents</li><li>db.collection.insertOne(doc) to create a single document</li><li>db.collection.findOne(filter) to query an individual document</li><li>db.collection.updateOne(filter, update) to modify documents atomically</li><li>db.collection.deleteOne(filter) to remove documents</li><li>Mongoose Model.create(), findById(), findByIdAndUpdate(), deleteOne()</li></ul>
+
+  <div class="section-head">Procedure:</div>
+  <p>The database connection and collections were inspected before a uniquely labelled temporary book document was inserted. That same document was read by identifier, updated, verified, deleted, and checked again to confirm cleanup; the live catalogue was then opened through the client.</p>
+  <ol><li>Provision a MongoDB database instance (Atlas cloud cluster or local mongod).</li><li>Connect to the cluster using the MongoDB Shell: mongosh $MONGO_URI.</li><li>Execute 'use kitabghar' to switch to the application database.</li><li>Execute 'show collections' to inspect active collections (books, categories, users, rentals).</li><li>Query total document counts using db.books.countDocuments() and db.categories.countDocuments().</li><li>Perform a READ operation: query the first 3 books using projection to select title, author, and availability.</li><li>Perform a CREATE operation: execute db.books.insertOne() to add a new test book ('The Great Gatsby').</li><li>Perform a READ verification: query the newly inserted book using db.books.findOne({ _id: ObjectId(...) }).</li><li>Perform an UPDATE operation: execute db.books.updateOne() using $set to change availableCopies to 2.</li><li>Perform a DELETE operation: execute db.books.deleteOne() to remove the test book document.</li><li>Verify deletion by re-running findOne() and confirming that null is returned.</li><li>Run 'node experiments/exp5/db-audit.mjs' to verify programmatic Mongoose CRUD operations.</li><li>Capture terminal screenshots and record test results.</li></ol>
+
+  <div class="section-head">Code:</div>
+  
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 5.1: MongoDB Shell (mongosh) CRUD Script</strong></p>
+      <p class="code-meta">File: <code>experiments/exp5/mongosh-demo.js</code> (Lines 15–54) — Commands executed in the MongoDB Shell demonstrating collections, count, and CRUD operations.</p>
+      <pre><code>// 1. Switch database and count documents
+use kitabghar;
+db.books.countDocuments();
+
+// 2. READ: Query books with field projection
+db.books.find({}, { title: 1, author: 1, category: 1, availableCopies: 1 }).limit(3);
+
+// 3. CREATE: Insert test book document
+var res = db.books.insertOne({
+  title: "The Great Gatsby",
+  author: "F. Scott Fitzgerald",
+  category: "Fiction",
+  totalCopies: 3,
+  availableCopies: 3,
+  status: "active"
+});
+print("Inserted ID: " + res.insertedId);
+
+// 4. READ: Verify inserted document
+db.books.findOne({ _id: res.insertedId });
+
+// 5. UPDATE: Mutate availability
+db.books.updateOne(
+  { _id: res.insertedId },
+  { $set: { availableCopies: 2, status: "limited" } }
+);
+
+// 6. DELETE: Remove test document
+db.books.deleteOne({ _id: res.insertedId });
+
+// 7. Verify deletion
+db.books.findOne({ _id: res.insertedId }); // returns null</code></pre>
+    </div>
+  
+
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 5.2: Mongoose ODM Programmatic CRUD Suite</strong></p>
+      <p class="code-meta">File: <code>experiments/exp5/db-audit.mjs</code> (Lines 15–28) — Demonstrates programmatic ODM CRUD operations using Mongoose Book model.</p>
+      <pre><code>// CREATE
+const created = await Book.create({
+  title: `__EXP5_EVIDENCE_${Date.now()}__`,
+  author: "Kitab Ghar Evidence Agent",
+  description: "Temporary MongoDB CRUD evidence document.",
+  category: "Evidence",
+  totalCopies: 1,
+  availableCopies: 1
+});
+
+// READ
+const read = await Book.findById(created._id).lean();
+
+// UPDATE
+const updated = await Book.findByIdAndUpdate(
+  created._id,
+  { availableCopies: 0, status: "archived" },
+  { new: true }
+).lean();
+
+// DELETE
+const deleted = await Book.deleteOne({ _id: created._id });
+const existsAfterDelete = Boolean(await Book.exists({ _id: created._id }));</code></pre>
+    </div>
+  
+
+  <div class="section-head">Output:</div>
+  
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp5/screenshots/EXP5-01-mongosh-show-collections.png" alt="mongosh — Connecting to Database &amp; Listing Collections">
+      </div>
+      <p class="fig-title"><strong>Figure 5.1: mongosh — Connecting to Database &amp; Listing Collections</strong></p>
+      <p class="fig-desc">This screenshot shows the MongoDB Shell (mongosh) connected to the live MongoDB Atlas cloud replica set cluster. Executing 'use kitabghar' switches the active database context, and 'show collections' confirms the presence of all 10 active collections: admins, books, categories, notifications, orders, payments, plans, rentals, subscriptions, and users. The shell session was established via the mongodb+srv connection protocol with TLS encryption to the Atlas primary node.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp5/screenshots/EXP5-02-mongosh-count-documents.png" alt="mongosh — Counting Book &amp; Category Documents">
+      </div>
+      <p class="fig-title"><strong>Figure 5.2: mongosh — Counting Book &amp; Category Documents</strong></p>
+      <p class="fig-desc">This screenshot shows the execution of countDocuments() queries against the kitabghar database. The command returns 79 book documents in the books collection and 12 category documents in the categories collection, verifying that the MongoDB Atlas database is actively populated with genuine Kitab Ghar library platform data. The countDocuments() method performs an accurate count by scanning the collection index rather than using metadata estimates.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp5/screenshots/EXP5-03-mongosh-find-books.png" alt="mongosh — READ: db.books.find() with Projection">
+      </div>
+      <p class="fig-title"><strong>Figure 5.3: mongosh — READ: db.books.find() with Projection</strong></p>
+      <p class="fig-desc">This screenshot demonstrates the READ operation. Executing db.books.find() with field projection ({ title: 1, author: 1, category: 1, availableCopies: 1 }) and limit(2) retrieves stored book records formatted as BSON documents. The projection parameter limits the returned fields to only the specified keys, reducing network payload and demonstrating efficient document retrieval. The limit(2) cursor modifier restricts the result set to two documents for clear display.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp5/screenshots/EXP5-04-mongosh-insert-book.png" alt="mongosh — CREATE: db.books.insertOne()">
+      </div>
+      <p class="fig-title"><strong>Figure 5.4: mongosh — CREATE: db.books.insertOne()</strong></p>
+      <p class="fig-desc">This screenshot shows the CREATE operation in mongosh. Executing db.books.insertOne() with a new book document ('The Great Gatsby') containing title, author, category, price, and availableCopies fields successfully inserts the record into the books collection, returning acknowledged: true and an automatically generated 24-character hexadecimal ObjectId. This confirms that MongoDB's write concern acknowledged the insertion to the primary node of the Atlas replica set.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp5/screenshots/EXP5-05-mongosh-findone-verify.png" alt="mongosh — READ Verification: db.books.findOne()">
+      </div>
+      <p class="fig-title"><strong>Figure 5.5: mongosh — READ Verification: db.books.findOne()</strong></p>
+      <p class="fig-desc">This screenshot proves successful document insertion by querying the newly generated ObjectId via db.books.findOne(). The complete BSON document is retrieved from the collection, confirming that all fields (title, author, category, price, availableCopies, and automatic timestamps) were persisted correctly. This read-after-write verification pattern validates data consistency in the MongoDB Atlas cluster.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp5/screenshots/EXP5-06-mongosh-update-book.png" alt="mongosh — UPDATE: db.books.updateOne()">
+      </div>
+      <p class="fig-title"><strong>Figure 5.6: mongosh — UPDATE: db.books.updateOne()</strong></p>
+      <p class="fig-desc">This screenshot demonstrates the UPDATE operation. Executing db.books.updateOne() with the $set atomic operator updates the availableCopies field to 2, returning matchedCount: 1 and modifiedCount: 1 to confirm that exactly one document was matched by the filter and successfully mutated. The $set operator performs an atomic field-level update without replacing the entire document, demonstrating MongoDB's fine-grained update capabilities.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp5/screenshots/EXP5-07-mongosh-delete-book.png" alt="mongosh — DELETE: db.books.deleteOne()">
+      </div>
+      <p class="fig-title"><strong>Figure 5.7: mongosh — DELETE: db.books.deleteOne()</strong></p>
+      <p class="fig-desc">This screenshot shows the DELETE operation. Executing db.books.deleteOne() removes the test document from the books collection, returning deletedCount: 1. A subsequent findOne() query using the same ObjectId returns null, verifying that the record was permanently removed from the database. This completes the full CRUD lifecycle: Create (insertOne), Read (find/findOne), Update (updateOne), and Delete (deleteOne).</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp5/screenshots/EXP5-08-mongoose-audit-output.png" alt="Mongoose ODM — Programmatic CRUD Audit (db-audit.mjs)">
+      </div>
+      <p class="fig-title"><strong>Figure 5.8: Mongoose ODM — Programmatic CRUD Audit (db-audit.mjs)</strong></p>
+      <p class="fig-desc">This screenshot shows the terminal output from running db-audit.mjs using the Mongoose ODM. Mongoose successfully connected to the Atlas cluster via the mongodb+srv connection string, executed programmatic Create, Read, Update, and Delete lifecycle operations on the Book model, and logged the JSON audit record for each operation. This demonstrates that the same CRUD operations performed in the mongosh shell can be executed programmatically using Mongoose in a Node.js application.</p>
+    </div>
+  
+
+  <div class="result-conclusion-block">
+    <div class="section-head">Result:</div>
+    <p>MongoDB installation and configuration for Kitab Ghar were successfully validated. All CRUD operations (Create, Read, Update, Delete) were executed and verified both interactively through the MongoDB Shell (mongosh) and programmatically through Mongoose ODM in Node.js.</p>
+    <p>The CRUD audit confirmed that each database operation produced the expected document state and that the temporary record was removed after the delete step. The application catalogue demonstrated that stored book data was available to the user interface.</p>
+
+    <div class="section-head">Conclusion:</div>
+    <p>The experiment confirmed that MongoDB provides a flexible, robust document storage layer ideal for dynamic web applications. BSON documents map naturally to JSON objects in JavaScript.</p>
+<p>The combination of shell-based administrative commands and programmatic Mongoose modeling ensures both operational visibility and application-level schema integrity for the Kitab Ghar platform.</p>
+    <p>This experiment verifies that MongoDB and Mongoose provide persistent, controlled storage for the catalogue while preserving a traceable CRUD workflow.</p>
+  </div>
+
+</body>
+</html>

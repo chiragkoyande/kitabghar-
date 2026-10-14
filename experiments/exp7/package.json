@@ -1,0 +1,6 @@
+{
+  "name": "kitab-ghar-exp7-node-practical",
+  "private": true,
+  "type": "module",
+  "scripts": { "demo": "node node-demo.mjs" }
+}

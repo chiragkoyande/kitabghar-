@@ -1,0 +1,21 @@
+<body style="margin:0;background:#111;color:#d8f5d0;font:18px monospace;padding:36px"><div style="color:#8be28b">Render API Service Configuration</div><pre style="white-space:pre-wrap;line-height:1.55">services:
+  - type: web
+    name: kitabghar-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: CLIENT_ORIGIN
+        sync: false
+</pre></body>

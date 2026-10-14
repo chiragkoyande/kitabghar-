@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{TITLE}}</title>
+  <style>
+    @page { size: A4; margin: 18mm 16mm 20mm; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #111; font-family: "Times New Roman", Times, serif; font-size: 12pt; line-height: 1.5; text-align: justify; }
+    h1, h2, h3 { font-family: "Times New Roman", Times, serif; font-size: 14pt; margin: 14pt 0 6pt; text-align: left; }
+    h1 { margin-top: 0; border-bottom: 1px solid #222; padding-bottom: 4pt; }
+    h3 { font-size: 12pt; }
+    p { margin: 0 0 8pt; }
+    ul, ol { margin: 0 0 9pt 24pt; padding: 0; }
+    li { margin-bottom: 4pt; }
+    .cover { min-height: 240mm; display: flex; flex-direction: column; justify-content: center; text-align: center; page-break-after: always; }
+    .cover h1, .cover h2, .cover p { text-align: center; }
+    .cover h1 { font-size: 22pt; border: 0; }
+    .cover h2 { font-size: 16pt; }
+    .meta { margin-top: 28pt; }
+    .flow { padding: 8pt; border: 1px solid #777; text-align: center; }
+    pre { margin: 7pt 0 10pt; padding: 7pt; border: 1px solid #999; background: #f5f5f5; white-space: pre-wrap; overflow-wrap: anywhere; font: 8.5pt/1.35 "Courier New", monospace; text-align: left; }
+    table { width: 100%; border-collapse: collapse; font-size: 9.4pt; page-break-inside: avoid; }
+    th, td { border: 1px solid #555; padding: 5pt; vertical-align: top; text-align: left; }
+    th { background: #eee; }
+    .figure { margin: 12pt 0 16pt; break-inside: avoid; page-break-inside: avoid; }
+    .figure img { display: block; width: auto; max-width: 100%; max-height: 108mm; margin: 6pt auto; border: 1px solid #999; }
+    .caption { text-align: center; font-weight: bold; }
+    .evidence-missing { padding: 8pt; border-left: 3px solid #a00; background: #fff2f2; }
+  </style>
+</head>
+<body>
+{{CONTENT}}
+</body>
+</html>

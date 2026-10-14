@@ -1,0 +1,61 @@
+{
+  "evidence": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [
+      "EVIDENCE MISSING: the current main React registration page does not load Bootstrap or a Bootstrap confirmation modal. Equivalent visible client-side validation is implemented with the current React component and stylesheet."
+    ],
+    "experiment": 1
+  },
+  "screenshots": {
+    "status": "PASS",
+    "count": 8,
+    "entries": [
+      {
+        "file": "screenshots/01-registration-overview.png",
+        "bytes": 55850
+      },
+      {
+        "file": "screenshots/02-empty-form-errors.png",
+        "bytes": 65201
+      },
+      {
+        "file": "screenshots/03-email-mobile-errors.png",
+        "bytes": 58905
+      },
+      {
+        "file": "screenshots/04-age-pincode-errors.png",
+        "bytes": 59011
+      },
+      {
+        "file": "screenshots/05-password-confirmation-errors.png",
+        "bytes": 60147
+      },
+      {
+        "file": "screenshots/06-terms-error.png",
+        "bytes": 66794
+      },
+      {
+        "file": "screenshots/07-valid-form-pass.png",
+        "bytes": 68768
+      },
+      {
+        "file": "screenshots/08-mobile-valid-form.png",
+        "bytes": 44730
+      }
+    ],
+    "errors": []
+  },
+  "content": {
+    "status": "PASS",
+    "missingHeadings": [],
+    "figureReferences": 24,
+    "errors": []
+  },
+  "pdf": {
+    "status": "PASS",
+    "pages": 17,
+    "errors": [],
+    "textLength": 22174
+  }
+}

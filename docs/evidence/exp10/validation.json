@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-09-29T20:19:07.788Z",
+  "evidence": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [
+      "EVIDENCE MISSING: no deployed frontend URL, deployed API URL, hosting credentials or cloud dashboard access was found. Live cloud deployment and end-to-end cloud verification could not be performed.",
+      "Blocked tests recorded truthfully: E10-05, E10-06"
+    ],
+    "experiment": 10
+  },
+  "screenshots": {
+    "status": "PASS",
+    "count": 6,
+    "entries": [
+      {
+        "file": "screenshots/01-deployment-evidence.png",
+        "bytes": 57200
+      },
+      {
+        "file": "screenshots/02-deployment-evidence.png",
+        "bytes": 17481
+      },
+      {
+        "file": "screenshots/03-deployment-evidence.png",
+        "bytes": 81197
+      },
+      {
+        "file": "screenshots/04-deployment-evidence.png",
+        "bytes": 157860
+      },
+      {
+        "file": "screenshots/05-deployment-evidence.png",
+        "bytes": 23330
+      },
+      {
+        "file": "screenshots/06-deployment-evidence.png",
+        "bytes": 26665
+      }
+    ],
+    "errors": []
+  },
+  "content": {
+    "status": "PASS",
+    "missingHeadings": [],
+    "figureReferences": 18,
+    "errors": []
+  },
+  "pdf": {
+    "status": "PASS",
+    "pages": 11,
+    "errors": [],
+    "textLength": 8103
+  }
+}

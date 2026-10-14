@@ -1,0 +1,87 @@
+[
+  {
+    "figure": "Figure 2.1",
+    "title": "Current Kitab Ghar Main Home Page",
+    "file": "screenshots/01-main-home.png",
+    "purpose": "Initial capture of the actual running Vite main application.",
+    "what_it_demonstrates": "The official header, current Book Genie artwork, navigation and current home hero are rendered directly by the main client.",
+    "code_refs": [
+      "EXP2-CODE-06",
+      "EXP2-CODE-01"
+    ]
+  },
+  {
+    "figure": "Figure 2.2",
+    "title": "Current Main Home Content",
+    "file": "screenshots/02-main-home-sections.png",
+    "purpose": "Capture of the genuine main application's reader-service section.",
+    "what_it_demonstrates": "The current main UI continues from the hero into the Badlapur service and collection experience, rather than a recreated experiment shell.",
+    "code_refs": [
+      "EXP2-CODE-06"
+    ]
+  },
+  {
+    "figure": "Figure 2.3",
+    "title": "Current Book Genie Popup",
+    "file": "screenshots/03-genie-popup.png",
+    "purpose": "Open Ask the Book Genie from the actual main home hero.",
+    "what_it_demonstrates": "The self-managed Book Genie dialog opens from the current component's popup state.",
+    "code_refs": [
+      "EXP2-CODE-01",
+      "EXP2-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 2.4",
+    "title": "Book Genie Question Options",
+    "file": "screenshots/04-genie-question-one.png",
+    "purpose": "Start a new Book Genie session.",
+    "what_it_demonstrates": "The option array is mapped into interactive category buttons in the real wizard popup.",
+    "code_refs": [
+      "EXP2-CODE-02",
+      "EXP2-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 2.5",
+    "title": "Book Genie Event-Driven Question Flow",
+    "file": "screenshots/05-genie-mystery-flow.png",
+    "purpose": "Choose Mystery and suspense in question one.",
+    "what_it_demonstrates": "An anonymous option event changes state and selects the mystery-specific next array of choices.",
+    "code_refs": [
+      "EXP2-CODE-02",
+      "EXP2-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 2.6",
+    "title": "Live Book Genie Recommendations",
+    "file": "screenshots/06-genie-recommendations.png",
+    "purpose": "Complete the mystery preference flow against the configured live catalogue.",
+    "what_it_demonstrates": "The current recommendation engine scores the live books and returns three Book Genie recommendations.",
+    "code_refs": [
+      "EXP2-CODE-03",
+      "EXP2-CODE-04"
+    ]
+  },
+  {
+    "figure": "Figure 2.7",
+    "title": "Current API-Backed Books Page",
+    "file": "screenshots/07-main-live-catalogue.png",
+    "purpose": "Open the real main Books route.",
+    "what_it_demonstrates": "The actual current page shows the 77-title API-backed catalogue and current filter interface.",
+    "code_refs": [
+      "EXP2-CODE-05"
+    ]
+  },
+  {
+    "figure": "Figure 2.8",
+    "title": "Current Rendered Book Cards",
+    "file": "screenshots/08-main-book-cards.png",
+    "purpose": "Capture the rendered book-card output in the actual current Books page.",
+    "what_it_demonstrates": "The current main client maps the API-backed book array into visible card components with title, author, category and availability data.",
+    "code_refs": [
+      "EXP2-CODE-05"
+    ]
+  }
+]

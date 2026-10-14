@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-09-29T20:19:07.687Z",
+  "evidence": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "experiment": 7
+  },
+  "screenshots": {
+    "status": "PASS",
+    "count": 8,
+    "entries": [
+      {
+        "file": "screenshots/01-terminal.png",
+        "bytes": 20255
+      },
+      {
+        "file": "screenshots/02-terminal.png",
+        "bytes": 17302
+      },
+      {
+        "file": "screenshots/03-terminal.png",
+        "bytes": 16047
+      },
+      {
+        "file": "screenshots/04-terminal.png",
+        "bytes": 14790
+      },
+      {
+        "file": "screenshots/05-terminal.png",
+        "bytes": 14619
+      },
+      {
+        "file": "screenshots/06-terminal.png",
+        "bytes": 12839
+      },
+      {
+        "file": "screenshots/07-terminal.png",
+        "bytes": 17583
+      },
+      {
+        "file": "screenshots/08-terminal.png",
+        "bytes": 11235
+      }
+    ],
+    "errors": []
+  },
+  "content": {
+    "status": "PASS",
+    "missingHeadings": [],
+    "figureReferences": 24,
+    "errors": []
+  },
+  "pdf": {
+    "status": "PASS",
+    "pages": 10,
+    "errors": [],
+    "textLength": 11175
+  }
+}

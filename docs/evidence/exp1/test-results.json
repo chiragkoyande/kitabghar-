@@ -1,0 +1,100 @@
+{
+  "generatedAt": "2026-09-29T19:55:25.443Z",
+  "tests": [
+    {
+      "id": "E1-01",
+      "scenario": "Load the current main registration route",
+      "input": "Load the current main registration route",
+      "expected": "The current Kitab Ghar registration card, validation fields, reader terms and Create account action render.",
+      "actual": "Observed in the running current main registration page.",
+      "status": "PASS"
+    },
+    {
+      "id": "E1-02",
+      "scenario": "Submit an empty registration form",
+      "input": "Submit an empty registration form",
+      "expected": "A summary and every required reader-field error appear in the current UI.",
+      "actual": "Observed in the running current main registration page.",
+      "status": "PASS"
+    },
+    {
+      "id": "E1-03",
+      "scenario": "Enter invalid email and mobile details",
+      "input": "Enter invalid email and mobile details",
+      "expected": "The visible email and Indian mobile validation feedback appears.",
+      "actual": "Observed in the running current main registration page.",
+      "status": "PASS"
+    },
+    {
+      "id": "E1-04",
+      "scenario": "Enter an underage date and short pincode",
+      "input": "Enter an underage date and short pincode",
+      "expected": "The visible age and pincode feedback appears.",
+      "actual": "Observed in the running current main registration page.",
+      "status": "PASS"
+    },
+    {
+      "id": "E1-05",
+      "scenario": "Enter a weak password and mismatch",
+      "input": "Enter a weak password and mismatch",
+      "expected": "The current UI shows a weak-strength label and confirmation error.",
+      "actual": "Observed in the running current main registration page.",
+      "status": "PASS"
+    },
+    {
+      "id": "E1-06",
+      "scenario": "Leave reader terms unchecked",
+      "input": "Leave reader terms unchecked",
+      "expected": "The terms feedback prevents a complete profile from being submitted.",
+      "actual": "Observed in the running current main registration page.",
+      "status": "PASS"
+    },
+    {
+      "id": "E1-07",
+      "scenario": "Fill all valid reader details",
+      "input": "Fill all valid reader details",
+      "expected": "The current UI displays the visible all-checks-passed message and green field states.",
+      "actual": "Observed in the running current main registration page.",
+      "status": "PASS"
+    },
+    {
+      "id": "E1-08",
+      "scenario": "Inspect responsive desktop form grid",
+      "input": "Inspect responsive desktop form grid",
+      "expected": "The current registration form places its inputs in a two-column CSS grid at desktop width.",
+      "actual": "Observed in the running current main registration page.",
+      "status": "PASS"
+    },
+    {
+      "id": "E1-09",
+      "scenario": "Use a 320px viewport",
+      "input": "Browser viewport 320 × 900 px",
+      "expected": "The current main registration layout uses one column without horizontal overflow.",
+      "actual": "Observed in the running current main registration page.",
+      "status": "PASS"
+    },
+    {
+      "id": "E1-10",
+      "scenario": "Inspect real registration request wiring",
+      "input": "Inspect real registration request wiring",
+      "expected": "The form uses the authentication context registration function and the /auth/register API endpoint.",
+      "actual": "Observed in the running current main registration page.",
+      "status": "PASS"
+    }
+  ],
+  "runtimeChecks": [
+    {
+      "name": "Brand identity",
+      "type": "image",
+      "complete": true,
+      "naturalWidth": 1080,
+      "source": "/kitab-ghar-logo.png",
+      "status": "PASS"
+    },
+    {
+      "name": "Bootstrap dependency in current main UI",
+      "available": false,
+      "status": "BLOCKED"
+    }
+  ]
+}

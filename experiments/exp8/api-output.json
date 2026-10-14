@@ -1,0 +1,42 @@
+{
+  "health": {
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "service": "kitabghar-api",
+      "database": "mongodb"
+    }
+  },
+  "books": {
+    "status": 200,
+    "count": 77,
+    "first": "Deewar Mein Ek Khidki Rehti Thi"
+  },
+  "categories": {
+    "status": 200,
+    "count": 13
+  },
+  "unauthorizedCreate": {
+    "status": 401,
+    "message": "Authentication required"
+  },
+  "login": {
+    "status": 200,
+    "role": "admin"
+  },
+  "create": {
+    "status": 201,
+    "id": "6abc1a72315cc420423961d9",
+    "title": "__EXP8_API_EVIDENCE_TEMP__",
+    "availableCopies": 2
+  },
+  "update": {
+    "status": 200,
+    "availableCopies": 1
+  },
+  "delete": {
+    "status": 200,
+    "message": "Book archived",
+    "statusAfterDelete": "archived"
+  }
+}

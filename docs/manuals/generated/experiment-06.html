@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Experiment No. 6 — Kitab Ghar</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #000000;
+      background: #ffffff;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      font-size: 12pt;
+      line-height: 1.4;
+      text-align: left;
+    }
+    .exp-no {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 3pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .exp-title {
+      font-size: 11.5pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 8pt;
+      line-height: 1.3;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .section-head {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 8pt 0 2pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    p {
+      margin: 0 0 4pt;
+      color: #000000;
+      text-align: left;
+    }
+    ul, ol {
+      margin: 0 0 6pt 18pt;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 2pt;
+      color: #000000;
+      text-align: left;
+    }
+    .methodology-flow {
+      border: 1px solid #000000;
+      padding: 5pt 8pt;
+      margin: 4pt 0 6pt;
+      font-size: 9.5pt;
+      font-weight: bold;
+      text-align: center;
+      background: #fafafa;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-block {
+      margin: 4pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-label {
+      font-size: 9.5pt;
+      font-weight: bold;
+      margin: 0 0 1.5pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .code-meta {
+      font-size: 8.5pt;
+      font-style: italic;
+      margin: 0 0 2pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    pre {
+      margin: 2pt 0 4pt;
+      padding: 4pt 6pt;
+      border: 1px solid #000000;
+      background: #fafafa;
+      color: #000000;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 7.5pt;
+      line-height: 1.2;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .figure-block {
+      margin: 5pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .fig-img-wrap {
+      text-align: center;
+      margin: 2pt 0 2pt;
+    }
+    .fig-img-wrap img {
+      max-width: 92%;
+      max-height: 82mm;
+      width: auto;
+      height: auto;
+      border: 1px solid #000000;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .fig-title {
+      font-size: 10pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 3pt 0 2pt;
+      text-align: center;
+      page-break-before: avoid !important;
+      break-before: avoid !important;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .fig-desc {
+      font-size: 12pt;
+      color: #000000;
+      line-height: 1.3;
+      margin: 1pt 0 3pt;
+      text-align: left;
+    }
+    .result-conclusion-block {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin-top: 4pt;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+      margin: 3pt 0 4pt;
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+    tr {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid #000000;
+      padding: 2.5pt 4pt;
+      text-align: left;
+      vertical-align: top;
+      color: #000000;
+      line-height: 1.22;
+    }
+    th {
+      background: #f0f0f0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starts immediately on Page 1 -->
+  <div class="exp-no">Experiment No. 6</div>
+  <div class="exp-title">Title: Develop a Node.js Application using Express.js and Mongoose to Connect with MongoDB</div>
+
+  <div class="section-head">Aim:</div>
+  <p>To build a modular backend web server using Node.js, the Express.js framework, and Mongoose ODM, establishing a persistent database connection with MongoDB and exposing structured RESTful endpoints.</p>
+
+  <div class="section-head">Tools Used:</div>
+  <ul><li>Node.js runtime v22 (ES Modules)</li><li>Express.js v4.21.1 web framework</li><li>Mongoose v8.7.1 ODM</li><li>MongoDB Atlas cloud database</li><li>Helmet, CORS, Morgan, Express JSON body parsing middleware</li><li>JSON Web Token (jsonwebtoken) &amp; bcryptjs for security</li></ul>
+
+  <div class="section-head">Methodology:</div>
+  <div class="methodology-flow">Express App Initialization → Middleware Pipeline Mounting → Mongoose DB Connection → Schema &amp; Model Compilation → Controller Business Logic → Route Mounting → Client Integration</div>
+  <p>The backend server is structured following MVC design patterns. Express initializes HTTP server listeners and mounts a robust middleware chain (Helmet security headers, CORS, body parsers, logging). Mongoose connects to the MongoDB cluster via connection pooling. Schemas define document shapes, types, and validation constraints. Controllers encapsulate business logic and database queries, which routes map to HTTP verbs.</p>
+
+  <div class="section-head">Theory:</div>
+  <p>Express.js is a minimalist, flexible Node.js web application framework that provides a robust set of features for web and mobile applications. It simplifies server creation through a modular middleware pipeline where incoming HTTP requests pass through sequential functions capable of inspecting, modifying, or terminating requests.</p>
+<p>Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, translates between JavaScript objects and BSON representations, and exposes rich query builders. Mongoose schemas define the fields, data types, default values, validators, and indexing strategies for collections.</p>
+<p>In a 3-tier web architecture, Express functions as the Application/Logic Tier mediating between the Presentation Tier (React client) and the Data Tier (MongoDB). Security middleware like Helmet sets HTTP response headers, CORS manages cross-origin resource sharing, and JWT authentication middleware guards sensitive business endpoints.</p>
+
+  <div class="section-head">Case Study Context:</div>
+  <p>Kitab Ghar, Badlapur — backend web service. The Express application (server/server.js) hosts modular routers for book inventory, reader accounts, subscriptions, rental transactions, and notifications, connected via Mongoose to the MongoDB Atlas cluster.</p>
+  <p>This experiment documents the genuine production backend architecture in server/, analyzing server initialization, middleware pipelines, Mongoose schema compilation, controllers, and authenticated endpoint delivery.</p>
+
+  <div class="section-head">Functions / Methods / Technologies Used:</div>
+  <ul><li>express() and app.listen() for server lifecycle management</li><li>app.use() for middleware composition (express.json, cors, helmet, morgan)</li><li>mongoose.connect() with connection string and reconnection handling</li><li>new mongoose.Schema() for data structure definition</li><li>mongoose.model() for model compilation</li><li>express.Router() for modular endpoint mapping</li><li>jwt.sign() and jwt.verify() for token-based security</li></ul>
+
+  <div class="section-head">Procedure:</div>
+  <p>The Express service was started with its Mongoose connection, then health, catalogue, plan, authentication, and protected dashboard flows were exercised. Public and protected endpoints were compared so the middleware and controller behaviour could be observed separately.</p>
+  <ol><li>Navigate to server/ and review package.json dependencies (express, mongoose, dotenv, cors, helmet).</li><li>Examine server/server.js to analyze middleware pipeline: helmet(), cors(), express.json(), morgan().</li><li>Inspect server/config/db.js to examine the Mongoose connection manager and error event handlers.</li><li>Review server/models/Book.js to study Mongoose Schema definition, types, and validation rules.</li><li>Review server/controllers/bookController.js to analyze async controller functions (getBooks, getBookById).</li><li>Review server/routes/bookRoutes.js to study how endpoints are bound to controller functions.</li><li>Review server/middleware/auth.js to trace JWT verification and role-based access control.</li><li>Start the backend server using 'npm run dev' inside server/; verify terminal confirms database connection.</li><li>Query GET http://localhost:5000/api/health; verify { status: 'ok', database: 'mongodb' }.</li><li>Query GET http://localhost:5000/api/books; verify JSON array of catalogue documents is returned.</li><li>Capture screenshots of server startup, API responses, and client frontend integration.</li></ol>
+
+  <div class="section-head">Code:</div>
+  
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 6.1: Express Server Setup &amp; Middleware Pipeline</strong></p>
+      <p class="code-meta">File: <code>server/server.js</code> (Lines 1–32) — Initializes Express, configures security middleware, connects database, and mounts routes.</p>
+      <pre><code>import express from "express";
+import dotenv from "dotenv";
+import cors from "cors";
+import helmet from "helmet";
+import morgan from "morgan";
+import connectDB from "./config/db.js";
+import bookRoutes from "./routes/bookRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
+
+dotenv.config();
+connectDB();
+
+const app = express();
+
+app.use(helmet());
+app.use(cors({ origin: process.env.CLIENT_ORIGIN || "http://localhost:5173" }));
+app.use(express.json());
+app.use(morgan("dev"));
+
+app.get("/api/health", (req, res) =&gt; {
+  res.json({ status: "ok", service: "kitabghar-api", database: "mongodb" });
+});
+
+app.use("/api/books", bookRoutes);
+app.use("/api/auth", authRoutes);
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () =&gt; console.log(`Server running on port ${PORT}`));</code></pre>
+    </div>
+  
+
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 6.2: Mongoose Schema Definition: Book Model</strong></p>
+      <p class="code-meta">File: <code>server/models/Book.js</code> (Lines 1–24) — Defines schema fields, data types, validation rules, and indexes for books collection.</p>
+      <pre><code>import mongoose from "mongoose";
+
+const bookSchema = new mongoose.Schema(
+  {
+    title: { type: String, required: true, trim: true },
+    author: { type: String, required: true, trim: true },
+    description: { type: String, required: true },
+    category: { type: String, required: true },
+    coverImage: { type: String, default: "" },
+    totalCopies: { type: Number, required: true, min: 1, default: 1 },
+    availableCopies: { type: Number, required: true, min: 0, default: 1 },
+    language: { type: String, default: "English" },
+    status: { type: String, enum: ["active", "archived"], default: "active" }
+  },
+  { timestamps: true }
+);
+
+bookSchema.index({ title: "text", author: "text", category: "text" });
+
+export const Book = mongoose.model("Book", bookSchema);</code></pre>
+    </div>
+  
+
+  <div class="section-head">Output:</div>
+  
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp6/screenshots/01-express-server-health.png" alt="Express Server Health Check Endpoint (GET /api/health)">
+      </div>
+      <p class="fig-title"><strong>Figure 6.1: Express Server Health Check Endpoint (GET /api/health)</strong></p>
+      <p class="fig-desc">This screenshot shows the JSON response returned by GET /api/health. The endpoint verifies that the Express web service is listening, responsive, and connected to the MongoDB Atlas cluster.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp6/screenshots/02-api-books-endpoint.png" alt="REST API Books Catalogue Endpoint (GET /api/books)">
+      </div>
+      <p class="fig-title"><strong>Figure 6.2: REST API Books Catalogue Endpoint (GET /api/books)</strong></p>
+      <p class="fig-desc">This screenshot displays the raw JSON output from the /api/books endpoint. The Express controller queried MongoDB via Mongoose, returning 77 book documents with pagination metadata.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp6/screenshots/03-main-homepage-backend.png" alt="Kitab Ghar Main Frontend Connected to Express API">
+      </div>
+      <p class="fig-title"><strong>Figure 6.3: Kitab Ghar Main Frontend Connected to Express API</strong></p>
+      <p class="fig-desc">This screenshot shows the React frontend consuming live data from the Express backend via the Fetch API, verifying end-to-end communication between client and server. The books catalogue displayed on the frontend exactly matches the data stored in MongoDB, confirming that the Express middleware chain (CORS, body-parser, Helmet) correctly handles cross-origin requests from the React client.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp6/screenshots/04-books-catalogue-mongodb.png" alt="Books Catalogue Rendered from MongoDB Documents">
+      </div>
+      <p class="fig-title"><strong>Figure 6.4: Books Catalogue Rendered from MongoDB Documents</strong></p>
+      <p class="fig-desc">This screenshot shows the live books catalogue rendered from MongoDB documents fetched through the Express API route /api/books, proving database-backed front-end presentation. Each BookCard component displays title, author, category badge, and real-time availability count sourced directly from the Mongoose query results, demonstrating the complete data flow from database to browser.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp6/screenshots/05-dynamic-book-details-crud.png" alt="Dynamic Book Details View Backed by API Endpoint">
+      </div>
+      <p class="fig-title"><strong>Figure 6.5: Dynamic Book Details View Backed by API Endpoint</strong></p>
+      <p class="fig-desc">This screenshot shows the book details view populated via the GET /api/books/:id Express route, demonstrating single-document retrieval through Mongoose's findById() query. The Express controller extracts the :id parameter from req.params, passes it to Mongoose, and returns the complete book document including description, rating, rental pricing, and availability status.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp6/screenshots/06-membership-plans-api.png" alt="Membership Plans API Endpoint &amp; Subscription Service">
+      </div>
+      <p class="fig-title"><strong>Figure 6.6: Membership Plans API Endpoint &amp; Subscription Service</strong></p>
+      <p class="fig-desc">This screenshot shows membership plan options (Reader, Scholar, Patron tiers) delivered dynamically by the Express server's planController via the GET /api/plans endpoint, illustrating modular endpoint routing. Each plan document includes pricing, features, and duration fields stored in MongoDB and served through the Express-Mongoose pipeline.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp6/screenshots/07-jwt-auth-login.png" alt="JWT Authentication &amp; User Login (POST /api/auth/login)">
+      </div>
+      <p class="fig-title"><strong>Figure 6.7: JWT Authentication &amp; User Login (POST /api/auth/login)</strong></p>
+      <p class="fig-desc">This screenshot shows reader authentication. Submitting credentials to the POST /api/auth/login endpoint invokes bcrypt.compare() for secure password verification against the hashed value stored in MongoDB. Upon successful authentication, the Express controller issues a signed JSON Web Token (JWT) using jsonwebtoken.sign(), which the React client stores in localStorage for subsequent authenticated API requests.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp6/screenshots/08-reader-dashboard-rentals.png" alt="Protected Reader Dashboard Populated via Authenticated API">
+      </div>
+      <p class="fig-title"><strong>Figure 6.8: Protected Reader Dashboard Populated via Authenticated API</strong></p>
+      <p class="fig-desc">This screenshot displays the protected reader dashboard populated with personalized rental data. API requests from the React client include the JWT Bearer token in the Authorization header, allowing the Express auth middleware to verify the token, decode the user payload, and attach it to req.user. The controller then queries MongoDB for the authenticated user's active rentals, return dates, and membership status.</p>
+    </div>
+  
+
+  <div class="result-conclusion-block">
+    <div class="section-head">Result:</div>
+    <p>A complete backend web application was built using Node.js, Express.js, and Mongoose connected to MongoDB. The server establishes persistent database connectivity, validates document schemas, and exposes robust public and protected RESTful API endpoints.</p>
+    <p>The API returned live JSON data for public resources, while authentication issued a token and protected requests used that session to return reader-specific data. Schema, controller, and middleware responsibilities were visible across the observed requests.</p>
+
+    <div class="section-head">Conclusion:</div>
+    <p>The experiment confirmed that Express.js and Mongoose form an efficient, expressive backend foundation for Node.js web development. The middleware architecture provides clear separation between security, routing, and business logic.</p>
+<p>Mongoose models provide strong data validation and schema integrity while retaining the schema flexibility of MongoDB, ensuring a secure and scalable backend service.</p>
+    <p>This backend architecture demonstrates how Express routing, Mongoose models, and JWT middleware combine to deliver a secure, database-backed API.</p>
+  </div>
+
+</body>
+</html>

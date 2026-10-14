@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-09-29T20:20:55.519Z",
+  "tests": [
+    {
+      "id": "E5-01",
+      "scenario": "Connect with Mongoose",
+      "input": "Configured local MongoDB URI",
+      "expected": "Connection opens database kitabghar",
+      "actual": "Connected to kitabghar",
+      "status": "PASS"
+    },
+    {
+      "id": "E5-02",
+      "scenario": "Inspect database collections",
+      "input": "db.listCollections()",
+      "expected": "Kitab Ghar collections are returned",
+      "actual": "10 collections observed: admins, books, categories, notifications, orders, payments, plans, rentals, subscriptions, users",
+      "status": "PASS"
+    },
+    {
+      "id": "E5-03",
+      "scenario": "Read live collection counts",
+      "input": "Book.countDocuments() and Category.countDocuments()",
+      "expected": "Stored document totals are returned",
+      "actual": "77 book documents and 13 category documents observed",
+      "status": "PASS"
+    },
+    {
+      "id": "E5-04",
+      "scenario": "Create temporary evidence document",
+      "input": "__EXP5_EVIDENCE_1790712769652__",
+      "expected": "A book document is inserted",
+      "actual": "Created id 6abc1bc10674113ee201f70a with status active and 1 available copy",
+      "status": "PASS"
+    },
+    {
+      "id": "E5-05",
+      "scenario": "Read inserted document",
+      "input": "findById(createdId)",
+      "expected": "Inserted document is retrievable",
+      "actual": "Document found with category Evidence",
+      "status": "PASS"
+    },
+    {
+      "id": "E5-06",
+      "scenario": "Update temporary document",
+      "input": "availableCopies=0; status=archived",
+      "expected": "Stored document changes are returned",
+      "actual": "Updated status archived and availableCopies 0",
+      "status": "PASS"
+    },
+    {
+      "id": "E5-07",
+      "scenario": "Delete temporary document",
+      "input": "deleteOne(createdId)",
+      "expected": "Temporary document is removed",
+      "actual": "deletedCount 1 and record absent after delete",
+      "status": "PASS"
+    },
+    {
+      "id": "E5-08",
+      "scenario": "Load live localhost catalogue",
+      "input": "http://localhost:5173/books",
+      "expected": "77 stored books render",
+      "actual": "77 BookCard components observed",
+      "status": "PASS"
+    },
+    {
+      "id": "E5-09",
+      "scenario": "Search Murakami",
+      "input": "Murakami",
+      "expected": "Norwegian Wood remains",
+      "actual": "One BookCard named Norwegian Wood observed",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "experiment": 1,
+  "title": "Design a Responsive Registration Form using Bootstrap and Perform Client-Side Validation using JavaScript",
+  "requirements": [
+    "Responsive registration form",
+    "Client-side required and email constraints",
+    "Bootstrap layout and custom validation (EVIDENCE MISSING in current main UI)"
+  ],
+  "implemented": [
+    "Current main React RegisterPage renders reader, delivery, password confirmation and reader-terms controls with visible client-side feedback.",
+    "Current main CSS uses a two-column form grid on desktop and a responsive one-column mobile form grid.",
+    "Current AuthContext and the shared apiRequest helper wire the form to the real /auth/register endpoint."
+  ],
+  "missing": [
+    "EVIDENCE MISSING: the current main React registration page does not load Bootstrap or a Bootstrap confirmation modal. Equivalent visible client-side validation is implemented with the current React component and stylesheet."
+  ],
+  "files_used": [
+    "client/README.md",
+    "client/package.json",
+    "client/index.html",
+    "client/src/pages/Pages.jsx",
+    "client/src/styles.css",
+    "client/src/context/AuthContext.jsx",
+    "client/src/services/api.js"
+  ],
+  "screenshots_required": 8
+}

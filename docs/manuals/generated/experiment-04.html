@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Experiment No. 4 — Kitab Ghar</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #000000;
+      background: #ffffff;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      font-size: 12pt;
+      line-height: 1.4;
+      text-align: left;
+    }
+    .exp-no {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 3pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .exp-title {
+      font-size: 11.5pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 8pt;
+      line-height: 1.3;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .section-head {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 8pt 0 2pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    p {
+      margin: 0 0 4pt;
+      color: #000000;
+      text-align: left;
+    }
+    ul, ol {
+      margin: 0 0 6pt 18pt;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 2pt;
+      color: #000000;
+      text-align: left;
+    }
+    .methodology-flow {
+      border: 1px solid #000000;
+      padding: 5pt 8pt;
+      margin: 4pt 0 6pt;
+      font-size: 9.5pt;
+      font-weight: bold;
+      text-align: center;
+      background: #fafafa;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-block {
+      margin: 4pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-label {
+      font-size: 9.5pt;
+      font-weight: bold;
+      margin: 0 0 1.5pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .code-meta {
+      font-size: 8.5pt;
+      font-style: italic;
+      margin: 0 0 2pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    pre {
+      margin: 2pt 0 4pt;
+      padding: 4pt 6pt;
+      border: 1px solid #000000;
+      background: #fafafa;
+      color: #000000;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 7.5pt;
+      line-height: 1.2;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .figure-block {
+      margin: 5pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .fig-img-wrap {
+      text-align: center;
+      margin: 2pt 0 2pt;
+    }
+    .fig-img-wrap img {
+      max-width: 92%;
+      max-height: 82mm;
+      width: auto;
+      height: auto;
+      border: 1px solid #000000;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .fig-title {
+      font-size: 10pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 3pt 0 2pt;
+      text-align: center;
+      page-break-before: avoid !important;
+      break-before: avoid !important;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .fig-desc {
+      font-size: 12pt;
+      color: #000000;
+      line-height: 1.3;
+      margin: 1pt 0 3pt;
+      text-align: left;
+    }
+    .result-conclusion-block {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin-top: 4pt;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+      margin: 3pt 0 4pt;
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+    tr {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid #000000;
+      padding: 2.5pt 4pt;
+      text-align: left;
+      vertical-align: top;
+      color: #000000;
+      line-height: 1.22;
+    }
+    th {
+      background: #f0f0f0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starts immediately on Page 1 -->
+  <div class="exp-no">Experiment No. 4</div>
+  <div class="exp-title">Title: Develop a Single Page Application (SPA) using React Router, Hooks, and Component Lifecycle Methods</div>
+
+  <div class="section-head">Aim:</div>
+  <p>To develop a client-side Single Page Application (SPA) using React Router DOM v6, manage view navigation without full-page HTTP reloads, extract dynamic URL parameters with useParams, and coordinate lifecycle-equivalent side effects using custom Hooks.</p>
+
+  <div class="section-head">Tools Used:</div>
+  <ul><li>React 18.3 &amp; React Router DOM v6.28.0</li><li>Vite 5 development server</li><li>HTML5 History API (pushState, replaceState, popstate)</li><li>Chrome DevTools Network panel for zero-reload verification</li></ul>
+
+  <div class="section-head">Methodology:</div>
+  <div class="methodology-flow">BrowserRouter Provider Setup → Declarative Route Tree Definition → NavLink Client Navigation → Dynamic Route Parameter Extraction → Protected Route Guarding → Network Tab Zero-Reload Audit</div>
+  <p>BrowserRouter wraps the application root to subscribe to browser history changes. Routes and Route declarations define the URL-to-component mappings. Navigation is managed exclusively via NavLink and Link components, which intercept anchor clicks and invoke the HTML5 History API. Dynamic book details are addressed through parameterized routes (/books/:id) and resolved via useParams(). Protected routes redirect unauthorized readers using custom auth guards.</p>
+
+  <div class="section-head">Theory:</div>
+  <p>Single Page Applications (SPAs) rewrite the traditional multi-page web paradigm. Rather than requesting a fresh HTML document from the server on every navigation action, an SPA loads a single root HTML document once. Subsequent view transitions are performed by client-side JavaScript dynamically rewriting the DOM tree in response to URL changes.</p>
+<p>React Router DOM provides declarative client-side routing. BrowserRouter uses the browser's native HTML5 History API (pushState, replaceState, and the popstate event) to keep the UI synchronized with the browser's address bar. The &lt;Routes&gt; and &lt;Route&gt; elements match location pathnames to component trees, supporting nested routes and layout sharing via &lt;Outlet /&gt;.</p>
+<p>Dynamic routing is achieved using route parameters (e.g., path='books/:id'). The useParams() hook extracts route parameters from the current URL, enabling components to perform parameterized data fetching in useEffect(). Route protection is implemented by wrapping private routes in guard components that inspect authentication tokens and conditionally render either child outlets or &lt;Navigate to='/login' replace /&gt;.</p>
+
+  <div class="section-head">Case Study Context:</div>
+  <p>Kitab Ghar, Badlapur — a complete library SPA. The client-side routing architecture enables readers to navigate seamlessly between the Homepage (/), Book Catalogue (/books), dynamic Book Details (/books/:id), Membership Tiers (/membership), Authentication (/login, /register), and a Protected Reader Dashboard (/dashboard).</p>
+  <p>The experiment documents both the main Kitab Ghar application routing switchboard (client/src/App.jsx) and the standalone React Router demonstration suite (experiments/exp4/), confirming zero-reload client-side navigation across both implementations.</p>
+
+  <div class="section-head">Functions / Methods / Technologies Used:</div>
+  <ul><li>&lt;BrowserRouter&gt;, &lt;Routes&gt;, and &lt;Route&gt; for declarative routing</li><li>&lt;NavLink&gt; and &lt;Link&gt; for client-side zero-reload navigation</li><li>&lt;Outlet /&gt; for rendering nested route children inside Layout</li><li>useParams() to extract dynamic parameters (/books/:id)</li><li>useNavigate() for programmatic navigation and workflow redirects</li><li>useLocation() to track current pathname and state</li><li>useEffect() for lifecycle-equivalent mount, update, and unmount effects</li><li>&lt;Navigate replace /&gt; for declarative redirection</li></ul>
+
+  <div class="section-head">Procedure:</div>
+  <p>Each public and protected route was opened through client-side navigation, including the dynamic book-detail path. The dashboard route was checked without a session and after login, while direct URL navigation was used to verify single-page application route handling.</p>
+  <ol><li>Inspect client/src/main.jsx to verify BrowserRouter wrapping around the App component.</li><li>Review client/src/App.jsx to study declarative route definitions: index, /books, /books/:id, /membership, /login, /dashboard.</li><li>Inspect client/src/components/Layout.jsx to examine the NavLink navigation bar and &lt;Outlet /&gt; structure.</li><li>Review client/src/components/ProtectedRoute.jsx to understand authentication guard logic.</li><li>Trace how BookDetailsPage consumes useParams() to fetch specific book documents.</li><li>Start the development server and open DevTools Network panel filtering for 'Doc' (HTML documents).</li><li>Click between Home, Books, and Membership; observe that zero new HTML document requests occur.</li><li>Click an individual book card to navigate to /books/:id; verify that the book ID resolves dynamically.</li><li>Attempt to access /dashboard while unauthenticated; verify redirection to /login.</li><li>Log in and verify immediate navigation to /dashboard with active reader credentials.</li><li>Test browser Back and Forward buttons; confirm expected history stack behavior.</li></ol>
+
+  <div class="section-head">Code:</div>
+  
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 4.1: Declarative SPA Route Tree &amp; Route Guarding</strong></p>
+      <p class="code-meta">File: <code>client/src/App.jsx</code> (Lines 1–11) — Defines the route switchboard, nested layout routes, parameter paths, and protected routes.</p>
+      <pre><code>import React from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { useAuth } from "./context/AuthContext";
+import { AdminPage, BookDetailsPage, BooksPage, DashboardPage, HomePage, LoginPage, MembershipPage, RegisterPage } from "./pages/Pages";
+
+function AdminRoute() {
+  const { user } = useAuth();
+  return user?.role === "admin" ? &lt;AdminPage /&gt; : &lt;Navigate to="/dashboard" replace /&gt;;
+}
+
+export default function App() {
+  return (
+    &lt;Routes&gt;
+      &lt;Route element={&lt;Layout /&gt;}&gt;
+        &lt;Route index element={&lt;HomePage /&gt;} /&gt;
+        &lt;Route path="books" element={&lt;BooksPage /&gt;} /&gt;
+        &lt;Route path="books/:id" element={&lt;BookDetailsPage /&gt;} /&gt;
+        &lt;Route path="membership" element={&lt;MembershipPage /&gt;} /&gt;
+        &lt;Route path="login" element={&lt;LoginPage /&gt;} /&gt;
+        &lt;Route path="register" element={&lt;RegisterPage /&gt;} /&gt;
+        &lt;Route element={&lt;ProtectedRoute /&gt;}&gt;
+          &lt;Route path="dashboard" element={&lt;DashboardPage /&gt;} /&gt;
+          &lt;Route path="admin" element={&lt;AdminRoute /&gt;} /&gt;
+        &lt;/Route&gt;
+        &lt;Route path="*" element={&lt;HomePage /&gt;} /&gt;
+      &lt;/Route&gt;
+    &lt;/Routes&gt;
+  );
+}</code></pre>
+    </div>
+  
+
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 4.2: Dynamic Parameter Extraction with useParams Hook</strong></p>
+      <p class="code-meta">File: <code>experiments/exp4/src/pages/BookDetailsPage.jsx</code> (Lines 8–28) — Extracts :id from the URL and fetches corresponding book data on mount.</p>
+      <pre><code>export default function BookDetailsPage() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [book, setBook] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() =&gt; {
+    // Lifecycle effect: triggers when 'id' parameter changes
+    const foundBook = booksCatalogue.find((b) =&gt; b._id === id);
+    setBook(foundBook || null);
+    setLoading(false);
+    document.title = foundBook ? `${foundBook.title} · Kitab Ghar` : "Book Details";
+    window.scrollTo(0, 0);
+  }, [id]);
+
+  if (loading) return &lt;div className="spinner"&gt;Loading book details...&lt;/div&gt;;
+  if (!book) return &lt;div className="error-box"&gt;Book not found in catalogue.&lt;/div&gt;;
+
+  return (
+    &lt;div className="book-details-view"&gt;
+      &lt;button onClick={() =&gt; navigate(-1)} className="btn-back"&gt;← Back to Catalogue&lt;/button&gt;
+      &lt;h1&gt;{book.title}&lt;/h1&gt;
+      &lt;p className="author"&gt;By {book.author}&lt;/p&gt;
+      &lt;span className="badge"&gt;{book.category}&lt;/span&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+    </div>
+  
+
+  <div class="section-head">Output:</div>
+  
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp4/screenshots/01-main-homepage.png" alt="React Router SPA Home Route (/)">
+      </div>
+      <p class="fig-title"><strong>Figure 4.1: React Router SPA Home Route (/)</strong></p>
+      <p class="fig-desc">This screenshot shows the initial index route (/) of the Single Page Application. The application is rendered without full-page reloads, with active navigation links managed by React Router's NavLink component which applies an active CSS class to the currently matched route. The browser URL bar displays the root path, confirming that BrowserRouter has initialized and the HTML5 History API is managing navigation state.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp4/screenshots/02-book-genie-wizard.png" alt="Client-Side Interactive Wizard View Transition">
+      </div>
+      <p class="fig-title"><strong>Figure 4.2: Client-Side Interactive Wizard View Transition</strong></p>
+      <p class="fig-desc">This screenshot shows client-side view state transitions in action. The Book Genie recommendation wizard alters internal view state without requesting new server documents from the backend, confirming Single Page Application principles. The browser Network tab shows zero document requests during this transition, proving that only client-side JavaScript manages the view updates.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp4/screenshots/03-books-catalogue.png" alt="Live Books Catalogue Route (/books)">
+      </div>
+      <p class="fig-title"><strong>Figure 4.3: Live Books Catalogue Route (/books)</strong></p>
+      <p class="fig-desc">This screenshot shows the /books catalogue route. Navigating here from the homepage updates the browser URL bar instantaneously to /books without triggering an HTML document reload in the Network tab. The React Router Routes component matches the path and renders the BooksPage component, while the Layout wrapper (header, footer) persists across route transitions without re-mounting.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp4/screenshots/04-dynamic-book-details.png" alt="Dynamic Parameter Route (/books/:id) using useParams">
+      </div>
+      <p class="fig-title"><strong>Figure 4.4: Dynamic Parameter Route (/books/:id) using useParams</strong></p>
+      <p class="fig-desc">This screenshot demonstrates dynamic route resolution. The URL path /books/6abc2b... is parsed by the useParams() hook, which extracts the :id parameter to fetch and render the corresponding book details. The useEffect hook triggers a data fetch whenever the id parameter changes, demonstrating the component lifecycle equivalent of componentDidMount and componentDidUpdate in functional React.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp4/screenshots/05-membership-plans.png" alt="Membership Plans Route (/membership)">
+      </div>
+      <p class="fig-title"><strong>Figure 4.5: Membership Plans Route (/membership)</strong></p>
+      <p class="fig-desc">This screenshot shows the /membership route rendering Kitab Ghar subscription tiers (Reader, Scholar, and Patron plans). Client-side navigation smoothly switches views while preserving active application state such as authentication tokens and user preferences in React Context. The URL transition from /books to /membership happens entirely in the browser without a server round-trip.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp4/screenshots/06-login-route.png" alt="Authentication Route (/login)">
+      </div>
+      <p class="fig-title"><strong>Figure 4.6: Authentication Route (/login)</strong></p>
+      <p class="fig-desc">This screenshot shows the /login route. The route accepts state parameters from useNavigate() to remember the intended destination and redirect readers back upon successful login using navigate(from, { replace: true }). This demonstrates React Router's programmatic navigation API and the useLocation hook for reading route state passed between components.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp4/screenshots/07-dashboard-route.png" alt="Protected Reader Dashboard Route (/dashboard)">
+      </div>
+      <p class="fig-title"><strong>Figure 4.7: Protected Reader Dashboard Route (/dashboard)</strong></p>
+      <p class="fig-desc">This screenshot shows the protected /dashboard route. Accessing this route without an active session triggers the ProtectedRoute wrapper component to redirect to /login via the Navigate component, whereas authenticated users see their active rentals, return dates, and membership status. The ProtectedRoute component checks the auth context and conditionally renders either the child Outlet or a redirect, demonstrating route-level access control in React Router.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp4/screenshots/08-responsive-mobile-spa.png" alt="Responsive Mobile Single Page Application Navigation">
+      </div>
+      <p class="fig-title"><strong>Figure 4.8: Responsive Mobile Single Page Application Navigation</strong></p>
+      <p class="fig-desc">This screenshot proves responsive SPA navigation on mobile screens. The collapsible hamburger navigation drawer allows seamless switching between client-side routes without layout breakage or full-page reloads. All route transitions are handled entirely by React Router on the client side, confirming that the Single Page Application architecture works consistently across both desktop and mobile viewports.</p>
+    </div>
+  
+
+  <div class="result-conclusion-block">
+    <div class="section-head">Result:</div>
+    <p>A robust Single Page Application was successfully implemented using React Router DOM v6. Client-side routing, dynamic parameter extraction via useParams, route protection via custom auth guards, and lifecycle effects via useEffect were thoroughly validated with zero full-page reloads.</p>
+    <p>The route runs confirmed zero-reload view changes, correct extraction of the dynamic book identifier, and redirection of unauthenticated users before protected content was displayed.</p>
+
+    <div class="section-head">Conclusion:</div>
+    <p>The experiment confirmed that React Router DOM provides powerful, declarative routing capabilities that transform multi-component React applications into cohesive Single Page Applications.</p>
+<p>The combination of useParams, useNavigate, and ProtectedRoute guards provides a production-ready routing architecture that delivers desktop-like speed and responsiveness to web users.</p>
+    <p>This experiment combines React Router paths, hooks, and authentication guards into a maintainable navigation structure for the reader workflow.</p>
+  </div>
+
+</body>
+</html>

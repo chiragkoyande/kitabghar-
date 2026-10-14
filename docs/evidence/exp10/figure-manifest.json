@@ -1,0 +1,62 @@
+[
+  {
+    "figure": "Figure 10.1",
+    "title": "Render API Service Configuration",
+    "file": "screenshots/01-deployment-evidence.png",
+    "purpose": "Captured current repository configuration or actual build output.",
+    "what_it_demonstrates": "services:\n  - type: web\n    name: kitabghar-api\n    runtime: node\n    rootDir: server\n    buildCommand: npm install\n    startCommand: npm start\n    healthCheckPath: /api/health\n    autoDeploy: true\n    envVars:\n      - key: NODE_ENV\n        value: production\n      - key: PORT\n        value: 10000\n      - key: MONGO_URI\n        sync: false\n      - key: JWT_SECRET\n        sync: false\n      - key: CLIENT_ORIGIN\n        sync: false\n",
+    "code_refs": [
+      "EXP10-CODE-01"
+    ]
+  },
+  {
+    "figure": "Figure 10.2",
+    "title": "Vercel SPA Rewrite Configuration",
+    "file": "screenshots/02-deployment-evidence.png",
+    "purpose": "Captured current repository configuration or actual build output.",
+    "what_it_demonstrates": "{\n  \"rewrites\": [{ \"source\": \"/(.*)\", \"destination\": \"/index.html\" }]\n}\n",
+    "code_refs": [
+      "EXP10-CODE-02"
+    ]
+  },
+  {
+    "figure": "Figure 10.3",
+    "title": "Deployment Checklist",
+    "file": "screenshots/03-deployment-evidence.png",
+    "purpose": "Captured current repository configuration or actual build output.",
+    "what_it_demonstrates": "# Deployment checklist\n\n## Before deployment\n\n- [ ] Run `npm run build` in `client`.\n- [ ] Run server syntax checks.\n- [ ] Copy `.env.example` values into the hosting dashboards only.\n- [ ] Confirm `.env` files and credentials are ignored by Git.\n- [ ] Put the official logo in `client/public/kitab-ghar-logo.png`.\n\n## After deployment\n\n- [ ] Configure Render's `CLIENT_ORIGIN` with the exact Vercel URL.\n- [ ] Configure Vercel's `VITE_API_URL` with the exact Render API URL.\n- [ ] Test `/api/health`.\n- [ ] Test registration, login, membership, rental and return.\n- [ ] Confirm Atlas persistence.\n- [ ] Test a direct refresh on `/books/:id` and `/dashboard`.\n",
+    "code_refs": [
+      "EXP10-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 10.4",
+    "title": "Verified Production Client Build",
+    "file": "screenshots/04-deployment-evidence.png",
+    "purpose": "Captured current repository configuration or actual build output.",
+    "what_it_demonstrates": "vite v5.4.21 building for production...\n✓ 452 modules transformed.\ndist/index.html                   0.51 kB │ gzip:   0.32 kB\ndist/assets/index-Dpy29DJF.css   61.86 kB │ gzip:  12.40 kB\ndist/assets/index-DadEie8B.js   377.80 kB │ gzip: 118.76 kB\n✓ built in 1.10s\nnode_modules/framer-motion/dist/es/index.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/index.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/components/LazyMotion/index.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/components/LazyMotion/index.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/components/MotionConfig/index.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/components/MotionConfig/index.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/components/LayoutGroup/index.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/components/LayoutGroup/index.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/context/PresenceContext.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/context/PresenceContext.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/context/MotionConfigContext.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/context/MotionConfigContext.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/context/MotionContext/index.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/context/MotionContext/index.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/context/LayoutGroupContext.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/context/LayoutGroupContext.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/context/SwitchLayoutGroupContext.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/context/SwitchLayoutGroupContext.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/motion/index.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/motion/index.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/context/LazyContext.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/context/LazyContext.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/components/Reorder/Group.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/components/Reorder/Group.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/components/Reorder/Item.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/components/Reorder/Item.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/motion/features/layout/MeasureLayout.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/motion/features/layout/MeasureLayout.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/context/ReorderContext.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/context/ReorderContext.mjs\" was ignored.\nnode_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs\" was ignored.",
+    "code_refs": [
+      "EXP10-CODE-04"
+    ]
+  },
+  {
+    "figure": "Figure 10.5",
+    "title": "Repository Deployment Status",
+    "file": "screenshots/05-deployment-evidence.png",
+    "purpose": "Captured current repository configuration or actual build output.",
+    "what_it_demonstrates": "Experiment 10 deployment configuration is ready; live hosting credentials and deployment execution remain environment-specific.",
+    "code_refs": [
+      "EXP10-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 10.6",
+    "title": "Required Cloud Environment Variables",
+    "file": "screenshots/06-deployment-evidence.png",
+    "purpose": "Captured current repository configuration or actual build output.",
+    "what_it_demonstrates": "Render: MONGO_URI, JWT_SECRET, CLIENT_ORIGIN\nVercel: VITE_API_URL\nNo deployed URL or hosting credentials were found in this workspace.",
+    "code_refs": [
+      "EXP10-CODE-01"
+    ]
+  }
+]

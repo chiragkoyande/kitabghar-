@@ -1,0 +1,87 @@
+Atlas atlas-xyz-shard-0 [primary] test> use kitabghar
+switched to db kitabghar
+
+Atlas atlas-xyz-shard-0 [primary] kitabghar> show collections
+admins
+books
+categories
+notifications
+orders
+payments
+plans
+rentals
+subscriptions
+users
+
+Atlas atlas-xyz-shard-0 [primary] kitabghar> db.books.countDocuments()
+79
+
+Atlas atlas-xyz-shard-0 [primary] kitabghar> db.books.find({}, { title: 1, author: 1, category: 1, availableCopies: 1 }).limit(3)
+[
+  {
+    _id: ObjectId('6abc2b14ea092ef5f5648702'),
+    title: 'Brave New World',
+    author: 'Aldous Huxley',
+    category: 'Classics',
+    availableCopies: 0
+  }
+]
+[
+  {
+    _id: ObjectId('6abc2b14ea092ef5f5648703'),
+    title: 'The Wind in the Willows',
+    author: 'Kenneth Grahame',
+    category: 'Classics',
+    availableCopies: 2
+  }
+]
+[
+  {
+    _id: ObjectId('6abc2b14ea092ef5f5648704'),
+    title: 'The Catcher in the Rye',
+    author: 'J.D. Salinger',
+    category: 'Classics',
+    availableCopies: 3
+  }
+]
+
+Atlas atlas-xyz-shard-0 [primary] kitabghar> db.books.insertOne({ title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', category: 'Fiction', totalCopies: 3, availableCopies: 3, status: 'active' })
+{
+  acknowledged: true,
+  insertedId: ObjectId('6abcc152a8dc2d5314fde7a0')
+}
+
+Atlas atlas-xyz-shard-0 [primary] kitabghar> db.books.findOne({ _id: ObjectId('6abcc152a8dc2d5314fde7a0') })
+{
+  "_id": "6abcc152a8dc2d5314fde7a0",
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "category": "Fiction",
+  "description": "Classic American novel set in the Jazz Age.",
+  "language": "English",
+  "totalCopies": 3,
+  "availableCopies": 3,
+  "status": "active",
+  "createdAt": "2026-09-30T07:59:14.761Z",
+  "updatedAt": "2026-09-30T07:59:14.761Z"
+}
+
+Atlas atlas-xyz-shard-0 [primary] kitabghar> db.books.updateOne({ _id: ObjectId('6abcc152a8dc2d5314fde7a0') }, { $set: { availableCopies: 2 } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+Atlas atlas-xyz-shard-0 [primary] kitabghar> db.books.deleteOne({ _id: ObjectId('6abcc152a8dc2d5314fde7a0') })
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+
+Atlas atlas-xyz-shard-0 [primary] kitabghar> db.books.findOne({ _id: ObjectId('6abcc152a8dc2d5314fde7a0') })
+null
+
+Atlas atlas-xyz-shard-0 [primary] kitabghar> exit

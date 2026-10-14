@@ -1,0 +1,90 @@
+[1m════════════════════════════════════════════════════[0m
+[1m  Kitab Ghar REST API — curl Test Suite[0m
+[1m════════════════════════════════════════════════════[0m
+
+[1mTEST 1: GET /api/health → Expected: 200 OK[0m
+[33m$ curl -s -w '
+HTTP Status: %{http_code}
+' http://localhost:5000/api/health[0m
+{"status":"ok","service":"kitabghar-api","database":"mongodb"}
+HTTP Status: 200
+
+────────────────────────────────────────────────────
+[1mTEST 2: GET /api/books → Expected: 200 OK (paginated list)[0m
+[33m$ curl -s -w '
+HTTP Status: %{http_code}
+' http://localhost:5000/api/books | head -c 500[0m
+{"count":77,"books":[{"_id":"6abc2b14ea092ef5f5648731","title":"A Shimla Affair","author":"Srishti Chaudhary","__v":0,"availableCopies":1,"category":"Romance","coverImage":"/book-covers/catalogue-043.jpg","createdAt":"2026-09-29T21:18:12.394Z","description":"Three sisters and a family secret unravel against the backdrop of a fading colonial hill town.","language":"English","publicationYear":2025,"status":"active","totalCopies":1,"updatedAt":"2026-09-29T21:18:12.394Z"},{"_id":"6abc2b14ea092ef5f56
+
+────────────────────────────────────────────────────
+[1mTEST 3: GET /api/categories → Expected: 200 OK[0m
+[33m$ curl -s -w '
+HTTP Status: %{http_code}
+' http://localhost:5000/api/categories[0m
+[{"_id":"6abc2b13ea092ef5f56486f9","name":"Children's & YA","__v":0,"createdAt":"2026-09-29T21:18:11.980Z","description":"Curated stories and adventures for younger readers.","updatedAt":"2026-09-29T21:18:11.980Z"},{"_id":"6abc2b13ea092ef5f56486f3","name":"Classics","__v":0,"createdAt":"2026-09-29T21:18:11.285Z","description":"Enduring stories and literary landmarks.","updatedAt":"2026-09-29T21:18:11.285Z"},{"_id":"6abc2b14ea092ef5f56486fa","name":"Comics & Graphic Novels","__v":0,"createdAt":"2026-09-29T21:18:12.067Z","description":"Visual storytelling across graphic novels and comics.","updatedAt":"2026-09-29T21:18:12.067Z"},{"_id":"6abc2b13ea092ef5f56486f5","name":"Fantasy & Sci-Fi","__v":0,"createdAt":"2026-09-29T21:18:11.867Z","description":"Imaginative worlds, speculative futures and big questions.","updatedAt":"2026-09-29T21:18:11.867Z"},{"_id":"6abc2b14ea092ef5f56486fe","name":"Hindi Literature","__v":0,"createdAt":"2026-09-29T21:18:12.256Z","description":"Selected Hindi stories and modern literary voices.","updatedAt":"2026-09-29T21:18:12.256Z"},{"_id":"6abc2b13ea092ef5f56486f4","name":"Literary Fiction","__v":0,"createdAt":"2026-09-29T21:18:11.716Z","description":"Character-led stories and contemporary literary voices.","updatedAt":"2026-09-29T21:18:11.716Z"},{"_id":"6abc2b13ea092ef5f56486f7","name":"Mystery & Thriller","__v":0,"createdAt":"2026-09-29T21:18:11.926Z","description":"Page-turning mysteries, suspense and detective stories.","updatedAt":"2026-09-29T21:18:11.926Z"},{"_id":"6abc2b13ea092ef5f56486f6","name":"Mythology & Fantasy","__v":0,"createdAt":"2026-09-29T21:18:11.896Z","description":"Myths, legends and Indian-inspired fantasy adventures.","updatedAt":"2026-09-29T21:18:11.896Z"},{"_id":"6abc2b14ea092ef5f56486fb","name":"Nonfiction","__v":0,"createdAt":"2026-09-29T21:18:12.167Z","description":"Ideas, skills and true stories for curious minds.","updatedAt":"2026-09-29T21:18:12.167Z"},{"_id":"6abc2b14ea092ef5f56486fc","name":"Nonfiction & Memoir","__v":0,"createdAt":"2026-09-29T21:18:12.196Z","description":"Memoirs, journeys and real-life perspectives.","updatedAt":"2026-09-29T21:18:12.196Z"},{"_id":"6abc2b14ea092ef5f56486fd","name":"Poetry","__v":0,"createdAt":"2026-09-29T21:18:12.225Z","description":"Poems about love, life, loss and everything between.","updatedAt":"2026-09-29T21:18:12.225Z"},{"_id":"6abc2b13ea092ef5f56486f8","name":"Romance","__v":0,"createdAt":"2026-09-29T21:18:11.956Z","description":"Warm, hopeful stories about relationships and second chances.","updatedAt":"2026-09-29T21:18:11.956Z"}]
+HTTP Status: 200
+
+────────────────────────────────────────────────────
+[1mTEST 4: POST /api/books (no auth) → Expected: 401 Unauthorized[0m
+[33m$ curl -s -w '
+HTTP Status: %{http_code}
+' -X POST -H 'Content-Type: application/json' \
+  -d '{"title":"Test Book","author":"Test"}' http://localhost:5000/api/books[0m
+{"message":"Authentication required"}
+HTTP Status: 401
+
+────────────────────────────────────────────────────
+[1mTEST 5: POST /api/auth/login → Expected: 200 OK + JWT token[0m
+[33m$ curl -s -w '
+HTTP Status: %{http_code}
+' -X POST -H 'Content-Type: application/json' \
+  -d '{"email":"admin@kitabghar.local","password":"KitabGhar@2026!"}' http://localhost:5000/api/auth/login[0m
+{"user":{"id":"6abc2b152a8c8cb5ea2824ca","name":"Kitab Ghar Admin","email":"admin@kitabghar.local","role":"admin"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYmMyYjE1MmE4YzhjYjVlYTI4MjRjYSIsInJvbGUiOiJhZG1pbiIsIm5hbWUiOiJLaXRhYiBHaGFyIEFkbWluIiwiaWF0IjoxNzkwNzU0ODIxLCJleHAiOjE3OTEzNTk2MjF9.Pz7-EhamqNKowny04H_5FhD1DLgESzZJlnusSxQDr2Y"}
+HTTP Status: 200
+
+────────────────────────────────────────────────────
+[32mToken extracted successfully. Proceeding with authenticated tests.[0m
+
+[1mTEST 6: POST /api/books (authenticated) → Expected: 201 Created[0m
+[33m$ curl -s -w '
+HTTP Status: %{http_code}
+' -X POST \
+  -H 'Content-Type: application/json' -H 'Authorization: Bearer $TOKEN' \
+  -d '{...}' http://localhost:5000/api/books[0m
+{"title":"__EXP8_CURL_TEST_BOOK__","author":"Kitab Ghar Evidence Agent","description":"Temporary book created for REST API curl testing evidence.","category":"Evidence","language":"English","totalCopies":2,"availableCopies":2,"status":"active","_id":"6abcc00594ef7f9852e14668","createdAt":"2026-09-30T07:53:41.608Z","updatedAt":"2026-09-30T07:53:41.608Z","__v":0}
+HTTP Status: 201
+
+────────────────────────────────────────────────────
+[1mTEST 7: PUT /api/books/6abcc00594ef7f9852e14668 → Expected: 200 OK[0m
+[33m$ curl -s -w '
+HTTP Status: %{http_code}
+' -X PUT \
+  -H 'Content-Type: application/json' -H 'Authorization: Bearer $TOKEN' \
+  -d '{"availableCopies":1}' http://localhost:5000/api/books/6abcc00594ef7f9852e14668[0m
+{"_id":"6abcc00594ef7f9852e14668","title":"__EXP8_CURL_TEST_BOOK__","author":"Kitab Ghar Evidence Agent","description":"Temporary book created for REST API curl testing evidence.","category":"Evidence","language":"English","totalCopies":2,"availableCopies":1,"status":"active","createdAt":"2026-09-30T07:53:41.608Z","updatedAt":"2026-09-30T07:53:41.965Z","__v":0}
+HTTP Status: 200
+
+────────────────────────────────────────────────────
+[1mTEST 8: DELETE /api/books/6abcc00594ef7f9852e14668 → Expected: 200 OK[0m
+[33m$ curl -s -w '
+HTTP Status: %{http_code}
+' -X DELETE \
+  -H 'Authorization: Bearer $TOKEN' http://localhost:5000/api/books/6abcc00594ef7f9852e14668[0m
+{"message":"Book archived","book":{"_id":"6abcc00594ef7f9852e14668","title":"__EXP8_CURL_TEST_BOOK__","author":"Kitab Ghar Evidence Agent","description":"Temporary book created for REST API curl testing evidence.","category":"Evidence","language":"English","totalCopies":2,"availableCopies":1,"status":"archived","createdAt":"2026-09-30T07:53:41.608Z","updatedAt":"2026-09-30T07:53:42.424Z","__v":0}}
+HTTP Status: 200
+
+────────────────────────────────────────────────────
+
+[1m════════════════════════════════════════════════════[0m
+[32m[1m  All 8 REST API tests completed.[0m
+[1m════════════════════════════════════════════════════[0m
+
+Tests performed:
+  1. GET  /api/health       → 200 (Health check)
+  2. GET  /api/books        → 200 (List all books)
+  3. GET  /api/categories   → 200 (List categories)
+  4. POST /api/books        → 401 (Unauthorized create)
+  5. POST /api/auth/login   → 200 (Admin login + JWT)
+  6. POST /api/books        → 201 (Authenticated create)
+  7. PUT  /api/books/:id    → 200 (Update book)
+  8. DELETE /api/books/:id  → 200 (Delete book)

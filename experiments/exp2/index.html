@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitab Ghar · ES6 JavaScript Features (Experiment 2)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-light pb-5">
+    <!-- Header -->
+    <header class="bg-primary text-white py-4 mb-4 shadow">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">📚 Kitab Ghar</h1>
+            <p class="lead mb-0">ES6 JavaScript Features (Experiment 2)</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- SECTION 1: Arrow Functions -->
+        <section class="card mb-4 shadow-sm" id="section-1">
+            <div class="card-header bg-dark text-white">
+                <h3 class="h5 mb-0">Section 1: Arrow Functions</h3>
+            </div>
+            <div class="card-body">
+                <p>Demonstrating modern arrow function syntax (<code>=&gt;</code>) for formatting, mapping, and filtering Kitab Ghar data.</p>
+                
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <h6>Code Example:</h6>
+<pre><code>// Book price formatter
+const formatPrice = (price) =&gt; '₹' + price.toFixed(2);
+
+// Array processing
+const bookTitles = books.map(b =&gt; b.title);
+
+// Multi-line arrow filtering
+const getAvailable = () =&gt; {
+    return books.filter(b =&gt; b.available);
+};</code></pre>
+                        <button id="btn-arrow-demo" class="btn btn-primary w-100">Run Arrow Functions</button>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Output:</h6>
+                        <div id="out-arrow-demo" class="output min-h-150">Output will appear here...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Anonymous Functions -->
+        <section class="card mb-4 shadow-sm" id="section-2">
+            <div class="card-header bg-dark text-white">
+                <h3 class="h5 mb-0">Section 2: Anonymous Functions</h3>
+            </div>
+            <div class="card-body">
+                <p>Functions without a name, used as callbacks in <code>setTimeout</code> and array iterations.</p>
+                
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <h6>Code Example:</h6>
+<pre><code>// setTimeout with anonymous callback
+setTimeout(function() {
+    console.log("Reminder");
+}, 2000);
+
+// forEach with anonymous function
+books.forEach(function(book) {
+    // Process each book...
+});</code></pre>
+                        <button id="btn-anon-timeout" class="btn btn-secondary w-100 mb-2">Simulate Rental Reminder (2s delay)</button>
+                        <button id="btn-anon-foreach" class="btn btn-info w-100 text-white">List Books (forEach)</button>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Output:</h6>
+                        <div id="out-anon-demo" class="output min-h-150">Output will appear here...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Arrays -->
+        <section class="card mb-4 shadow-sm" id="section-3">
+            <div class="card-header bg-dark text-white">
+                <h3 class="h5 mb-0">Section 3: Arrays (map, filter, reduce)</h3>
+            </div>
+            <div class="card-body">
+                <p>Higher-order array methods operating on the Kitab Ghar catalogue.</p>
+                
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="d-grid gap-2">
+                            <button id="btn-array-map" class="btn btn-outline-primary"><code>map()</code>: Extract Titles</button>
+                            <button id="btn-array-filter" class="btn btn-outline-success"><code>filter()</code>: Available &amp; Fiction</button>
+                            <button id="btn-array-reduce" class="btn btn-outline-warning text-dark"><code>reduce()</code>: Calculate Stats</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Output:</h6>
+                        <div id="out-array-demo" class="output min-h-150">Output will appear here...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Events -->
+        <section class="card mb-4 shadow-sm" id="section-4">
+            <div class="card-header bg-dark text-white">
+                <h3 class="h5 mb-0">Section 4: Events</h3>
+            </div>
+            <div class="card-body">
+                <p>Demonstrating <code>click</code>, <code>input</code>, <code>change</code>, and <code>mouseover</code> events.</p>
+                
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Live Search (input event)</label>
+                        <input type="text" id="event-search-input" class="form-control" placeholder="Search title as you type...">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Category Filter (change event)</label>
+                        <select id="event-category-select" class="form-select">
+                            <option value="">All Categories</option>
+                            <option value="Fiction">Fiction</option>
+                            <option value="Non-Fiction">Non-Fiction</option>
+                            <option value="Self-Help">Self-Help</option>
+                            <option value="Mystery">Mystery</option>
+                            <option value="Biography">Biography</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-end">
+                        <button id="event-search-btn" class="btn btn-primary w-100">Search (click event)</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h6>Hover over books (mouseover event): <span id="hover-detail" class="text-success fw-bold"></span></h6>
+                        <div id="event-books-container" class="d-flex flex-wrap gap-2">
+                            <!-- Populated via JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Popup Boxes -->
+        <section class="card mb-4 shadow-sm" id="section-5">
+            <div class="card-header bg-dark text-white">
+                <h3 class="h5 mb-0">Section 5: Popup Boxes</h3>
+            </div>
+            <div class="card-body">
+                <p>Native browser dialogs for user interaction.</p>
+                
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="d-grid gap-2">
+                            <button id="btn-popup-alert" class="btn btn-outline-danger"><code>alert()</code>: Rental Confirmation</button>
+                            <button id="btn-popup-confirm" class="btn btn-outline-info"><code>confirm()</code>: Remove from Wishlist</button>
+                            <button id="btn-popup-prompt" class="btn btn-outline-primary"><code>prompt()</code>: Reader Name</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Output / Return Value:</h6>
+                        <div id="out-popup-demo" class="output min-h-150">Popup results will appear here...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="es6-demo.js"></script>
+</body>
+</html>

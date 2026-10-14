@@ -1,0 +1,90 @@
+[
+  {
+    "figure": "Figure 4.1",
+    "title": "Kitab Ghar Main Application & Book Genie Hero",
+    "file": "screenshots/01-main-homepage.png",
+    "purpose": "Initial render of the main Kitab Ghar React Router SPA homepage.",
+    "what_it_demonstrates": "The React Router client layout, active navigation, official branding logo, Book Genie reading guide hero and featured catalogue cards in the main application.",
+    "code_refs": [
+      "EXP4-CODE-01",
+      "EXP4-CODE-02"
+    ]
+  },
+  {
+    "figure": "Figure 4.2",
+    "title": "Interactive Book Genie Recommendation Wizard",
+    "file": "screenshots/02-book-genie-wizard.png",
+    "purpose": "Interactive Akinator-style recommendation wizard modal.",
+    "what_it_demonstrates": "The interactive Book Genie recommendation wizard rendered conditionally as an interactive modal with dynamic questions, option cards and progress tracking.",
+    "code_refs": [
+      "EXP4-CODE-01",
+      "EXP4-CODE-02"
+    ]
+  },
+  {
+    "figure": "Figure 4.3",
+    "title": "Live Books Catalogue Route (/books)",
+    "file": "screenshots/03-books-catalogue.png",
+    "purpose": "Main API-backed catalogue route with search, filters and sorting.",
+    "what_it_demonstrates": "The client-side BooksPage component fetching and rendering the 77-book API catalogue with live search, category filter pills, availability toggles and sorting.",
+    "code_refs": [
+      "EXP4-CODE-03",
+      "EXP4-CODE-01"
+    ]
+  },
+  {
+    "figure": "Figure 4.4",
+    "title": "Dynamic Parameter Route (/books/:id)",
+    "file": "screenshots/04-dynamic-book-details.png",
+    "purpose": "Dynamic route rendering book record by ID parameter.",
+    "what_it_demonstrates": "The dynamic parameter route extracting book ID with useParams, fetching record details via useApiData, and displaying cover artwork, stock availability and rental actions.",
+    "code_refs": [
+      "EXP4-CODE-04",
+      "EXP4-CODE-01"
+    ]
+  },
+  {
+    "figure": "Figure 4.5",
+    "title": "Reader Membership Plans Route (/membership)",
+    "file": "screenshots/05-membership-plans.png",
+    "purpose": "Dedicated subscription tiers page with UPI integration.",
+    "what_it_demonstrates": "The dedicated membership route with live subscription tiers (Basic, Standard, Bibliophile) and interactive UPI QR payment modal integration.",
+    "code_refs": [
+      "EXP4-CODE-07",
+      "EXP4-CODE-01"
+    ]
+  },
+  {
+    "figure": "Figure 4.6",
+    "title": "Controlled Authentication Route (/login)",
+    "file": "screenshots/06-login-route.png",
+    "purpose": "Reader login screen with controlled form state.",
+    "what_it_demonstrates": "Controlled form inputs for reader authentication, error feedback, and programmatic navigation redirection via useNavigate.",
+    "code_refs": [
+      "EXP4-CODE-05",
+      "EXP4-CODE-01"
+    ]
+  },
+  {
+    "figure": "Figure 4.7",
+    "title": "Protected Reader Dashboard Route (/dashboard)",
+    "file": "screenshots/07-dashboard-route.png",
+    "purpose": "Protected user dashboard displaying active loans and account status.",
+    "what_it_demonstrates": "The reader dashboard route guarded by ProtectedRoute, rendering active rental metrics, payment status, and library exploration CTAs.",
+    "code_refs": [
+      "EXP4-CODE-06",
+      "EXP4-CODE-05"
+    ]
+  },
+  {
+    "figure": "Figure 4.8",
+    "title": "Responsive Mobile SPA Layout (320px)",
+    "file": "screenshots/08-responsive-mobile-spa.png",
+    "purpose": "Mobile responsiveness capture at 320px viewport width.",
+    "what_it_demonstrates": "Responsive React Router layout and Book Genie hero adapting cleanly to a 320px mobile viewport without horizontal scrolling.",
+    "code_refs": [
+      "EXP4-CODE-01",
+      "EXP4-CODE-02"
+    ]
+  }
+]

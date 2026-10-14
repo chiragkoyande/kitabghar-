@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-09-29T20:19:07.578Z",
+  "evidence": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "experiment": 4
+  },
+  "screenshots": {
+    "status": "PASS",
+    "count": 8,
+    "entries": [
+      {
+        "file": "screenshots/01-main-homepage.png",
+        "bytes": 438047
+      },
+      {
+        "file": "screenshots/02-book-genie-wizard.png",
+        "bytes": 219127
+      },
+      {
+        "file": "screenshots/03-books-catalogue.png",
+        "bytes": 605808
+      },
+      {
+        "file": "screenshots/04-dynamic-book-details.png",
+        "bytes": 171981
+      },
+      {
+        "file": "screenshots/05-membership-plans.png",
+        "bytes": 78516
+      },
+      {
+        "file": "screenshots/06-login-route.png",
+        "bytes": 40746
+      },
+      {
+        "file": "screenshots/07-dashboard-route.png",
+        "bytes": 47615
+      },
+      {
+        "file": "screenshots/08-responsive-mobile-spa.png",
+        "bytes": 82185
+      }
+    ],
+    "errors": []
+  },
+  "content": {
+    "status": "PASS",
+    "missingHeadings": [],
+    "figureReferences": 24,
+    "errors": []
+  },
+  "pdf": {
+    "status": "PASS",
+    "pages": 19,
+    "errors": [],
+    "textLength": 29193
+  }
+}

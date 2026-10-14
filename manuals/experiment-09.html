@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Experiment No. 9 — Kitab Ghar</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #000000;
+      background: #ffffff;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      font-size: 12pt;
+      line-height: 1.4;
+      text-align: left;
+    }
+    .exp-no {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 3pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .exp-title {
+      font-size: 11.5pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 8pt;
+      line-height: 1.3;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .section-head {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 8pt 0 2pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    p {
+      margin: 0 0 4pt;
+      color: #000000;
+      text-align: left;
+    }
+    ul, ol {
+      margin: 0 0 6pt 18pt;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 2pt;
+      color: #000000;
+      text-align: left;
+    }
+    .methodology-flow {
+      border: 1px solid #000000;
+      padding: 5pt 8pt;
+      margin: 4pt 0 6pt;
+      font-size: 9.5pt;
+      font-weight: bold;
+      text-align: center;
+      background: #fafafa;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-block {
+      margin: 4pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-label {
+      font-size: 9.5pt;
+      font-weight: bold;
+      margin: 0 0 1.5pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .code-meta {
+      font-size: 8.5pt;
+      font-style: italic;
+      margin: 0 0 2pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    pre {
+      margin: 2pt 0 4pt;
+      padding: 4pt 6pt;
+      border: 1px solid #000000;
+      background: #fafafa;
+      color: #000000;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 7.5pt;
+      line-height: 1.2;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .figure-block {
+      margin: 5pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .fig-img-wrap {
+      text-align: center;
+      margin: 2pt 0 2pt;
+    }
+    .fig-img-wrap img {
+      max-width: 92%;
+      max-height: 82mm;
+      width: auto;
+      height: auto;
+      border: 1px solid #000000;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .fig-title {
+      font-size: 10pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 3pt 0 2pt;
+      text-align: center;
+      page-break-before: avoid !important;
+      break-before: avoid !important;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .fig-desc {
+      font-size: 12pt;
+      color: #000000;
+      line-height: 1.3;
+      margin: 1pt 0 3pt;
+      text-align: left;
+    }
+    .result-conclusion-block {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin-top: 4pt;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+      margin: 3pt 0 4pt;
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+    tr {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid #000000;
+      padding: 2.5pt 4pt;
+      text-align: left;
+      vertical-align: top;
+      color: #000000;
+      line-height: 1.22;
+    }
+    th {
+      background: #f0f0f0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starts immediately on Page 1 -->
+  <div class="exp-no">Experiment No. 9</div>
+  <div class="exp-title">Title: Develop a Full-Stack MERN Application by Integrating React Frontend with Express Backend using Axios / Fetch API</div>
+
+  <div class="section-head">Aim:</div>
+  <p>To develop and deploy a complete full-stack MERN (MongoDB, Express.js, React 18, Node.js) web application for Kitab Ghar, integrating the client-side user interface with the backend RESTful API via asynchronous HTTP requests (Fetch API / Axios) with end-to-end data flow.</p>
+
+  <div class="section-head">Tools Used:</div>
+  <ul><li>MongoDB Atlas (Data Tier)</li><li>Express.js &amp; Node.js (Application / API Tier)</li><li>React 18 &amp; Vite (Presentation / UI Tier)</li><li>Fetch API / Axios HTTP client with Bearer token interceptor</li><li>CORS middleware for cross-origin communication</li><li>Google Chrome DevTools Network tab for HTTP timing inspection</li></ul>
+
+  <div class="section-head">Methodology:</div>
+  <div class="methodology-flow">React UI Action → Fetch API Asynchronous Request → Express Route &amp; Controller → Mongoose Query → MongoDB BSON Document Retrieval → JSON HTTP Response → React State Mutation → Virtual DOM Re-render</div>
+  <p>The integration follows an end-to-end lifecycle. The React client delegates all network communication to a unified helper (client/src/services/api.js). Requests attach JWT tokens from localStorage. The Express server processes requests through Helmet, CORS, and auth middleware, delegates queries to Mongoose models, and returns structured JSON responses that update React state variables.</p>
+
+  <div class="section-head">Theory:</div>
+  <p>The MERN stack is an all-JavaScript software stack comprising MongoDB, Express.js, React, and Node.js. By utilizing JavaScript across all architectural layers—from database queries (BSON/JSON) to server-side logic and client-side rendering—the MERN stack minimizes context switching and facilitates unified data modeling across the full application lifecycle.</p>
+<p>Asynchronous client-server communication in modern web applications relies on the Fetch API or Axios. These libraries issue asynchronous HTTP requests using JavaScript Promises, allowing the user interface to remain responsive while awaiting server responses. Centralized API clients attach authorization headers, handle base URLs, and format error messages uniformly.</p>
+<p>CORS (Cross-Origin Resource Sharing) is a browser security mechanism that restricts HTTP requests made by client scripts to a different origin (domain, protocol, or port) than the one serving the client. In a decoupled MERN architecture where the Vite client runs on port 5173 and the Express server runs on port 5000, CORS middleware must be configured to permit cross-origin headers, methods, and credentials.</p>
+
+  <div class="section-head">Case Study Context:</div>
+  <p>Kitab Ghar, Badlapur — full-stack MERN platform. Traces a complete reader journey from browsing the catalogue in React, issuing asynchronous fetch requests through client/src/services/api.js, routing through Express middleware, querying MongoDB via Mongoose, and dynamically rendering book inventory, membership payments, and rental dashboards.</p>
+  <p>This experiment documents the genuine integration of the complete Kitab Ghar codebase (client/ and server/), demonstrating how the 4 tiers of the MERN stack function harmoniously in production.</p>
+
+  <div class="section-head">Functions / Methods / Technologies Used:</div>
+  <ul><li>Unified apiRequest(endpoint, options) fetch wrapper</li><li>localStorage.getItem('kitabghar-token') for bearer token injection</li><li>app.use(cors({ origin: CLIENT_ORIGIN })) for cross-origin access</li><li>React useEffect() hooks initiating data fetching on route mount</li><li>Mongoose populate() and lean() for optimized JSON serialization</li></ul>
+
+  <div class="section-head">Procedure:</div>
+  <p>The React client, Express API, and MongoDB service were run together. The workflow followed a reader from registration and login through catalogue search, membership selection, rental creation, return, and profile refresh so that each request could be observed across all three tiers.</p>
+  <ol><li>Inspect the decoupled architecture: client/ on port 5173 and server/ on port 5000.</li><li>Review client/src/services/api.js to examine the unified apiRequest() helper and token injection.</li><li>Review server/server.js to verify CORS middleware configuration matching client origins.</li><li>Start both servers concurrently: 'cd server &amp;&amp; npm run dev' and 'cd client &amp;&amp; npm run dev'.</li><li>Open http://localhost:5173 and open Chrome DevTools Network panel filtering for 'Fetch/XHR'.</li><li>Observe the homepage issuing GET /api/books to populate featured catalogue cards.</li><li>Navigate to /books and type 'Murakami'; inspect the XHR request to /api/books?search=Murakami.</li><li>Click 'Norwegian Wood' to navigate to /books/:id; observe the GET /api/books/:id request.</li><li>Register a new reader account; inspect the POST /api/auth/register request payload and response token.</li><li>Verify that the returned token is saved to localStorage and the reader dashboard renders personalized data.</li><li>Capture screenshots demonstrating the end-to-end user journey across all MERN tiers.</li></ol>
+
+  <div class="section-head">Code:</div>
+  
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 9.1: Unified React API Client Service</strong></p>
+      <p class="code-meta">File: <code>client/src/services/api.js</code> (Lines 1–22) — Encapsulates Fetch API calls, attaches JWT Bearer tokens, and parses JSON responses.</p>
+      <pre><code>const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+
+export async function apiRequest(path, options = {}) {
+  const token = localStorage.getItem("kitabghar-token");
+  const headers = {
+    "Content-Type": "application/json",
+    ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    ...(options.headers || {})
+  };
+
+  const response = await fetch(`${API_BASE}${path}`, {
+    ...options,
+    headers
+  });
+
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.message || "An error occurred during the request.");
+  }
+  return data;
+}</code></pre>
+    </div>
+  
+
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 9.2: React Component Consuming End-to-End API Data</strong></p>
+      <p class="code-meta">File: <code>client/src/pages/Pages.jsx</code> (Lines 11–16) — Custom hook executing asynchronous API requests and binding results to component state.</p>
+      <pre><code>function useApiData(path) {
+  const [state, setState] = useState({ loading: true, data: null, error: "" });
+
+  useEffect(() =&gt; {
+    let active = true;
+    setState({ loading: true, data: null, error: "" });
+
+    apiRequest(path)
+      .then((data) =&gt; active &amp;&amp; setState({ loading: false, data, error: "" }))
+      .catch((err) =&gt; active &amp;&amp; setState({ loading: false, data: null, error: err.message }));
+
+    return () =&gt; { active = false; };
+  }, [path]);
+
+  return state;
+}</code></pre>
+    </div>
+  
+
+  <div class="section-head">Output:</div>
+  
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp9/screenshots/01-mern-homepage.png" alt="Full-Stack MERN Architecture — Kitab Ghar Homepage">
+      </div>
+      <p class="fig-title"><strong>Figure 9.1: Full-Stack MERN Architecture — Kitab Ghar Homepage</strong></p>
+      <p class="fig-desc">This screenshot shows the Kitab Ghar homepage rendered by React 18, populated by live catalogue documents queried from MongoDB through the Express REST API and delivered to the client via the Fetch API. The full MERN stack is in action: MongoDB stores the data, Express serves it as JSON, React renders the interactive UI components, and Node.js powers the server runtime — demonstrating seamless end-to-end integration.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp9/screenshots/02-book-genie-recommendation.png" alt="Three-Tier Recommendation Flow (React -&gt; Express -&gt; MongoDB)">
+      </div>
+      <p class="fig-title"><strong>Figure 9.2: Three-Tier Recommendation Flow (React -&gt; Express -&gt; MongoDB)</strong></p>
+      <p class="fig-desc">This screenshot illustrates the three-tier recommendation flow. The Book Genie wizard collects user reading preferences in React state, submits them to the Express API via a POST request, which queries MongoDB via Mongoose aggregation pipelines and returns personalized book recommendations. The matched books are rendered as interactive BookCard components, demonstrating the complete request-response cycle across all four MERN layers.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp9/screenshots/03-live-catalogue-api.png" alt="Live Catalogue Integration via Shared Fetch API Client">
+      </div>
+      <p class="fig-title"><strong>Figure 9.3: Live Catalogue Integration via Shared Fetch API Client</strong></p>
+      <p class="fig-desc">This screenshot displays the live BooksPage catalogue. The React client issued a GET /api/books request to the Express API, received the 77-book catalogue payload in JSON format from MongoDB, and rendered each book record as an interactive BookCard component with title, author, category badge, and availability indicator. The search bar and category filter demonstrate real-time client-side state management working in concert with server-side data.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp9/screenshots/04-dynamic-details-cart.png" alt="End-to-End Book Details &amp; Rental Flow">
+      </div>
+      <p class="fig-title"><strong>Figure 9.4: End-to-End Book Details &amp; Rental Flow</strong></p>
+      <p class="fig-desc">This screenshot shows an individual book details view. The React component dynamically queried GET /api/books/:id using the useParams hook to extract the URL parameter, fetched the document from MongoDB via Express, and rendered real-time availability counts, rental pricing, and reader review data. This demonstrates parameterized API routing, dynamic data fetching with useEffect, and single-document rendering in the MERN architecture.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp9/screenshots/05-membership-tiers-upi.png" alt="UPI Payment &amp; Subscription Tier Integration">
+      </div>
+      <p class="fig-title"><strong>Figure 9.5: UPI Payment &amp; Subscription Tier Integration</strong></p>
+      <p class="fig-desc">This screenshot shows the membership subscription workflow. Subscription tiers (Reader, Scholar, Patron) are retrieved from the MongoDB plans collection via the Express GET /api/plans endpoint and rendered as interactive pricing cards in React. Each tier is paired with client-side dynamic UPI QR code generation for payment processing, demonstrating full-stack feature integration across the MERN layers.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp9/screenshots/06-reader-authentication-jwt.png" alt="User Authentication Pipeline with Bcrypt &amp; JWT Security">
+      </div>
+      <p class="fig-title"><strong>Figure 9.6: User Authentication Pipeline with Bcrypt &amp; JWT Security</strong></p>
+      <p class="fig-desc">This screenshot shows reader login. Credentials submitted from the React login form are sent to the Express POST /api/auth/login endpoint, where they are verified against bcrypt-hashed passwords stored in the MongoDB users collection. Upon successful authentication, a signed JWT token is returned and stored in localStorage by the React AuthContext provider, enabling persistent authenticated sessions across page refreshes.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp9/screenshots/07-protected-reader-dashboard.png" alt="Protected Reader Dashboard Synchronized with Database">
+      </div>
+      <p class="fig-title"><strong>Figure 9.7: Protected Reader Dashboard Synchronized with Database</strong></p>
+      <p class="fig-desc">This screenshot displays the protected reader dashboard, accessible only to authenticated users. The React ProtectedRoute component verifies the JWT token, and authenticated API requests retrieve active book rentals, return dates, and membership status directly from MongoDB via the Express protected endpoints. The dashboard demonstrates end-to-end MERN security: React auth guards, Express JWT middleware, and MongoDB user-scoped queries.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp9/screenshots/08-responsive-mobile-mern.png" alt="Mobile Responsive Full-Stack MERN Experience">
+      </div>
+      <p class="fig-title"><strong>Figure 9.8: Mobile Responsive Full-Stack MERN Experience</strong></p>
+      <p class="fig-desc">This screenshot demonstrates the full-stack MERN application rendered on a mobile device viewport, confirming responsive CSS design, touch-friendly navigation, and API data synchronization across all four layers. The mobile layout adapts the navigation bar, book grid, and form inputs to smaller screens while maintaining full functionality, proving that the MERN architecture delivers a consistent user experience across all device form factors.</p>
+    </div>
+  
+
+  <div class="result-conclusion-block">
+    <div class="section-head">Result:</div>
+    <p>A complete full-stack MERN application was successfully integrated. The React frontend, Express web server, Node.js runtime, and MongoDB Atlas database communicate seamlessly through asynchronous HTTP requests, providing end-to-end data flow from database to user interface.</p>
+    <p>The completed workflow showed that React forms and pages exchanged JSON with Express, Mongoose persisted the changes, and the returned state was reflected in the dashboard and catalogue without relying on static client data.</p>
+
+    <div class="section-head">Conclusion:</div>
+    <p>The experiment confirmed that the MERN stack offers an exceptionally productive and unified architecture for modern web applications. The shared use of JavaScript/JSON eliminates impedance mismatch between layers.</p>
+<p>The integration of a centralized API client with token interception and React state hooks provides a robust foundation for building secure, scalable full-stack web platforms.</p>
+    <p>This experiment validates a practical MERN integration in which client state, protected API requests, and MongoDB persistence operate as one end-to-end rental application.</p>
+  </div>
+
+</body>
+</html>

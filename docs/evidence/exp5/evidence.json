@@ -1,0 +1,29 @@
+{
+  "experiment": 5,
+  "title": "Configure MongoDB and Perform CRUD Operations",
+  "requirements": [
+    "Database",
+    "Collections",
+    "Documents",
+    "CRUD"
+  ],
+  "implemented": [
+    "The local Mongoose connection opened the real kitabghar MongoDB database.",
+    "10 actual collections and live book/category document counts were observed.",
+    "A temporary labelled Book document completed create, read, update and delete operations and was removed after verification.",
+    "The current localhost UI displayed the MongoDB-backed catalogue."
+  ],
+  "missing": [
+    "EVIDENCE MISSING: mongosh is not installed in this workspace, so no mongosh terminal screenshot was captured. Database evidence was collected through the actual Mongoose models instead."
+  ],
+  "files_used": [
+    "server/config/db.js",
+    "server/models/Book.js",
+    "server/models/Category.js",
+    "server/controllers/bookController.js",
+    "server/routes/bookRoutes.js",
+    "client/src/pages/Pages.jsx",
+    "experiments/exp5/db-audit.mjs"
+  ],
+  "screenshots_required": 8
+}

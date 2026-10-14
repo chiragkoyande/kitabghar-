@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Experiment No. 3 — Kitab Ghar</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #000000;
+      background: #ffffff;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      font-size: 12pt;
+      line-height: 1.4;
+      text-align: left;
+    }
+    .exp-no {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 3pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .exp-title {
+      font-size: 11.5pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 8pt;
+      line-height: 1.3;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .section-head {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 8pt 0 2pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    p {
+      margin: 0 0 4pt;
+      color: #000000;
+      text-align: left;
+    }
+    ul, ol {
+      margin: 0 0 6pt 18pt;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 2pt;
+      color: #000000;
+      text-align: left;
+    }
+    .methodology-flow {
+      border: 1px solid #000000;
+      padding: 5pt 8pt;
+      margin: 4pt 0 6pt;
+      font-size: 9.5pt;
+      font-weight: bold;
+      text-align: center;
+      background: #fafafa;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-block {
+      margin: 4pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-label {
+      font-size: 9.5pt;
+      font-weight: bold;
+      margin: 0 0 1.5pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .code-meta {
+      font-size: 8.5pt;
+      font-style: italic;
+      margin: 0 0 2pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    pre {
+      margin: 2pt 0 4pt;
+      padding: 4pt 6pt;
+      border: 1px solid #000000;
+      background: #fafafa;
+      color: #000000;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 7.5pt;
+      line-height: 1.2;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .figure-block {
+      margin: 5pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .fig-img-wrap {
+      text-align: center;
+      margin: 2pt 0 2pt;
+    }
+    .fig-img-wrap img {
+      max-width: 92%;
+      max-height: 82mm;
+      width: auto;
+      height: auto;
+      border: 1px solid #000000;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .fig-title {
+      font-size: 10pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 3pt 0 2pt;
+      text-align: center;
+      page-break-before: avoid !important;
+      break-before: avoid !important;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .fig-desc {
+      font-size: 12pt;
+      color: #000000;
+      line-height: 1.3;
+      margin: 1pt 0 3pt;
+      text-align: left;
+    }
+    .result-conclusion-block {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin-top: 4pt;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+      margin: 3pt 0 4pt;
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+    tr {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid #000000;
+      padding: 2.5pt 4pt;
+      text-align: left;
+      vertical-align: top;
+      color: #000000;
+      line-height: 1.22;
+    }
+    th {
+      background: #f0f0f0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starts immediately on Page 1 -->
+  <div class="exp-no">Experiment No. 3</div>
+  <div class="exp-title">Title: Create a React Application using Functional Components, JSX, Props, and State</div>
+
+  <div class="section-head">Aim:</div>
+  <p>To build a modular React application using functional components, JSX declarative markup, unidirectional prop data flow, and component-level state management with the useState and useEffect hooks, using the Kitab Ghar codebase as the primary case study.</p>
+
+  <div class="section-head">Tools Used:</div>
+  <ul><li>React 18.3 &amp; React DOM</li><li>Vite 5 build tool and local development server</li><li>JavaScript ES6+ / JSX syntax</li><li>CSS3 with modular custom properties</li><li>Google Chrome Developer Tools for component inspection</li></ul>
+
+  <div class="section-head">Methodology:</div>
+  <div class="methodology-flow">Vite Application Setup → Functional Component Decomposition → JSX Hierarchy Composition → Props Interface Passing → useState State Management → useEffect Side Effects Execution</div>
+  <p>The Kitab Ghar React client was architected through functional decomposition. Component responsibility is strictly delineated: App provides top-level routing, Pages implements view containers, and BookCard serves as a pure presentation component. Props flow unidirectionally from stateful parent containers to stateless children, while user interactions trigger state mutations via useState dispatcher functions.</p>
+
+  <div class="section-head">Theory:</div>
+  <p>React is a component-driven JavaScript library for building user interfaces. Functional components are JavaScript functions that accept an arbitrary inputs object called 'props' and return a React element described in JSX syntax. Unlike legacy class components, modern React applications rely exclusively on functional components paired with Hooks.</p>
+<p>JSX (JavaScript XML) is a syntax extension that enables developers to write HTML-like structures directly inside JavaScript. JSX expressions compile down to React.createElement() calls. JSX supports dynamic embedding via curly braces ({expression}), conditional rendering through logical operators (&amp;&amp;, ? :), and list rendering via Array.prototype.map().</p>
+<p>Props (properties) provide a mechanism for unidirectional data flow from parent to child components. Props are immutable from the child's perspective. The useState Hook enables functional components to maintain private, reactive state variables; calling a state updater function schedules a re-render to synchronize the Virtual DOM with the real browser DOM.</p>
+
+  <div class="section-head">Case Study Context:</div>
+  <p>Kitab Ghar, Badlapur — a React 18 single-page application built with Vite. The application decomposes the user interface into reusable functional components including BookCard, GenieHero, BookGenieWizard, SearchBar, and CategoryFilter to facilitate catalogue exploration.</p>
+  <p>This experiment documents the genuine production React client (client/src/), detailing the exact files, line numbers, props interfaces, and state variables that implement each curriculum requirement without synthetic recreation.</p>
+
+  <div class="section-head">Functions / Methods / Technologies Used:</div>
+  <ul><li>React.useState() for component-level reactive state</li><li>React.useEffect() for side-effect lifecycle coordination</li><li>JSX expressions and conditional operators ({condition &amp;&amp; &lt;Component /&gt;})</li><li>Props destructuring: function BookCard({ book }) { ... }</li><li>Array.prototype.map() for declarative JSX list generation</li><li>Synthetic event handlers: onClick, onChange, onInput</li></ul>
+
+  <div class="section-head">Procedure:</div>
+  <p>The React application was run with the component tree visible in the browser. Book data was passed through reusable cards, then state changes were tested through search, category selection, book selection, membership selection, and the empty-state condition.</p>
+  <ol><li>Inspect client/package.json to verify dependencies: react, react-dom, and vite.</li><li>Examine client/src/main.jsx to review the React 18 createRoot() entry point and StrictMode wrapper.</li><li>Inspect client/src/components/BookCard.jsx to study functional component structure and props destructuring.</li><li>Review client/src/pages/Pages.jsx to examine the BooksPage component and its useState declarations.</li><li>Trace how the books array is mapped into a grid of &lt;BookCard key={book._id} book={book} /&gt; elements.</li><li>Examine client/src/components/hero/GenieHero.jsx to see parent-to-child state and callback passing.</li><li>Start the development server using npm run dev inside client/ and open http://localhost:5173.</li><li>Interactively test the search input and category filter dropdown to observe reactive state re-renders.</li><li>Verify the conditional empty state rendered when a search term matches zero books.</li><li>Capture component tree and UI screenshots reflecting functional components, props, and state.</li></ol>
+
+  <div class="section-head">Code:</div>
+  
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 3.1: Functional Component with Props: BookCard</strong></p>
+      <p class="code-meta">File: <code>client/src/components/BookCard.jsx</code> (Lines 1–18) — Reusable presentation component receiving a book prop and rendering JSX.</p>
+      <pre><code>import React from "react";
+import { Link } from "react-router-dom";
+
+export default function BookCard({ book }) {
+  const tone = book.category?.toLowerCase().includes("mystery") ? "wine"
+    : book.category?.toLowerCase().includes("fiction") ? "coffee" : "sage";
+
+  return (
+    &lt;article className="book-card"&gt;
+      &lt;Link to={`/books/${book._id}`}&gt;
+        &lt;div className={`book-cover cover-${tone}`}&gt;
+          {book.coverImage ? (
+            &lt;img className="book-cover-image" src={book.coverImage} alt={`${book.title} cover`} /&gt;
+          ) : (
+            &lt;&gt;
+              &lt;span&gt;KITAB GHAR&lt;/span&gt;
+              &lt;strong&gt;{book.title}&lt;/strong&gt;
+              &lt;small&gt;{book.category}&lt;/small&gt;
+            &lt;/&gt;
+          )}
+        &lt;/div&gt;
+        &lt;div className="book-card-body"&gt;
+          &lt;p className="book-category"&gt;{book.category}&lt;/p&gt;
+          &lt;h2&gt;{book.title}&lt;/h2&gt;
+          &lt;p className="book-author"&gt;{book.author}&lt;/p&gt;
+          &lt;span className={`availability ${book.availableCopies &gt; 0 ? "available" : "unavailable"}`}&gt;
+            {book.availableCopies &gt; 0 ? `${book.availableCopies} available` : "Currently out"}
+          &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/Link&gt;
+    &lt;/article&gt;
+  );
+}</code></pre>
+    </div>
+  
+
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 3.2: State Management &amp; List Rendering: BooksPage</strong></p>
+      <p class="code-meta">File: <code>client/src/pages/Pages.jsx</code> (Lines 17–42) — Manages search, category, and sort state via useState and maps data to BookCard props.</p>
+      <pre><code>export function BooksPage() {
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState("");
+  const [availability, setAvailability] = useState("");
+  const [sortMode, setSortMode] = useState("popular");
+
+  const requestParams = new URLSearchParams();
+  if (query.trim()) requestParams.set("search", query.trim());
+  if (category) requestParams.set("category", category);
+  if (availability) requestParams.set("availability", availability);
+
+  const requestPath = requestParams.toString() ? "/books?" + requestParams.toString() : "/books";
+  const { loading, data, error } = useApiData(requestPath);
+  const books = data?.books || [];
+
+  return (
+    &lt;div className="books-page"&gt;
+      &lt;input
+        type="search"
+        value={query}
+        onChange={(e) =&gt; setQuery(e.target.value)}
+        placeholder="Search by title or author..."
+      /&gt;
+      &lt;div className="book-grid"&gt;
+        {books.map((book) =&gt; (
+          &lt;BookCard key={book._id} book={book} /&gt;
+        ))}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+    </div>
+  
+
+  <div class="section-head">Output:</div>
+  
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp3/screenshots/01-main-react-home.png" alt="Kitab Ghar React Application Root Composition">
+      </div>
+      <p class="fig-title"><strong>Figure 3.1: Kitab Ghar React Application Root Composition</strong></p>
+      <p class="fig-desc">This screenshot shows the root React application rendered in the browser. The root component hierarchy composes the shared Layout component, responsive navigation bar, hero scene with the Book Genie feature, and featured book catalogue using JSX declarative markup syntax. The entire view is constructed from nested functional components without any class-based components, confirming the modern React functional paradigm.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp3/screenshots/02-react-home-components.png" alt="React Home Component Decomposition">
+      </div>
+      <p class="fig-title"><strong>Figure 3.2: React Home Component Decomposition</strong></p>
+      <p class="fig-desc">This screenshot highlights the component decomposition of the homepage. Individual sections such as TrustBar, HowItWorks, and MembershipPreview exist as decoupled functional components composed inside the HomePage parent component via JSX composition. Each child component receives its data through props, demonstrating the React principle of composition over inheritance and single-responsibility component design.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp3/screenshots/03-book-genie-state.png" alt="Book Genie Stateful Component State (useState)">
+      </div>
+      <p class="fig-title"><strong>Figure 3.3: Book Genie Stateful Component State (useState)</strong></p>
+      <p class="fig-desc">This screenshot demonstrates the Book Genie recommendation wizard managing its open/closed visibility and active step index through the useState hook. The wizard's multi-step form transitions are driven entirely by local component state, with each step index change triggering a React re-render that updates the visible panel. This proves local state reactivity and demonstrates how useState replaces class component this.setState() in modern React.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp3/screenshots/04-book-genie-props.png" alt="Prop Passing to Child Recommendation Components">
+      </div>
+      <p class="fig-title"><strong>Figure 3.4: Prop Passing to Child Recommendation Components</strong></p>
+      <p class="fig-desc">This screenshot shows unidirectional prop passing in action. The parent GenieHero component passes the fetched books array and user preference callback functions to child wizard components via explicit props. Data flows strictly downward from parent to child, and child components communicate upward only through callback props — demonstrating React's one-way data binding architecture.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp3/screenshots/05-live-bookcard-components.png" alt="Reusable BookCard Functional Components with Props">
+      </div>
+      <p class="fig-title"><strong>Figure 3.5: Reusable BookCard Functional Components with Props</strong></p>
+      <p class="fig-desc">This screenshot displays the live catalogue grid where each book record fetched from the backend API is passed as a typed book object prop to a reusable BookCard functional component. The BookCard destructures the book prop to extract title, author, category, and availableCopies, rendering each field into its designated JSX element. This demonstrates component reusability — one BookCard definition renders all 79 catalogue entries.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp3/screenshots/06-search-state.png" alt="Live Search &amp; Filter State Binding">
+      </div>
+      <p class="fig-title"><strong>Figure 3.6: Live Search &amp; Filter State Binding</strong></p>
+      <p class="fig-desc">This screenshot shows controlled state management in the BooksPage catalogue. Typing 'Murakami' binds to the query state variable via the setQuery dispatcher function from useState, which triggers a re-render and filters the catalogue to display only 'Norwegian Wood' in real time. This demonstrates the controlled component pattern where the input value is always synchronized with React state.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp3/screenshots/07-conditional-empty-state.png" alt="Conditional Rendering &amp; Empty State Handling">
+      </div>
+      <p class="fig-title"><strong>Figure 3.7: Conditional Rendering &amp; Empty State Handling</strong></p>
+      <p class="fig-desc">This screenshot illustrates conditional rendering in JSX. When an invalid search term is entered that matches zero records, a conditional ternary expression renders an empty-state message instead of the book grid. This demonstrates how React handles UI branching logic directly within JSX using JavaScript expressions, without requiring template directives or separate template files.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../evidence/exp3/screenshots/08-main-mobile-react.png" alt="Mobile Responsive React Interface">
+      </div>
+      <p class="fig-title"><strong>Figure 3.8: Mobile Responsive React Interface</strong></p>
+      <p class="fig-desc">This screenshot proves the responsiveness of the React component tree rendered on a mobile viewport. Components adapt their flex and grid directions gracefully without layout distortion, confirming that the CSS media queries and responsive design principles work correctly within the React rendering pipeline. Touch targets remain accessible and text remains legible across all breakpoints.</p>
+    </div>
+  
+
+  <div class="result-conclusion-block">
+    <div class="section-head">Result:</div>
+    <p>The Kitab Ghar React application successfully demonstrates functional components, JSX syntax, prop data passing, and state management via Hooks. Reusable components cleanly encapsulate UI logic and render responsive, dynamic views based on reactive state changes.</p>
+    <p>The visible application confirmed that JSX rendered component output, props carried book and plan data, and useState re-rendered the catalogue whenever the user changed an input or selection.</p>
+
+    <div class="section-head">Conclusion:</div>
+    <p>The experiment confirmed that React's component-based architecture and functional programming paradigms foster clean separation of concerns, high reusability, and maintainable front-end codebases.</p>
+<p>The useState and useEffect Hooks adequately replace class component lifecycle methods, offering a declarative, intuitive approach to state and side-effect coordination.</p>
+    <p>This experiment provides a clear React foundation in which reusable functional components and state-driven rendering can be extended into larger client-side features.</p>
+  </div>
+
+</body>
+</html>

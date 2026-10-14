@@ -1,0 +1,62 @@
+{
+  "generatedAt": "2026-09-29T20:21:15.457Z",
+  "evidence": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [
+      "EVIDENCE MISSING: mongosh is not installed in this workspace, so no mongosh terminal screenshot was captured. Database evidence was collected through the actual Mongoose models instead."
+    ],
+    "experiment": 5
+  },
+  "screenshots": {
+    "status": "PASS",
+    "count": 8,
+    "entries": [
+      {
+        "file": "screenshots/01-main-home.png",
+        "bytes": 438075
+      },
+      {
+        "file": "screenshots/02-main-home-sections.png",
+        "bytes": 469460
+      },
+      {
+        "file": "screenshots/03-live-books.png",
+        "bytes": 388707
+      },
+      {
+        "file": "screenshots/04-live-search.png",
+        "bytes": 117309
+      },
+      {
+        "file": "screenshots/05-live-availability.png",
+        "bytes": 369117
+      },
+      {
+        "file": "screenshots/06-mobile-ui.png",
+        "bytes": 82185
+      },
+      {
+        "file": "screenshots/07-book-genie-popup.png",
+        "bytes": 276748
+      },
+      {
+        "file": "screenshots/08-book-genie-question.png",
+        "bytes": 219127
+      }
+    ],
+    "errors": []
+  },
+  "content": {
+    "status": "PASS",
+    "missingHeadings": [],
+    "figureReferences": 24,
+    "errors": []
+  },
+  "pdf": {
+    "status": "PASS",
+    "pages": 15,
+    "errors": [],
+    "textLength": 13004
+  }
+}

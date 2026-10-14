@@ -1,0 +1,19 @@
+export function BooksPage() {
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState("");
+  const [availability, setAvailability] = useState("");
+  const [sortMode, setSortMode] = useState("popular");
+  const requestParams = new URLSearchParams();
+  if (query.trim()) requestParams.set("search", query.trim());
+  if (category) requestParams.set("category", category);
+  if (availability) requestParams.set("availability", availability);
+  const requestPath = requestParams.toString() ? "/books?" + requestParams.toString() : "/books";
+  const { loading, data, error } = useApiData(requestPath);
+  const categoriesState = useApiData("/categories");
+  const books = data?.books || [];
+  const categories = (categoriesState.data || []).map((item) => item.name).filter((name, index, values) => name && values.indexOf(name) === index).sort();
+  const displayedBooks = [...books].sort((a, b) => sortMode === "az" ? a.title.localeCompare(b.title) : sortMode === "category" ? a.category.localeCompare(b.category) || a.title.localeCompare(b.title) : 0);
+  const hasFilters = Boolean(query || category || availability || sortMode !== "popular");
+  const clearFilters = () => { setQuery(""); setCategory(""); setAvailability(""); setSortMode("popular"); };
+  return <section className="page"><div className="page-heading"><div><p className="eyebrow">Live catalogue</p><h1>Browse books</h1></div><span>{data?.count ?? "—"} titles</span></div><label className="search-control"><span aria-hidden="true">⌕</span><span className="visually-hidden">Search books</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search title, author or category" /></label><div className="catalogue-layout"><aside className="filter-panel" aria-label="Catalogue filters"><div className="filter-heading"><h2>Refine your search</h2>{hasFilters && <button className="clear-filters" type="button" onClick={clearFilters}>Clear all</button>}</div><fieldset><legend>Category</legend><button className={"filter-option " + (!category ? "selected" : "")} type="button" aria-pressed={!category} onClick={() => setCategory("")}>All categories</button>{categories.map((name) => <button className={"filter-option " + (category === name ? "selected" : "")} type="button" aria-pressed={category === name} key={name} onClick={() => setCategory(name)}>{name}</button>)}</fieldset><fieldset><legend>Availability</legend><button className={"filter-option " + (!availability ? "selected" : "")} type="button" aria-pressed={!availability} onClick={() => setAvailability("")}>All books</button><button className={"filter-option " + (availability === "available" ? "selected" : "")} type="button" aria-pressed={availability === "available"} onClick={() => setAvailability("available")}>Available now</button><button className={"filter-option " + (availability === "unavailable" ? "selected" : "")} type="button" aria-pressed={availability === "unavailable"} onClick={() => setAvailability("unavailable")}>Currently out</button></fieldset><label className="sort-control">Sort by<select value={sortMode} onChange={(event) => setSortMode(event.target.value)}><option value="popular">Popular</option><option value="recent">Recently added</option><option value="az">A–Z</option><option value="category">Category</option></select></label></aside><div className="catalogue-results">{loading && <div className="loading-state">Loading the catalogue…</div>}{error && <div className="error-state">{error}</div>}{!loading && !error && (displayedBooks.length ? <div className="book-grid">{displayedBooks.map((book) => <BookCard book={book} key={book._id} />)}</div> : <div className="empty-state"><h2>No books found</h2><p>Try another title, author, category or availability filter.</p><button className="secondary-button" type="button" onClick={clearFilters}>Reset filters</button></div>)}</div></div></section>;
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "figure": "Figure 3.1",
+    "title": "Current Kitab Ghar React Home Page",
+    "file": "screenshots/01-main-react-home.png",
+    "purpose": "Initial capture of the actual current main React application.",
+    "what_it_demonstrates": "The current Layout, HomePage, Hero and GenieHero functional components compose the official main UI through JSX.",
+    "code_refs": [
+      "EXP3-CODE-01",
+      "EXP3-CODE-02"
+    ]
+  },
+  {
+    "figure": "Figure 3.2",
+    "title": "Current Home Component Output",
+    "file": "screenshots/02-react-home-components.png",
+    "purpose": "Capture the next section of the actual main home page.",
+    "what_it_demonstrates": "The running main UI shows composed React home-section components, including the Badlapur service content.",
+    "code_refs": [
+      "EXP3-CODE-02"
+    ]
+  },
+  {
+    "figure": "Figure 3.3",
+    "title": "Book Genie Conditional Popup",
+    "file": "screenshots/03-book-genie-state.png",
+    "purpose": "Open Book Genie from the actual main home page.",
+    "what_it_demonstrates": "The GenieHero open state conditionally renders BookGenieWizard JSX rather than a separate legacy interface.",
+    "code_refs": [
+      "EXP3-CODE-05"
+    ]
+  },
+  {
+    "figure": "Figure 3.4",
+    "title": "Book Genie Interactive Child Components",
+    "file": "screenshots/04-book-genie-props.png",
+    "purpose": "Start the live Book Genie session.",
+    "what_it_demonstrates": "The current wizard receives live book data and maps question options into visible child components using props and JSX.",
+    "code_refs": [
+      "EXP3-CODE-05"
+    ]
+  },
+  {
+    "figure": "Figure 3.5",
+    "title": "Live BookCard Component List",
+    "file": "screenshots/05-live-bookcard-components.png",
+    "purpose": "Open the current API-backed Books page.",
+    "what_it_demonstrates": "The actual BooksPage maps the live catalogue into 77 reusable BookCard components with book props.",
+    "code_refs": [
+      "EXP3-CODE-03",
+      "EXP3-CODE-04"
+    ]
+  },
+  {
+    "figure": "Figure 3.6",
+    "title": "Controlled React Search State",
+    "file": "screenshots/06-search-state.png",
+    "purpose": "Search for Murakami in the live Books page.",
+    "what_it_demonstrates": "The controlled input updates query state and changes the rendered BookCard output to the matching Norwegian Wood result.",
+    "code_refs": [
+      "EXP3-CODE-03",
+      "EXP3-CODE-04"
+    ]
+  },
+  {
+    "figure": "Figure 3.7",
+    "title": "Conditional Empty-State JSX",
+    "file": "screenshots/07-conditional-empty-state.png",
+    "purpose": "Search a title absent from the live catalogue.",
+    "what_it_demonstrates": "Current component state makes the no-books-found JSX branch visible when no BookCard props remain to render.",
+    "code_refs": [
+      "EXP3-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 3.8",
+    "title": "Current React Mobile Layout",
+    "file": "screenshots/08-main-mobile-react.png",
+    "purpose": "Capture the actual current home page at a 320 px viewport.",
+    "what_it_demonstrates": "The current React component composition remains visible and within the narrow mobile viewport.",
+    "code_refs": [
+      "EXP3-CODE-01",
+      "EXP3-CODE-02"
+    ]
+  }
+]

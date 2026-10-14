@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Experiment No. 1 — Kitab Ghar</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #000000;
+      background: #ffffff;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      font-size: 12pt;
+      line-height: 1.4;
+      text-align: left;
+    }
+    .exp-no {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 3pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .exp-title {
+      font-size: 11.5pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 8pt;
+      line-height: 1.3;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .section-head {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 8pt 0 2pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    p {
+      margin: 0 0 4pt;
+      color: #000000;
+      text-align: left;
+    }
+    ul, ol {
+      margin: 0 0 6pt 18pt;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 2pt;
+      color: #000000;
+      text-align: left;
+    }
+    .methodology-flow {
+      border: 1px solid #000000;
+      padding: 5pt 8pt;
+      margin: 4pt 0 6pt;
+      font-size: 9.5pt;
+      font-weight: bold;
+      text-align: center;
+      background: #fafafa;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-block {
+      margin: 4pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-label {
+      font-size: 9.5pt;
+      font-weight: bold;
+      margin: 0 0 1.5pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .code-meta {
+      font-size: 8.5pt;
+      font-style: italic;
+      margin: 0 0 2pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    pre {
+      margin: 2pt 0 4pt;
+      padding: 4pt 6pt;
+      border: 1px solid #000000;
+      background: #fafafa;
+      color: #000000;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 7.5pt;
+      line-height: 1.2;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .figure-block {
+      margin: 5pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .fig-img-wrap {
+      text-align: center;
+      margin: 2pt 0 2pt;
+    }
+    .fig-img-wrap img {
+      max-width: 92%;
+      max-height: 82mm;
+      width: auto;
+      height: auto;
+      border: 1px solid #000000;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .fig-title {
+      font-size: 10pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 3pt 0 2pt;
+      text-align: center;
+      page-break-before: avoid !important;
+      break-before: avoid !important;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .fig-desc {
+      font-size: 12pt;
+      color: #000000;
+      line-height: 1.3;
+      margin: 1pt 0 3pt;
+      text-align: left;
+    }
+    .result-conclusion-block {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin-top: 4pt;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+      margin: 3pt 0 4pt;
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+    tr {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid #000000;
+      padding: 2.5pt 4pt;
+      text-align: left;
+      vertical-align: top;
+      color: #000000;
+      line-height: 1.22;
+    }
+    th {
+      background: #f0f0f0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starts immediately on Page 1 -->
+  <div class="exp-no">Experiment No. 1</div>
+  <div class="exp-title">Title: Design a Responsive Registration Form using Bootstrap and Perform Client-Side Validation using JavaScript</div>
+
+  <div class="section-head">Aim:</div>
+  <p>To design a responsive reader registration form using the Bootstrap 5 framework and implement robust client-side validation using the HTML5 Constraint Validation API and vanilla JavaScript, ensuring that user input is verified prior to submission.</p>
+
+  <div class="section-head">Tools Used:</div>
+  <ul><li>HTML5 semantic form controls (input, select, textarea, date, checkbox)</li><li>Bootstrap 5.3 CSS framework (12-column responsive grid, cards, input groups, modal)</li><li>Vanilla JavaScript (ES6+) for DOM manipulation and constraint validation</li><li>Regular expressions for Indian mobile numbers and pincodes</li><li>Google Chrome Headless automated test runner for screenshot evidence capture</li></ul>
+
+  <div class="section-head">Methodology:</div>
+  <div class="methodology-flow">Bootstrap 5 Responsive Grid → HTML5 Constraint Markup → Vanilla JS Event Listeners → Real-time DOM Feedback → Modal Summary → Multi-Device Verification</div>
+  <p>The form was developed using a mobile-first 12-column responsive grid. Each input control is mapped to specific validation rules: mandatory required checks, minimum lengths, regex pattern matching, and custom logic for birthdate age constraints (minimum 13 years) and password complexity. Client-side event listeners on input and blur provide instantaneous feedback through Bootstrap is-valid and is-invalid classes. On submission, event.preventDefault() intercepts page reload, focuses the first invalid element if any errors exist, or displays a modal summary with all entered details.</p>
+
+  <div class="section-head">Theory:</div>
+  <p>Client-side validation is a critical element of modern web usability and security. It ensures that user inputs adhere to required formats, bounds, and business invariants before transmitting payloads to backend servers. HTML5 provides built-in constraint validation through attributes such as required, minlength, maxlength, pattern, and specialized input types like email, tel, and date.</p>
+<p>The JavaScript Constraint Validation API augments standard HTML5 attributes through programmatic methods including element.checkValidity(), form.checkValidity(), and element.setCustomValidity(). Calling setCustomValidity() with a non-empty string flags the input as invalid and customizes the browser's error message, whereas passing an empty string resets the validation state.</p>
+<p>Bootstrap 5 provides visual validation classes (.is-valid, .is-invalid, and .was-validated) that pair with .valid-feedback and .invalid-feedback elements. When combined with form.addEventListener('submit', (e) =&gt; e.preventDefault()), developers can build intuitive, responsive forms that enhance user experience while minimizing unnecessary network round-trips.</p>
+
+  <div class="section-head">Case Study Context:</div>
+  <p>Kitab Ghar, Badlapur — a neighbourhood library and book-rental subscription platform. Readers sign up for library cards to rent fiction, classics, non-fiction, and children's literature with doorstep delivery across Badlapur and nearby Thane district localities. The registration interface collects personal credentials, delivery addresses, pincodes, age verification, and membership plan preferences.</p>
+  <p>A dedicated standalone demonstration module was built at experiments/exp1/ to demonstrate the exact curriculum requirement (pure Bootstrap 5 grid + CSS components + vanilla JavaScript validation) independently from the React SPA application, while sharing the identical Kitab Ghar design identity.</p>
+
+  <div class="section-head">Functions / Methods / Technologies Used:</div>
+  <ul><li>document.getElementById() and querySelectorAll() for DOM element access</li><li>addEventListener('input'), addEventListener('blur'), and addEventListener('change') for live validation</li><li>HTMLInputElement.checkValidity() and HTMLSelectElement.checkValidity()</li><li>HTMLInputElement.setCustomValidity() for custom password mismatch and age rules</li><li>Element.classList.add() and Element.classList.remove() for dynamic Bootstrap styling</li><li>Event.preventDefault() and Event.stopPropagation() for form submission interception</li><li>new window.bootstrap.Modal(modalEl).show() for registration confirmation</li></ul>
+
+  <div class="section-head">Procedure:</div>
+  <p>The form was checked first with blank fields and then with invalid email, mobile number, age, pincode, password, and confirmation values. A completed reader form was finally submitted at desktop and mobile widths to confirm both validation behaviour and responsive layout.</p>
+  <ol><li>Navigate to experiments/exp1/ and inspect index.html, styles.css, and script.js.</li><li>Structure the HTML using Bootstrap 5 container, row, col-12, col-md-6, and card classes.</li><li>Configure HTML5 attributes: required, autocomplete, pattern='[6-9][0-9]{9}' for mobile, and pattern='[0-9]{6}' for pincode.</li><li>Calculate maximum allowable date of birth in script.js to enforce the 13-year age threshold (dob.max = maxDobDate).</li><li>Attach input and blur event listeners to all input elements to evaluate validateField() in real-time.</li><li>Implement updatePasswordMeter() to score password complexity across 4 criteria (length, uppercase, lowercase, digits).</li><li>Attach the submit event listener on registration-form, invoking event.preventDefault() to suppress page reloads.</li><li>Execute checkValidity() and setCustomValidity() across all fields, accumulating any failure states.</li><li>If errors exist, focus the first failing element and render the danger alert banner.</li><li>Upon successful validation, compile reader details into modal-summary and trigger registrationModal.show().</li><li>Verify responsive design at 1280px (desktop dual-column) and 375px (mobile single-column) viewports.</li></ol>
+
+  <div class="section-head">Code:</div>
+  
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 1.1: Field Validation Logic with Constraint Validation API</strong></p>
+      <p class="code-meta">File: <code>experiments/exp1/script.js</code> (Lines 24–56) — Evaluates field correctness and applies setCustomValidity() and Bootstrap CSS classes.</p>
+      <pre><code>function validateField(field) {
+  if (!field) return true;
+  let isValid = true;
+  const value = (field.value || "").trim();
+  if (field.id === "dob") {
+    if (!value) return false;
+    const birthDate = new Date(value);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    if (monthDiff &lt; 0 || (monthDiff === 0 &amp;&amp; today.getDate() &lt; birthDate.getDate())) age--;
+    isValid = age &gt;= 13;
+  } else if (field.id === "password") {
+    isValid = value.length &gt;= 8 &amp;&amp; /[a-z]/.test(value) &amp;&amp; /[A-Z]/.test(value) &amp;&amp; /\d/.test(value);
+    field.setCustomValidity(isValid ? "" : "Password must be at least 8 characters with uppercase, lowercase and a digit.");
+  } else if (field.id === "confirmPassword") {
+    isValid = value.length &gt; 0 &amp;&amp; value === passwordInput.value;
+    field.setCustomValidity(isValid ? "" : "Passwords do not match.");
+  } else if (field.id === "terms") {
+    isValid = field.checked;
+  } else {
+    isValid = field.checkValidity();
+  }
+  if (isValid) {
+    field.setCustomValidity("");
+    field.classList.remove("is-invalid");
+    field.classList.add("is-valid");
+  } else {
+    field.classList.remove("is-valid");
+    field.classList.add("is-invalid");
+  }
+  return isValid;
+}</code></pre>
+    </div>
+  
+
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 1.2: Form Submission Handler &amp; Modal Integration</strong></p>
+      <p class="code-meta">File: <code>experiments/exp1/script.js</code> (Lines 96–129) — Suppresses page reload, aggregates field validity, and opens confirmation modal on success.</p>
+      <pre><code>form.addEventListener("submit", (event) =&gt; {
+  event.preventDefault();
+  event.stopPropagation();
+  let allValid = true;
+  let firstInvalidField = null;
+  inputElements.forEach((input) =&gt; {
+    const fieldValid = validateField(input);
+    if (!fieldValid &amp;&amp; !firstInvalidField) firstInvalidField = input;
+    if (!fieldValid) allValid = false;
+  });
+  if (!allValid) {
+    formAlert.className = "alert alert-danger mb-3";
+    formAlert.textContent = "Please review and correct the highlighted fields before submitting.";
+    if (firstInvalidField) firstInvalidField.focus();
+    return;
+  }
+  formAlert.className = "alert alert-success mb-3";
+  formAlert.textContent = "All reader details are valid! Preparing registration confirmation...";
+  modalSummary.innerHTML = `&lt;p class="mb-1"&gt;&lt;strong&gt;Reader:&lt;/strong&gt; ${form.fullName.value} | ${form.email.value}&lt;/p&gt;&lt;p class="mb-1"&gt;&lt;strong&gt;Contact:&lt;/strong&gt; +91 ${form.mobile.value} | ${form.city.value} (${form.pincode.value})&lt;/p&gt;`;
+  if (registrationModal) registrationModal.show();
+});</code></pre>
+    </div>
+  
+
+  <div class="section-head">Output:</div>
+  
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp1/screenshots/EXP1-01-registration-empty-form.png" alt="Kitab Ghar Reader Registration Form — Empty State">
+      </div>
+      <p class="fig-title"><strong>Figure 1.1: Kitab Ghar Reader Registration Form — Empty State</strong></p>
+      <p class="fig-desc">This screenshot shows the initial, unpopulated state of the Kitab Ghar reader registration form loaded at a desktop width of 1280px. The interface highlights the Bootstrap 5 two-column grid layout (col-md-6 responsive columns), clear sectional groupings for personal and library details, and prominent branding for the Badlapur neighbourhood library. The form is rendered inside a Bootstrap card component with appropriate spacing, and all input fields display placeholder text guiding the user on the expected format. No validation messages are visible at this stage, confirming the clean default state.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp1/screenshots/EXP1-02-empty-submit-validation-errors.png" alt="Empty Form Submission — Constraint Validation Feedback">
+      </div>
+      <p class="fig-title"><strong>Figure 1.2: Empty Form Submission — Constraint Validation Feedback</strong></p>
+      <p class="fig-desc">This screenshot shows the result of submitting the empty registration form without populating mandatory fields. The JavaScript submit handler intercepts the event via preventDefault(), evaluates checkValidity() on all inputs, applies the Bootstrap is-invalid class, and displays red error messages beneath every required field while focusing the first invalid input. The form visually demonstrates how HTML5 constraint validation and Bootstrap feedback classes work together to provide immediate, accessible error guidance without any server round-trip.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp1/screenshots/EXP1-03-invalid-email-error.png" alt="Email Format Validation Failure">
+      </div>
+      <p class="fig-title"><strong>Figure 1.3: Email Format Validation Failure</strong></p>
+      <p class="fig-desc">This screenshot demonstrates client-side email format validation in action. Entering the malformed string 'invalid-email' without an '@' symbol or top-level domain fails the browser's type='email' constraint, triggering the invalid-feedback prompt while valid preceding inputs receive green is-valid indicators. This demonstrates the native HTML5 email validation combined with Bootstrap visual feedback, ensuring data quality before any network request is made.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp1/screenshots/EXP1-04-invalid-mobile-error.png" alt="Mobile Number Pattern Validation Failure">
+      </div>
+      <p class="fig-title"><strong>Figure 1.4: Mobile Number Pattern Validation Failure</strong></p>
+      <p class="fig-desc">This screenshot confirms the regular expression pattern validation for Indian contact numbers. The input '1234' violates the required 10-digit pattern [6-9][0-9]{9}, causing the input-group wrapper to turn red and display explicit instructions to enter a valid 10-digit Indian phone number starting with 6, 7, 8, or 9. The pattern attribute on the input element enforces this regex constraint natively in the browser, while JavaScript provides the custom feedback message for a user-friendly experience.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp1/screenshots/EXP1-05-password-mismatch-error.png" alt="Password Strength Meter &amp; Confirmation Mismatch Validation">
+      </div>
+      <p class="fig-title"><strong>Figure 1.5: Password Strength Meter &amp; Confirmation Mismatch Validation</strong></p>
+      <p class="fig-desc">This screenshot shows password validation and the custom mismatch rule. The dynamic progress bar updates in real time to reflect password strength based on character count, uppercase, lowercase, digit, and special character criteria. The confirmPassword field uses setCustomValidity('Passwords do not match') from the HTML5 Constraint Validation API to visibly reject mismatched credentials, demonstrating programmatic custom validation beyond standard HTML5 attributes.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp1/screenshots/EXP1-06-successful-validation.png" alt="All Fields Validated Successfully">
+      </div>
+      <p class="fig-title"><strong>Figure 1.6: All Fields Validated Successfully</strong></p>
+      <p class="fig-desc">This screenshot proves successful client-side validation across all form controls. With valid reader credentials, Badlapur address, pincode (421503), date of birth, matching passwords, and accepted terms, every control displays the green is-valid border and a top-level alert-success banner confirms readiness. All Bootstrap validation states transitioned from is-invalid to is-valid, demonstrating the complete validation lifecycle from error detection through correction to successful submission.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp1/screenshots/EXP1-07-mobile-responsive-layout.png" alt="Responsive Mobile Layout (375px Viewport)">
+      </div>
+      <p class="fig-title"><strong>Figure 1.7: Responsive Mobile Layout (375px Viewport)</strong></p>
+      <p class="fig-desc">This screenshot shows the Kitab Ghar registration interface rendered on a mobile viewport (375px width). The Bootstrap 12-column grid automatically collapses the dual-column layout into a single, stacked column, ensuring touch targets and labels remain clear without horizontal scrolling. This confirms the responsive breakpoint behaviour of the col-md-6 grid classes, which stack below 768px viewport width, satisfying the mobile-first design requirement.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp1/screenshots/EXP1-08-bootstrap-modal-confirmation.png" alt="Bootstrap Registration Confirmation Modal">
+      </div>
+      <p class="fig-title"><strong>Figure 1.8: Bootstrap Registration Confirmation Modal</strong></p>
+      <p class="fig-desc">This screenshot shows the Bootstrap modal window rendered upon successful form submission. The JavaScript submit handler prevents standard page navigation via preventDefault(), compiles the validated reader data into a summary card, and triggers the modal overlay using Bootstrap's Modal API to simulate a completed membership registration. The modal displays the reader's name, email, selected membership type, and confirmation of successful validation.</p>
+    </div>
+  
+
+  <div class="result-conclusion-block">
+    <div class="section-head">Result:</div>
+    <p>A responsive registration form for Kitab Ghar was successfully designed using Bootstrap 5 and validated with JavaScript. All form controls adapt seamlessly across desktop and mobile screen resolutions. The Constraint Validation API, regular expressions, password complexity calculation, and custom mismatch logic reliably block invalid submissions and provide immediate visual guidance.</p>
+    <p>The validation sequence showed that invalid inputs were stopped before submission, while a valid reader record produced the expected confirmation state. The mobile check also confirmed that the form remained usable without horizontal overflow.</p>
+
+    <div class="section-head">Conclusion:</div>
+    <p>The practical successfully demonstrated client-side form validation using Bootstrap 5 and modern JavaScript. The integration of HTML5 semantic constraints with custom JavaScript business logic guarantees data integrity before server submission.</p>
+<p>The use of Bootstrap's responsive grid system ensured consistent usability across desktop and mobile devices, satisfying real-world web design requirements.</p>
+    <p>This experiment establishes a reusable registration workflow in which HTML5 constraints, JavaScript business rules, and a responsive Bootstrap layout work together before data is submitted.</p>
+  </div>
+
+</body>
+</html>

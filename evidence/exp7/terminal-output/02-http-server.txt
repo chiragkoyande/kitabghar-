@@ -1,0 +1,35 @@
+==================================================
+Kitab Ghar - HTTP Server Demonstration
+==================================================
+
+✅ Server started on http://127.0.0.1:5007
+
+--- Running Auto-Tests ---
+GET /       -> Status: 200 | Response: { message: 'Welcome to Kitab Ghar API' }
+GET /books  -> Status: 200 | Response: {
+  books: [
+    {
+      id: 1,
+      title: 'Norwegian Wood',
+      author: 'Haruki Murakami',
+      category: 'Fiction'
+    },
+    {
+      id: 2,
+      title: 'Ikigai',
+      author: 'Francesc Miralles and Hector Garcia',
+      category: 'Self-Help'
+    },
+    {
+      id: 3,
+      title: 'The Alchemist',
+      author: 'Paulo Coelho',
+      category: 'Fiction'
+    }
+  ]
+}
+GET /health -> Status: 200 | Response: { status: 'ok', service: 'kitab-ghar-exp7' }
+GET /unknown-> Status: 404 | Response: { error: 'Route not found' }
+
+--- Closing Server ---
+Server closed successfully.

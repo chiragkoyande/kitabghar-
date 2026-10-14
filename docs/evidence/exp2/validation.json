@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-09-29T20:19:07.493Z",
+  "evidence": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "experiment": 2
+  },
+  "screenshots": {
+    "status": "PASS",
+    "count": 8,
+    "entries": [
+      {
+        "file": "screenshots/01-main-home.png",
+        "bytes": 437737
+      },
+      {
+        "file": "screenshots/02-main-home-sections.png",
+        "bytes": 469305
+      },
+      {
+        "file": "screenshots/03-genie-popup.png",
+        "bytes": 287124
+      },
+      {
+        "file": "screenshots/04-genie-question-one.png",
+        "bytes": 219127
+      },
+      {
+        "file": "screenshots/05-genie-mystery-flow.png",
+        "bytes": 230866
+      },
+      {
+        "file": "screenshots/06-genie-recommendations.png",
+        "bytes": 282843
+      },
+      {
+        "file": "screenshots/07-main-live-catalogue.png",
+        "bytes": 388707
+      },
+      {
+        "file": "screenshots/08-main-book-cards.png",
+        "bytes": 567427
+      }
+    ],
+    "errors": []
+  },
+  "content": {
+    "status": "PASS",
+    "missingHeadings": [],
+    "figureReferences": 24,
+    "errors": []
+  },
+  "pdf": {
+    "status": "PASS",
+    "pages": 22,
+    "errors": [],
+    "textLength": 36899
+  }
+}

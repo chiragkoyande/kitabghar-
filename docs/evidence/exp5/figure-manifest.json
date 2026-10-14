@@ -1,0 +1,84 @@
+[
+  {
+    "figure": "Figure 5.1",
+    "title": "Current Kitab Ghar Main Home Page",
+    "file": "screenshots/01-main-home.png",
+    "purpose": "The current localhost React home page confirms the main Kitab Ghar client was running during the database evidence session.",
+    "what_it_demonstrates": "The current localhost React home page confirms the main Kitab Ghar client was running during the database evidence session.",
+    "code_refs": [
+      "EXP5-CODE-01"
+    ]
+  },
+  {
+    "figure": "Figure 5.2",
+    "title": "Current Main Home Components",
+    "file": "screenshots/02-main-home-sections.png",
+    "purpose": "The current localhost main UI is shown below the hero section, establishing the running client context for this database evidence.",
+    "what_it_demonstrates": "The current localhost main UI is shown below the hero section, establishing the running client context for this database evidence.",
+    "code_refs": [
+      "EXP5-CODE-01"
+    ]
+  },
+  {
+    "figure": "Figure 5.3",
+    "title": "Live MongoDB-Backed Books Page",
+    "file": "screenshots/03-live-books.png",
+    "purpose": "The running Books page displays the MongoDB-backed catalogue returned by the current API.",
+    "what_it_demonstrates": "The running Books page displays the MongoDB-backed catalogue returned by the current API.",
+    "code_refs": [
+      "EXP5-CODE-01",
+      "EXP5-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 5.4",
+    "title": "Live MongoDB Search Result",
+    "file": "screenshots/04-live-search.png",
+    "purpose": "Searching Murakami in the current localhost UI reduced the live catalogue to Norwegian Wood, demonstrating retrieval of stored book documents.",
+    "what_it_demonstrates": "Searching Murakami in the current localhost UI reduced the live catalogue to Norwegian Wood, demonstrating retrieval of stored book documents.",
+    "code_refs": [
+      "EXP5-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 5.5",
+    "title": "Live Availability Query Output",
+    "file": "screenshots/05-live-availability.png",
+    "purpose": "The Currently out control displays records with zero available copies from the current database-backed catalogue.",
+    "what_it_demonstrates": "The Currently out control displays records with zero available copies from the current database-backed catalogue.",
+    "code_refs": [
+      "EXP5-CODE-02",
+      "EXP5-CODE-03"
+    ]
+  },
+  {
+    "figure": "Figure 5.6",
+    "title": "Current Main UI at Mobile Width",
+    "file": "screenshots/06-mobile-ui.png",
+    "purpose": "The current localhost React interface remained visible at 320 px while the database-backed application was running.",
+    "what_it_demonstrates": "The current localhost React interface remained visible at 320 px while the database-backed application was running.",
+    "code_refs": [
+      "EXP5-CODE-01"
+    ]
+  },
+  {
+    "figure": "Figure 5.7",
+    "title": "Current Book Genie Popup",
+    "file": "screenshots/07-book-genie-popup.png",
+    "purpose": "The Book Genie popup opened from the current main UI during the same localhost evidence run.",
+    "what_it_demonstrates": "The Book Genie popup opened from the current main UI during the same localhost evidence run.",
+    "code_refs": [
+      "EXP5-CODE-01"
+    ]
+  },
+  {
+    "figure": "Figure 5.8",
+    "title": "Book Genie Live Question Output",
+    "file": "screenshots/08-book-genie-question.png",
+    "purpose": "The current Book Genie rendered its interactive first question using the application that reads the live book catalogue.",
+    "what_it_demonstrates": "The current Book Genie rendered its interactive first question using the application that reads the live book catalogue.",
+    "code_refs": [
+      "EXP5-CODE-03"
+    ]
+  }
+]

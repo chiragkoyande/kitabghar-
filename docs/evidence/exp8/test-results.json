@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-09-29T20:07:31.951Z",
+  "tests": [
+    {
+      "id": "E8-01",
+      "scenario": "GET /api/health",
+      "input": "Actual HTTP request from api-demo.mjs",
+      "expected": "Documented REST status and JSON response",
+      "actual": "Observed response: {\"status\":200,\"body\":{\"status\":\"ok\",\"service\":\"kitabghar-api\",\"database\":\"mongodb\"}}",
+      "status": "PASS"
+    },
+    {
+      "id": "E8-02",
+      "scenario": "GET /api/books",
+      "input": "Actual HTTP request from api-demo.mjs",
+      "expected": "Documented REST status and JSON response",
+      "actual": "Observed response: {\"status\":200,\"count\":77,\"first\":\"Deewar Mein Ek Khidki Rehti Thi\"}",
+      "status": "PASS"
+    },
+    {
+      "id": "E8-03",
+      "scenario": "GET /api/categories",
+      "input": "Actual HTTP request from api-demo.mjs",
+      "expected": "Documented REST status and JSON response",
+      "actual": "Observed response: {\"status\":200,\"count\":13}",
+      "status": "PASS"
+    },
+    {
+      "id": "E8-04",
+      "scenario": "Unauthorized POST /api/books",
+      "input": "Actual HTTP request from api-demo.mjs",
+      "expected": "Documented REST status and JSON response",
+      "actual": "Observed response: {\"status\":401,\"message\":\"Authentication required\"}",
+      "status": "PASS"
+    },
+    {
+      "id": "E8-05",
+      "scenario": "POST /api/auth/login",
+      "input": "Actual HTTP request from api-demo.mjs",
+      "expected": "Documented REST status and JSON response",
+      "actual": "Observed response: {\"status\":200,\"role\":\"admin\"}",
+      "status": "PASS"
+    },
+    {
+      "id": "E8-06",
+      "scenario": "Authenticated POST /api/books",
+      "input": "Actual HTTP request from api-demo.mjs",
+      "expected": "Documented REST status and JSON response",
+      "actual": "Observed response: {\"status\":201,\"id\":\"6abc1a72315cc420423961d9\",\"title\":\"__EXP8_API_EVIDENCE_TEMP__\",\"availableCopies\":2}",
+      "status": "PASS"
+    },
+    {
+      "id": "E8-07",
+      "scenario": "Authenticated PUT /api/books/:id",
+      "input": "Actual HTTP request from api-demo.mjs",
+      "expected": "Documented REST status and JSON response",
+      "actual": "Observed response: {\"status\":200,\"availableCopies\":1}",
+      "status": "PASS"
+    },
+    {
+      "id": "E8-08",
+      "scenario": "Authenticated DELETE /api/books/:id",
+      "input": "Actual HTTP request from api-demo.mjs",
+      "expected": "Documented REST status and JSON response",
+      "actual": "Observed response: {\"status\":200,\"message\":\"Book archived\",\"statusAfterDelete\":\"archived\"}",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "experiment": 9,
+  "title": "Develop a Full MERN Application using React, Express, Node and MongoDB",
+  "requirements": [
+    "Three-Tier MERN Architecture Integration (MongoDB, Express, React, Node.js)",
+    "Express REST API Gateway & Mongoose ODM Data Modeling",
+    "React Single Page Application with React Router v6 & Custom Hooks",
+    "Unified Client-to-Server Fetch API Service with JWT Authentication",
+    "End-to-End Catalogue Search, Filter, Book Details, and Rental Workflows",
+    "Reader Registration, Login, Protected Dashboard & UPI Subscription Management"
+  ],
+  "implemented": [
+    "Integrated three-tier MERN stack architecture connecting React 18 SPA, Node.js runtime, Express REST API, and MongoDB with Mongoose ODM.",
+    "Unified client-side fetch service with automatic JWT Bearer token attachment and centralized JSON parsing.",
+    "Asynchronous data flow synchronizing React Hooks (useState, useEffect, useContext) with backend REST endpoints for catalogue, membership, and rental operations.",
+    "Secure end-to-end user authentication with bcrypt password hashing in MongoDB, signed JWT tokens, and React protected route guards."
+  ],
+  "missing": [],
+  "files_used": [
+    "client/README.md",
+    "client/package.json",
+    "client/index.html",
+    "server/server.js",
+    "server/models/Book.js",
+    "server/controllers/bookController.js",
+    "client/src/services/api.js",
+    "client/src/context/AuthContext.jsx",
+    "client/src/pages/Pages.jsx"
+  ],
+  "screenshots_required": 8
+}

@@ -1,0 +1,28 @@
+{
+  "experiment": 2,
+  "title": "Develop JavaScript Programs using ES6 Features, Arrays, Events and Popup Boxes",
+  "requirements": [
+    "Arrow functions",
+    "Anonymous functions",
+    "Arrays",
+    "Events",
+    "Popup boxes"
+  ],
+  "implemented": [
+    "The actual main Book Genie uses ES6 arrays, arrow functions, anonymous handlers and self-managed popup state.",
+    "The current Book Genie recommendation engine processes the live catalogue with array methods and callback functions.",
+    "The real current Books page uses ES6 state, URLSearchParams, search, availability filtering and alphabetical sorting with the API-backed catalogue."
+  ],
+  "missing": [],
+  "files_used": [
+    "client/README.md",
+    "client/package.json",
+    "client/index.html",
+    "client/src/components/hero/GenieHero.jsx",
+    "client/src/components/genie/BookGenieWizard.jsx",
+    "client/src/components/genie/recommendationEngine.js",
+    "client/src/pages/Pages.jsx",
+    "client/src/components/hero/Hero.jsx"
+  ],
+  "screenshots_required": 8
+}

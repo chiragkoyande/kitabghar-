@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-09-29T20:19:07.650Z",
+  "evidence": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "experiment": 6
+  },
+  "screenshots": {
+    "status": "PASS",
+    "count": 8,
+    "entries": [
+      {
+        "file": "screenshots/01-express-server-health.png",
+        "bytes": 11273
+      },
+      {
+        "file": "screenshots/02-api-books-endpoint.png",
+        "bytes": 352598
+      },
+      {
+        "file": "screenshots/03-main-homepage-backend.png",
+        "bytes": 438017
+      },
+      {
+        "file": "screenshots/04-books-catalogue-mongodb.png",
+        "bytes": 605808
+      },
+      {
+        "file": "screenshots/05-dynamic-book-details-crud.png",
+        "bytes": 171981
+      },
+      {
+        "file": "screenshots/06-membership-plans-api.png",
+        "bytes": 78516
+      },
+      {
+        "file": "screenshots/07-jwt-auth-login.png",
+        "bytes": 40746
+      },
+      {
+        "file": "screenshots/08-reader-dashboard-rentals.png",
+        "bytes": 62242
+      }
+    ],
+    "errors": []
+  },
+  "content": {
+    "status": "PASS",
+    "missingHeadings": [],
+    "figureReferences": 24,
+    "errors": []
+  },
+  "pdf": {
+    "status": "PASS",
+    "pages": 19,
+    "errors": [],
+    "textLength": 25257
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "generatedAt": "2026-09-29T19:42:51.828Z",
+  "tests": [
+    {
+      "id": "E9-01",
+      "scenario": "MERN health endpoint",
+      "input": "MERN health endpoint",
+      "expected": "Express returns MongoDB health status.",
+      "actual": "Observed in the running current Kitab Ghar MERN application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E9-02",
+      "scenario": "MongoDB catalogue through Express",
+      "input": "MongoDB catalogue through Express",
+      "expected": "GET /api/books returns the seeded current book array.",
+      "actual": "Observed in the running current Kitab Ghar MERN application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E9-03",
+      "scenario": "Load the current main React home page",
+      "input": "Load the current main React home page",
+      "expected": "The current Kitab Ghar logo, hero and Book Genie launch action render.",
+      "actual": "Observed in the running current Kitab Ghar MERN application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E9-04",
+      "scenario": "Render API-backed React catalogue",
+      "input": "Render API-backed React catalogue",
+      "expected": "The current BooksPage maps the 77-title API response into visible book cards.",
+      "actual": "Observed in the running current Kitab Ghar MERN application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E9-05",
+      "scenario": "Search across the MERN catalogue",
+      "input": "Search across the MERN catalogue",
+      "expected": "The React query reaches Express and MongoDB, leaving Norwegian Wood as the displayed result.",
+      "actual": "Observed in the running current Kitab Ghar MERN application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E9-06",
+      "scenario": "Load a dynamic MongoDB book record",
+      "input": "Load a dynamic MongoDB book record",
+      "expected": "A /books/:id React route displays the Express and Mongoose record details.",
+      "actual": "Observed in the running current Kitab Ghar MERN application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E9-07",
+      "scenario": "Render MongoDB membership plans",
+      "input": "Render MongoDB membership plans",
+      "expected": "The current membership route displays active API-backed plan cards.",
+      "actual": "Observed in the running current Kitab Ghar MERN application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E9-08",
+      "scenario": "Authenticate a seeded reader",
+      "input": "Authenticate a seeded reader",
+      "expected": "The real auth API returns a JWT session and React redirects to the protected dashboard.",
+      "actual": "Observed in the running current Kitab Ghar MERN application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E9-09",
+      "scenario": "Guard a protected MERN route",
+      "input": "Guard a protected MERN route",
+      "expected": "An unauthenticated dashboard request redirects to the current login form.",
+      "actual": "Observed in the running current Kitab Ghar MERN application.",
+      "status": "PASS"
+    },
+    {
+      "id": "E9-10",
+      "scenario": "Use the MERN home page at 320px",
+      "input": "Use the MERN home page at 320px",
+      "expected": "The current main home page remains within the mobile viewport.",
+      "actual": "Observed in the running current Kitab Ghar MERN application.",
+      "status": "PASS"
+    }
+  ],
+  "runtimeChecks": [
+    {
+      "name": "Brand identity",
+      "type": "image",
+      "complete": true,
+      "naturalWidth": 1080,
+      "source": "/kitab-ghar-logo.png",
+      "status": "PASS"
+    }
+  ]
+}

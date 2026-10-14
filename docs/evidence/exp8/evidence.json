@@ -1,0 +1,26 @@
+{
+  "experiment": 8,
+  "title": "Build and Test a RESTful API using Express and Postman",
+  "requirements": [
+    "RESTful API",
+    "Express",
+    "Postman testing"
+  ],
+  "implemented": [
+    "An isolated current Express API was started and tested with real HTTP requests.",
+    "Public, authenticated and authorization-failure API responses were observed.",
+    "A temporary book completed POST, PUT and DELETE/archive actions and was removed after the test."
+  ],
+  "missing": [
+    "EVIDENCE MISSING: Postman/Newman is not installed. Equivalent HTTP requests were executed against the same Express endpoints and their actual JSON responses were captured."
+  ],
+  "files_used": [
+    "server/server.js",
+    "server/controllers/bookController.js",
+    "server/routes/categoryRoutes.js",
+    "server/middleware/auth.js",
+    "server/controllers/authController.js",
+    "experiments/exp8/api-demo.mjs"
+  ],
+  "screenshots_required": 8
+}

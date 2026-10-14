@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-09-29T20:17:40.509Z",
+  "tests": [
+    {
+      "id": "E10-01",
+      "scenario": "Render service YAML present",
+      "input": "Render service YAML present",
+      "expected": "Deployment preflight passes",
+      "actual": "Observed in the current repository.",
+      "status": "PASS"
+    },
+    {
+      "id": "E10-02",
+      "scenario": "Vercel rewrite present",
+      "input": "Vercel rewrite present",
+      "expected": "Deployment preflight passes",
+      "actual": "Observed in the current repository.",
+      "status": "PASS"
+    },
+    {
+      "id": "E10-03",
+      "scenario": "Production client build",
+      "input": "Production client build",
+      "expected": "Deployment preflight passes",
+      "actual": "452 modules transformed in the current Vite build.",
+      "status": "PASS"
+    },
+    {
+      "id": "E10-04",
+      "scenario": "Server syntax check",
+      "input": "Server syntax check",
+      "expected": "Deployment preflight passes",
+      "actual": "node --check completed successfully for server/server.js.",
+      "status": "PASS"
+    },
+    {
+      "id": "E10-05",
+      "scenario": "Cloud URL configured",
+      "input": "Cloud URL configured",
+      "expected": "Live cloud evidence available",
+      "actual": "EVIDENCE MISSING: no deployed URL or credentials.",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "E10-06",
+      "scenario": "Cloud end-to-end verification",
+      "input": "Cloud end-to-end verification",
+      "expected": "Live cloud evidence available",
+      "actual": "EVIDENCE MISSING: no deployed URL or credentials.",
+      "status": "BLOCKED"
+    }
+  ]
+}

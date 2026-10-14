@@ -1,0 +1,34 @@
+{
+  "database": "kitabghar",
+  "collections": [
+    "admins",
+    "books",
+    "categories",
+    "notifications",
+    "orders",
+    "payments",
+    "plans",
+    "rentals",
+    "subscriptions",
+    "users"
+  ],
+  "bookCount": 79,
+  "categoryCount": 12,
+  "created": {
+    "id": "6abcc13b61dd3a25982f1899",
+    "title": "__EXP5_EVIDENCE_1790755130344__",
+    "status": "active",
+    "availableCopies": 1
+  },
+  "read": {
+    "category": "Evidence"
+  },
+  "updated": {
+    "status": "archived",
+    "availableCopies": 0
+  },
+  "deleted": {
+    "deletedCount": 1,
+    "existsAfterDelete": false
+  }
+}

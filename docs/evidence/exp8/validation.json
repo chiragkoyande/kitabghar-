@@ -1,0 +1,62 @@
+{
+  "generatedAt": "2026-09-29T20:19:07.719Z",
+  "evidence": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [
+      "EVIDENCE MISSING: Postman/Newman is not installed. Equivalent HTTP requests were executed against the same Express endpoints and their actual JSON responses were captured."
+    ],
+    "experiment": 8
+  },
+  "screenshots": {
+    "status": "PASS",
+    "count": 8,
+    "entries": [
+      {
+        "file": "screenshots/01-api-response.png",
+        "bytes": 22295
+      },
+      {
+        "file": "screenshots/02-api-response.png",
+        "bytes": 18239
+      },
+      {
+        "file": "screenshots/03-api-response.png",
+        "bytes": 13626
+      },
+      {
+        "file": "screenshots/04-api-response.png",
+        "bytes": 18419
+      },
+      {
+        "file": "screenshots/05-api-response.png",
+        "bytes": 13904
+      },
+      {
+        "file": "screenshots/06-api-response.png",
+        "bytes": 25932
+      },
+      {
+        "file": "screenshots/07-api-response.png",
+        "bytes": 16453
+      },
+      {
+        "file": "screenshots/08-api-response.png",
+        "bytes": 21986
+      }
+    ],
+    "errors": []
+  },
+  "content": {
+    "status": "PASS",
+    "missingHeadings": [],
+    "figureReferences": 24,
+    "errors": []
+  },
+  "pdf": {
+    "status": "PASS",
+    "pages": 10,
+    "errors": [],
+    "textLength": 14156
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-09-29T20:19:07.749Z",
+  "evidence": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "experiment": 9
+  },
+  "screenshots": {
+    "status": "PASS",
+    "count": 8,
+    "entries": [
+      {
+        "file": "screenshots/01-mern-homepage.png",
+        "bytes": 437950
+      },
+      {
+        "file": "screenshots/02-book-genie-recommendation.png",
+        "bytes": 219127
+      },
+      {
+        "file": "screenshots/03-live-catalogue-api.png",
+        "bytes": 605808
+      },
+      {
+        "file": "screenshots/04-dynamic-details-cart.png",
+        "bytes": 171981
+      },
+      {
+        "file": "screenshots/05-membership-tiers-upi.png",
+        "bytes": 78516
+      },
+      {
+        "file": "screenshots/06-reader-authentication-jwt.png",
+        "bytes": 40746
+      },
+      {
+        "file": "screenshots/07-protected-reader-dashboard.png",
+        "bytes": 62242
+      },
+      {
+        "file": "screenshots/08-responsive-mobile-mern.png",
+        "bytes": 82073
+      }
+    ],
+    "errors": []
+  },
+  "content": {
+    "status": "PASS",
+    "missingHeadings": [],
+    "figureReferences": 24,
+    "errors": []
+  },
+  "pdf": {
+    "status": "PASS",
+    "pages": 19,
+    "errors": [],
+    "textLength": 27932
+  }
+}

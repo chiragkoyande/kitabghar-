@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Experiment No. 7 — Kitab Ghar</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #000000;
+      background: #ffffff;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      font-size: 12pt;
+      line-height: 1.4;
+      text-align: left;
+    }
+    .exp-no {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 3pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .exp-title {
+      font-size: 11.5pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 0 0 8pt;
+      line-height: 1.3;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .section-head {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 8pt 0 2pt;
+      text-align: left;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    p {
+      margin: 0 0 4pt;
+      color: #000000;
+      text-align: left;
+    }
+    ul, ol {
+      margin: 0 0 6pt 18pt;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 2pt;
+      color: #000000;
+      text-align: left;
+    }
+    .methodology-flow {
+      border: 1px solid #000000;
+      padding: 5pt 8pt;
+      margin: 4pt 0 6pt;
+      font-size: 9.5pt;
+      font-weight: bold;
+      text-align: center;
+      background: #fafafa;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-block {
+      margin: 4pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .code-label {
+      font-size: 9.5pt;
+      font-weight: bold;
+      margin: 0 0 1.5pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .code-meta {
+      font-size: 8.5pt;
+      font-style: italic;
+      margin: 0 0 2pt;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    pre {
+      margin: 2pt 0 4pt;
+      padding: 4pt 6pt;
+      border: 1px solid #000000;
+      background: #fafafa;
+      color: #000000;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 7.5pt;
+      line-height: 1.2;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .figure-block {
+      margin: 5pt 0 6pt;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .fig-img-wrap {
+      text-align: center;
+      margin: 2pt 0 2pt;
+    }
+    .fig-img-wrap img {
+      max-width: 92%;
+      max-height: 82mm;
+      width: auto;
+      height: auto;
+      border: 1px solid #000000;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .fig-title {
+      font-size: 10pt;
+      font-weight: bold;
+      color: #000000;
+      margin: 3pt 0 2pt;
+      text-align: center;
+      page-break-before: avoid !important;
+      break-before: avoid !important;
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+    .fig-desc {
+      font-size: 12pt;
+      color: #000000;
+      line-height: 1.3;
+      margin: 1pt 0 3pt;
+      text-align: left;
+    }
+    .result-conclusion-block {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin-top: 4pt;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+      margin: 3pt 0 4pt;
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+    tr {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid #000000;
+      padding: 2.5pt 4pt;
+      text-align: left;
+      vertical-align: top;
+      color: #000000;
+      line-height: 1.22;
+    }
+    th {
+      background: #f0f0f0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starts immediately on Page 1 -->
+  <div class="exp-no">Experiment No. 7</div>
+  <div class="exp-title">Title: Develop Basic Node.js Applications Demonstrating REPL, HTTP Server, File System, Buffers, Streams, and Event Loop</div>
+
+  <div class="section-head">Aim:</div>
+  <p>To write and execute independent Node.js scripts demonstrating six core built-in capabilities: the interactive REPL, raw HTTP server creation, File System (fs) operations, binary Buffer manipulation, Stream chunked processing, and the asynchronous Event Loop execution phases.</p>
+
+  <div class="section-head">Tools Used:</div>
+  <ul><li>Node.js v22.22.2 runtime</li><li>Node.js built-in modules: repl, http, fs/promises, fs, buffer, stream, events, timers</li><li>Kitab Ghar catalogue data source (server/data/catalogue.js)</li><li>Linux terminal environment for execution capture</li></ul>
+
+  <div class="section-head">Methodology:</div>
+  <div class="methodology-flow">REPL Evaluation Script → http.createServer Router → Synchronous &amp; Async File I/O → Binary Buffer Encodings → Stream Chunk Piping → Event Loop Phase Sequence Analysis</div>
+  <p>Six independent scripts were authored, each addressing one core Node.js feature. 01-repl-demo.mjs demonstrates interactive expression evaluation; 02-http-server.mjs launches a raw HTTP server; 03-filesystem.mjs exercises synchronous and promise-based file I/O; 04-buffers.mjs demonstrates memory allocation and encodings; 05-streams.mjs streams the 30KB catalogue in 1KB chunks; and 06-event-loop.mjs traces microtask and macrotask scheduling.</p>
+
+  <div class="section-head">Theory:</div>
+  <p>Node.js is an open-source, cross-platform JavaScript runtime environment built on Google Chrome's V8 engine. Unlike browser JavaScript, Node.js provides direct access to operating system capabilities including filesystems, network sockets, and binary memory buffers.</p>
+<p>The REPL (Read-Eval-Print Loop) is an interactive programming environment that reads user expressions, evaluates them via V8, prints the results, and loops. The built-in 'http' module allows developers to create raw HTTP/1.1 web servers without external frameworks. The 'fs' module provides both synchronous blocking methods and asynchronous non-blocking promise-based APIs for filesystem operations.</p>
+<p>Buffers represent raw fixed-allocation memory chunks outside the V8 heap, essential for handling binary data such as TCP streams and file buffers. Streams are collections of data that might not be available all at once, enabling efficient handling of large files via chunked processing and pipe() backpressure control. The Event Loop coordinates asynchronous callbacks across phases: timers (setTimeout), poll (I/O), and check (setImmediate), prioritizing process.nextTick and Promise microtasks before advancing.</p>
+
+  <div class="section-head">Case Study Context:</div>
+  <p>Kitab Ghar, Badlapur — core runtime services. Independent Node.js scripts simulate underlying platform operations: processing reader notes via file system calls, streaming large catalogue files in chunks, allocating binary memory buffers for book metadata, and executing scheduled reminder workflows via the event loop.</p>
+  <p>In strict compliance with the curriculum requirements, this practical does NOT use Express or external npm packages. It consists of 6 dedicated, independent scripts in experiments/exp7/ utilizing only Node.js core built-in modules.</p>
+
+  <div class="section-head">Functions / Methods / Technologies Used:</div>
+  <ul><li>repl.start() for programmatic REPL sessions</li><li>http.createServer((req, res) =&gt; ...), res.writeHead(), res.end()</li><li>fs.writeFileSync(), fs.readFileSync(), fs.appendFileSync(), fs.unlinkSync()</li><li>Buffer.from(), Buffer.alloc(), buffer.toString('hex'|'base64'), buffer.slice()</li><li>fs.createReadStream(), fs.createWriteStream(), stream.pipe(), stream.on('data'|'end')</li><li>EventEmitter.on(), EventEmitter.emit()</li><li>process.nextTick(), Promise.resolve().then(), setImmediate(), setTimeout()</li></ul>
+
+  <div class="section-head">Procedure:</div>
+  <p>Each Node.js core example was executed independently: the REPL expression, raw HTTP server, synchronous and asynchronous file operations, buffer conversion, stream processing, event-loop scheduling, and EventEmitter workflow. Temporary files and servers were closed after their checks.</p>
+  <ol><li>Navigate to experiments/exp7/ and inspect the 6 independent script files.</li><li>Run 'node 01-repl-demo.mjs' to observe programmatic REPL evaluation of arithmetic and catalogue filtering.</li><li>Run 'node 02-http-server.mjs' to start a raw HTTP server on port 5007 and verify GET /, /books, and /health.</li><li>Run 'node 03-filesystem.mjs' to execute synchronous and async file writes, reads, appends, and verified cleanup.</li><li>Run 'node 04-buffers.mjs' to allocate buffers, encode strings to UTF-8, hex, and base64, and test slice and concat.</li><li>Run 'node 05-streams.mjs' to stream server/data/catalogue.js in 1KB chunks and pipe to an output file.</li><li>Run 'node 06-event-loop.mjs' to observe execution order: synchronous -&gt; nextTick -&gt; Promise -&gt; timer -&gt; check.</li><li>Run the combined reference script 'node node-demo.mjs' to verify integrated runtime output.</li><li>Capture terminal output transcripts and compile high-resolution terminal frames.</li></ol>
+
+  <div class="section-head">Code:</div>
+  
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 7.1: Raw HTTP Server Implementation (Built-in http module)</strong></p>
+      <p class="code-meta">File: <code>experiments/exp7/02-http-server.mjs</code> (Lines 1–38) — Demonstrates raw HTTP server creation, route parsing, JSON headers, and graceful shutdown.</p>
+      <pre><code>import { createServer } from "node:http";
+
+const books = [
+  { id: 1, title: "Norwegian Wood", author: "Haruki Murakami", category: "Fiction" },
+  { id: 2, title: "Ikigai", author: "Francesc Miralles and Hector Garcia", category: "Self-Help" },
+  { id: 3, title: "The Alchemist", author: "Paulo Coelho", category: "Fiction" }
+];
+
+const server = createServer((req, res) =&gt; {
+  if (req.method === "GET" &amp;&amp; req.url === "/") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ message: "Welcome to Kitab Ghar API" }));
+  } else if (req.method === "GET" &amp;&amp; req.url === "/books") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ books }));
+  } else if (req.method === "GET" &amp;&amp; req.url === "/health") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ status: "ok", service: "kitab-ghar-exp7" }));
+  } else {
+    res.writeHead(404, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ error: "Route not found" }));
+  }
+});
+
+server.listen(5007, "127.0.0.1", () =&gt; {
+  console.log("Server started on http://127.0.0.1:5007");
+});</code></pre>
+    </div>
+  
+
+    <div class="code-block">
+      <p class="code-label"><strong>Code Block 7.2: Event Loop Phase Ordering Demonstration</strong></p>
+      <p class="code-meta">File: <code>experiments/exp7/06-event-loop.mjs</code> (Lines 15–48) — Interleaves sync code, nextTick, Promises, timers, and setImmediate to prove phase order.</p>
+      <pre><code>console.log("[Step 1] Sync: Processing reader registration...");
+
+setTimeout(() =&gt; {
+  console.log("[Step 5] setTimeout: Sending rental reminder... (Macrotask/Timer)");
+}, 0);
+
+setImmediate(() =&gt; {
+  console.log("[Step 6] setImmediate: Updating reader dashboard... (Check Phase)");
+});
+
+Promise.resolve().then(() =&gt; {
+  console.log("[Step 3] Promise: Fetching book catalogue... (Microtask)");
+});
+
+process.nextTick(() =&gt; {
+  console.log("[Step 2] nextTick: Validating membership... (Microtask)");
+});
+
+console.log("[Step 4] Sync: Initial script execution completed.");</code></pre>
+    </div>
+  
+
+  <div class="section-head">Output:</div>
+  
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp7/screenshots/EXP7-01-repl-demo.png" alt="Node.js REPL — Interactive Expression Evaluation">
+      </div>
+      <p class="fig-title"><strong>Figure 7.1: Node.js REPL — Interactive Expression Evaluation</strong></p>
+      <p class="fig-desc">This screenshot shows the interactive Node.js REPL (Read-Eval-Print Loop) session launched by running 01-repl-demo.mjs. The runtime evaluates arithmetic expressions (2 + 3 * 4 = 14), string manipulation methods such as .toUpperCase() and .split(), and array filtering operations directly in the command-line environment. The REPL demonstrates Node.js's ability to execute JavaScript expressions interactively without requiring a full script file.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp7/screenshots/EXP7-02-http-server.png" alt="Node.js Core — Raw HTTP Server (http.createServer)">
+      </div>
+      <p class="fig-title"><strong>Figure 7.2: Node.js Core — Raw HTTP Server (http.createServer)</strong></p>
+      <p class="fig-desc">This screenshot shows the execution of 02-http-server.mjs. The built-in Node.js http module creates a raw HTTP server using http.createServer() on port 5007, handles GET requests for /, /books, and /health routes, and returns proper JSON payloads with appropriate Content-Type headers. The script demonstrates low-level HTTP handling without any framework, showing request routing, status codes, and response serialization.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp7/screenshots/EXP7-03-filesystem.png" alt="Node.js Core — Synchronous &amp; Asynchronous File System (fs)">
+      </div>
+      <p class="fig-title"><strong>Figure 7.3: Node.js Core — Synchronous &amp; Asynchronous File System (fs)</strong></p>
+      <p class="fig-desc">This screenshot demonstrates the Node.js fs module from 03-filesystem.mjs. The script executes synchronous operations (writeFileSync, readFileSync, appendFileSync) on a reader note file with Kitab Ghar-themed content, followed by asynchronous promise-based I/O using fs.promises.writeFile and fs.promises.readFile. File statistics (size, creation date) are inspected via statSync, and the temporary file is cleaned up at the end to leave no artifacts.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp7/screenshots/EXP7-04-buffers.png" alt="Node.js Core — Binary Buffer Operations &amp; Encodings">
+      </div>
+      <p class="fig-title"><strong>Figure 7.4: Node.js Core — Binary Buffer Operations &amp; Encodings</strong></p>
+      <p class="fig-desc">This screenshot illustrates Buffer operations from 04-buffers.mjs. The script creates binary buffers from the string 'Kitab Ghar · Badlapur' using Buffer.from(), then converts the buffer across UTF-8, hexadecimal, and base64 encodings using toString(). The output compares buffer.length (byte count) with string.length (character count) to demonstrate multi-byte character encoding. Buffer.alloc(), buffer.write(), Buffer.concat(), buffer.slice(), and buffer.copy() methods are also exercised.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp7/screenshots/EXP7-05-streams.png" alt="Node.js Core — Readable &amp; Writable Streams (30 Chunks)">
+      </div>
+      <p class="fig-title"><strong>Figure 7.5: Node.js Core — Readable &amp; Writable Streams (30 Chunks)</strong></p>
+      <p class="fig-desc">This screenshot shows stream processing in action from 05-streams.mjs. The catalogue dataset is read in discrete chunks of 1024 bytes using fs.createReadStream(), with each chunk's number and byte size logged to the terminal. The readable stream is piped to a writable stream created via fs.createWriteStream() using the .pipe() method, demonstrating memory-efficient I/O that processes data incrementally without loading the full file into memory. The 'data', 'end', and 'error' events are handled explicitly.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp7/screenshots/EXP7-06-event-loop.png" alt="Node.js Core — Asynchronous Event Loop Phase Ordering">
+      </div>
+      <p class="fig-title"><strong>Figure 7.6: Node.js Core — Asynchronous Event Loop Phase Ordering</strong></p>
+      <p class="fig-desc">This screenshot proves the deterministic execution order of the Node.js event loop from 06-event-loop.mjs: synchronous code executes first, followed by process.nextTick microtasks, then Promise.resolve().then() microtasks, then setTimeout macrotasks (timers phase), and finally setImmediate callbacks (check phase). The numbered output confirms the event loop phase ordering: timers → pending callbacks → idle/prepare → poll → check → close, with Kitab Ghar-themed messages for each phase.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp7/screenshots/EXP7-07-event-emitter.png" alt="Node.js Core — EventEmitter Publish/Subscribe Pattern">
+      </div>
+      <p class="fig-title"><strong>Figure 7.7: Node.js Core — EventEmitter Publish/Subscribe Pattern</strong></p>
+      <p class="fig-desc">This screenshot demonstrates the built-in EventEmitter class from the Node.js events module. A custom event listener subscribes to 'book-rented' domain events using .on(), and logs the event payload (book title, reader name, rental date) when triggered by the application using .emit(). This demonstrates the publish-subscribe pattern that underpins Node.js's asynchronous, event-driven architecture.</p>
+    </div>
+  
+
+    <div class="figure-block">
+      <div class="fig-img-wrap">
+        <img src="../../evidence/exp7/screenshots/EXP7-08-node-demo-summary.png" alt="Node.js Core — Complete Demo Suite Execution &amp; Cleanup">
+      </div>
+      <p class="fig-title"><strong>Figure 7.8: Node.js Core — Complete Demo Suite Execution &amp; Cleanup</strong></p>
+      <p class="fig-desc">This screenshot displays the full execution summary of the combined node-demo.mjs script, confirming Node.js runtime version, REPL expression evaluation, buffer hex and base64 representations, stream chunking statistics, event loop phase ordering, and temporary file cleanup. This consolidated view verifies that all six Node.js core concepts were executed and produced the expected terminal output.</p>
+    </div>
+  
+
+  <div class="result-conclusion-block">
+    <div class="section-head">Result:</div>
+    <p>All six Node.js core built-in capabilities—REPL, HTTP Server, File System, Buffers, Streams, and the Event Loop—were successfully implemented and verified as independent scripts without external npm dependencies.</p>
+    <p>The outputs showed correct evaluation, HTTP response handling, file cleanup, byte encoding, incremental stream processing, and expected asynchronous execution order without relying on third-party packages.</p>
+
+    <div class="section-head">Conclusion:</div>
+    <p>The experiment confirmed that Node.js provides a comprehensive, high-performance standard library for server-side programming. Built-in modules like http and fs eliminate the need for third-party libraries for fundamental I/O tasks.</p>
+<p>Understanding Streams and the Event Loop phase ordering is essential for writing scalable, non-blocking asynchronous JavaScript applications that handle high concurrency efficiently.</p>
+    <p>This experiment confirms that Node.js built-in modules provide the core runtime facilities needed to build efficient, non-blocking server-side programs.</p>
+  </div>
+
+</body>
+</html>

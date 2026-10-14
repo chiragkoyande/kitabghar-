@@ -1,0 +1,91 @@
+[
+  {
+    "figure": "Figure 9.1",
+    "title": "Kitab Ghar MERN Application Homepage & Visual Identity",
+    "file": "screenshots/01-mern-homepage.png",
+    "purpose": "Initial render of the integrated full MERN application homepage.",
+    "what_it_demonstrates": "React 18 SPA homepage connected to the Express backend and MongoDB database, rendering live trust metrics, brand identity, and the Book Genie hero.",
+    "code_refs": [
+      "EXP9-CODE-01",
+      "EXP9-CODE-04"
+    ]
+  },
+  {
+    "figure": "Figure 9.2",
+    "title": "Interactive Book Genie Recommendation Engine",
+    "file": "screenshots/02-book-genie-recommendation.png",
+    "purpose": "Interactive Akinator-style recommendation wizard querying live catalogue.",
+    "what_it_demonstrates": "React recommendation wizard querying the 77-book MongoDB catalogue via Express API to provide real-time personalized book suggestions.",
+    "code_refs": [
+      "EXP9-CODE-04",
+      "EXP9-CODE-06"
+    ]
+  },
+  {
+    "figure": "Figure 9.3",
+    "title": "Full-Stack Books Catalogue Route (/books)",
+    "file": "screenshots/03-live-catalogue-api.png",
+    "purpose": "Live API-backed catalogue rendering 77 books directly from MongoDB.",
+    "what_it_demonstrates": "React BooksPage component querying Express /api/books with URLSearchParams, live search input, category filters, and availability toggles.",
+    "code_refs": [
+      "EXP9-CODE-06",
+      "EXP9-CODE-03",
+      "EXP9-CODE-02"
+    ]
+  },
+  {
+    "figure": "Figure 9.4",
+    "title": "Dynamic Book Details & Rental Cart Action (/books/:id)",
+    "file": "screenshots/04-dynamic-details-cart.png",
+    "purpose": "Dynamic parameter route fetching record details via Mongoose findById.",
+    "what_it_demonstrates": "Targeted book record loaded from MongoDB via Express /api/books/:id, displaying cover art, description, real-time inventory count, and rental cart interaction.",
+    "code_refs": [
+      "EXP9-CODE-03",
+      "EXP9-CODE-04"
+    ]
+  },
+  {
+    "figure": "Figure 9.5",
+    "title": "Subscription Management & UPI Payment Gateway (/membership)",
+    "file": "screenshots/05-membership-tiers-upi.png",
+    "purpose": "Live reader subscription tiers with dynamic UPI payment integration.",
+    "what_it_demonstrates": "Subscription tiers retrieved from MongoDB /api/plans rendered into interactive cards with dynamic UPI QR code modal generation.",
+    "code_refs": [
+      "EXP9-CODE-07",
+      "EXP9-CODE-04"
+    ]
+  },
+  {
+    "figure": "Figure 9.6",
+    "title": "Full-Stack Reader Authentication & JWT Session (/login)",
+    "file": "screenshots/06-reader-authentication-jwt.png",
+    "purpose": "Controlled reader login screen interacting with /api/auth/login.",
+    "what_it_demonstrates": "Controlled login form transmitting credentials to the Express authController, verifying bcrypt password hashes against MongoDB, and storing JWT tokens.",
+    "code_refs": [
+      "EXP9-CODE-05",
+      "EXP9-CODE-04"
+    ]
+  },
+  {
+    "figure": "Figure 9.7",
+    "title": "Protected Reader Dashboard & Account Overview (/dashboard)",
+    "file": "screenshots/07-protected-reader-dashboard.png",
+    "purpose": "Guarded reader dashboard displaying authenticated profile and rentals.",
+    "what_it_demonstrates": "Protected reader dashboard guarded by React ProtectedRoute and Express JWT middleware, rendering live account details and library services.",
+    "code_refs": [
+      "EXP9-CODE-05",
+      "EXP9-CODE-01"
+    ]
+  },
+  {
+    "figure": "Figure 9.8",
+    "title": "Responsive Mobile Full MERN Layout (320px)",
+    "file": "screenshots/08-responsive-mobile-mern.png",
+    "purpose": "Mobile responsiveness verification at 320px viewport width.",
+    "what_it_demonstrates": "Complete MERN application UI and Book Genie hero adapting cleanly to a 320px mobile viewport without horizontal scrolling or clipping.",
+    "code_refs": [
+      "EXP9-CODE-01",
+      "EXP9-CODE-06"
+    ]
+  }
+]
